@@ -46,10 +46,7 @@ function Layout() {
             </svg>
           </button>
           <img src="/logo Agrovision.png" alt="AgroVisión" className="w-7 h-7 object-contain shrink-0" />
-          <div className="flex flex-col gap-0.5">
-            <img src="/texto Agrovision.png" alt="AgroVisión" className="h-7 object-contain object-left" />
-            <img src="/down text.png" alt="Una guía para tu cultivo" className="h-4 object-contain object-left" />
-          </div>
+          <img src="/texto Agrovision.png" alt="AgroVisión" className="h-7 object-contain object-left" />
         </header>
 
         <AnimatedRoutes />

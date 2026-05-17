@@ -58,18 +58,11 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
             className="w-9 h-9 object-contain shrink-0"
           />
           {(!colapsado || hovered) && (
-            <div className="flex flex-col gap-0.5">
-              <img
-                src="/texto Agrovision.png"
-                alt="AgroVisión"
-                className="h-7 object-contain object-left"
-              />
-              <img
-                src="/down text.png"
-                alt="Una guía para tu cultivo"
-                className="h-4 object-contain object-left"
-              />
-            </div>
+            <img
+              src="/texto Agrovision.png"
+              alt="AgroVisión"
+              className="h-7 object-contain object-left"
+            />
           )}
         </div>
 
