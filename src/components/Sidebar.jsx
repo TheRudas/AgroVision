@@ -89,16 +89,15 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
                     {cultivo.emoji}
                   </span>
 
-                  {(!colapsado || hovered) && (
-                    <span
-                      className={[
-                        'font-titulo font-bold text-sm truncate',
-                        esActivo ? 'text-agro-lima' : '',
-                      ].join(' ')}
-                    >
-                      {cultivo.nombre}
-                    </span>
-                  )}
+                  <span
+                    className={[
+                      'font-titulo font-bold text-sm truncate transition-all duration-200',
+                      esActivo ? 'text-agro-lima' : '',
+                      (!colapsado || hovered) ? 'opacity-100 max-w-full' : 'opacity-0 max-w-0',
+                    ].join(' ')}
+                  >
+                    {cultivo.nombre}
+                  </span>
 
                   {/* Indicador activo en modo colapsado */}
                   {colapsado && !hovered && esActivo && (

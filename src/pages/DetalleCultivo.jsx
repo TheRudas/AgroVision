@@ -29,7 +29,11 @@ function SeccionCollapsible({ id, titulo, children, defaultOpen = true }) {
         </svg>
       </button>
 
-      {abierto && <div className="pb-5">{children}</div>}
+      <div className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${abierto ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+        <div className="overflow-hidden">
+          <div className="pb-5">{children}</div>
+        </div>
+      </div>
     </section>
   )
 }

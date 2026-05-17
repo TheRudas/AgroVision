@@ -1,8 +1,26 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
 import Home from './pages/Home'
 import DetalleCultivo from './pages/DetalleCultivo'
+
+function AnimatedRoutes() {
+  const location = useLocation()
+  // Usamos solo el segundo segmento de la ruta como key para que el fade
+  // ocurra al cambiar de cultivo pero no al cambiar de sección
+  const routeKey = location.pathname.split('/').slice(0, 3).join('/')
+
+  return (
+    <main key={routeKey} className="flex-1 overflow-y-auto animate-fadein">
+      <Routes location={location}>
+        <Route path="/" element={<Home />} />
+        <Route path="/cultivo/:id" element={<DetalleCultivo />} />
+        <Route path="/cultivo/:id/:seccion" element={<DetalleCultivo />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </main>
+  )
+}
 
 function Layout() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -31,15 +49,7 @@ function Layout() {
           <img src="/texto Agrovision.png" alt="AgroVisión" className="h-6 object-contain" />
         </header>
 
-        {/* Contenido scrolleable */}
-        <main className="flex-1 overflow-y-auto">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/cultivo/:id" element={<DetalleCultivo />} />
-            <Route path="/cultivo/:id/:seccion" element={<DetalleCultivo />} />
-            <Route path="*" element={<Home />} />
-          </Routes>
-        </main>
+        <AnimatedRoutes />
       </div>
     </div>
   )

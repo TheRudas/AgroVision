@@ -4,7 +4,7 @@ export default function CultivoCard({ cultivo }) {
   const navigate = useNavigate()
   return (
     <div
-      className="bg-agro-card rounded-2xl p-6 flex flex-col items-center gap-4 cursor-pointer hover:ring-1 hover:ring-agro-limaHover transition-all"
+      className="bg-agro-card rounded-2xl p-6 flex flex-col items-center gap-4 cursor-pointer hover:ring-1 hover:ring-agro-limaHover hover:scale-[1.03] hover:-translate-y-1 transition-all duration-200"
       onClick={() => navigate(`/cultivo/${cultivo.id}`)}
     >
       <span className="text-5xl">{cultivo.emoji}</span>
