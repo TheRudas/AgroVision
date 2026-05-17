@@ -27,8 +27,8 @@ function Layout() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-          <img src="/agroVision.png" alt="AgroVisión" className="w-7 h-7 object-contain" />
-          <span className="font-titulo font-bold text-agro-lima text-lg">AgroVisión</span>
+          <img src="/logo Agrovision.png" alt="AgroVisión" className="w-7 h-7 object-contain" />
+          <img src="/texto Agrovision.png" alt="AgroVisión" className="h-6 object-contain" />
         </header>
 
         {/* Contenido scrolleable */}

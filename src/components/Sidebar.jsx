@@ -10,7 +10,8 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
   // Determinar cultivo activo desde la URL: /cultivo/:id
   const partes = pathname.split('/')
   const cultivoActivo = partes[1] === 'cultivo' ? partes[2] : null
-  const colapsado = !!cultivoActivo
+  // En móvil abierto siempre expandido; en desktop colapsa cuando hay cultivo activo
+  const colapsado = !!cultivoActivo && !mobileOpen
 
   function seleccionar(cultivoId) {
     if (cultivoId === cultivoActivo) {

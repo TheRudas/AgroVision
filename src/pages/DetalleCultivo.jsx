@@ -65,7 +65,7 @@ function SeccionClima({ clima }) {
       <div className="flex flex-col gap-4">
         <div>
           <p className="text-agro-cardLabel text-xs font-cuerpo uppercase tracking-wide mb-2">Temperatura</p>
-          <div className="flex gap-3">
+          <div className="grid grid-cols-3 gap-3">
             <TemperaturaCard label="Máxima" valor={temperatura.maxima} unidad={temperatura.unidad} />
             <TemperaturaCard label="Media"  valor={temperatura.media}  unidad={temperatura.unidad} />
             <TemperaturaCard label="Mínima" valor={temperatura.minima} unidad={temperatura.unidad} />
@@ -165,7 +165,7 @@ export default function DetalleCultivo() {
   }
 
   return (
-    <div className="p-6 sm:p-8 flex flex-col max-w-3xl">
+    <div className="p-4 sm:p-6 lg:p-8 flex flex-col w-full">
       <div className="flex items-center gap-4">
         <span className="text-5xl">{cultivo.emoji}</span>
         <div>
