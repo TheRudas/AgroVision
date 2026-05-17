@@ -67,7 +67,7 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
               <img
                 src="/down text.png"
                 alt="Una guía para tu cultivo"
-                className="h-4 object-contain object-left"
+                className="object-contain object-left w-[80%]"
               />
             </div>
           )}
