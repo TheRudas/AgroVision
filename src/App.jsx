@@ -45,8 +45,11 @@ function Layout() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-          <img src="/logo Agrovision.png" alt="AgroVisión" className="w-7 h-7 object-contain" />
-          <img src="/texto Agrovision.png" alt="AgroVisión" className="h-6 object-contain" />
+          <img src="/logo Agrovision.png" alt="AgroVisión" className="w-7 h-7 object-contain shrink-0" />
+          <div className="flex flex-col gap-0.5">
+            <img src="/texto Agrovision.png" alt="AgroVisión" className="h-5 object-contain object-left" />
+            <img src="/down text.png" alt="Una guía para tu cultivo" className="h-3 object-contain object-left" />
+          </div>
         </header>
 
         <AnimatedRoutes />
