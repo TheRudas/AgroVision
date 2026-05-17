@@ -1,0 +1,301 @@
+[
+  {
+    "id": "mango",
+    "nombre": "Mango",
+    "emoji": "🥭",
+    "descripcion": "Mangifera indica. Cultivo tropical que requiere un período de estrés hídrico de 2 a 3 meses para inducir la floración.",
+    "imagen_url": null,
+    "condiciones_suelo": {
+      "humedad": "100-150 mm de lluvia mensual. Requiere humedad constante y moderada.",
+      "textura": "Franco-arenoso o franco-arcilloso",
+      "profundidad": "Mínimo 1.5 metros de profundidad efectiva",
+      "ph": "5.5 - 7.5 (ligeramente ácido a neutro)"
+    },
+    "clima": {
+      "temperatura": {
+        "maxima": 30,
+        "media": 27,
+        "minima": 24,
+        "unidad": "°C",
+        "nota": "Temperatura ideal entre 24°C y 30°C"
+      },
+      "horas_luz": {
+        "valor": "8-10",
+        "nota": "Requiere alta luminosidad. Mínimo 8-10 horas de luz solar directa al día."
+      },
+      "rango_humedad": {
+        "minimo": 100,
+        "maximo": 150,
+        "unidad": "mm/mes",
+        "nota": "Requiere entre 100 y 150 mm de lluvia mensual."
+      }
+    },
+    "nutricion": {
+      "requerimientos": [
+        "Nitrógeno (N) y Fósforo (P) en etapa vegetativa",
+        "Fósforo (P), Boro (B) y Zinc (Zn) en floración — reducir N a cero",
+        "Potasio (K) y Calcio (Ca) en llenado del fruto"
+      ],
+      "fertilizantes": [
+        "Urea y nitrato de amonio — fuente de Nitrógeno (N)",
+        "Superfosfato triple y DAP — fuente de Fósforo (P)",
+        "Sulfato de potasio — fuente de Potasio (K); preferible sobre cloruro por sensibilidad al cloro",
+        "Quelatos de hierro, zinc, boro y manganeso aplicados vía foliar",
+        "Compost, estiércol maduro o humus de lombriz antes de época de lluvias"
+      ]
+    },
+    "fenologia": {
+      "etapas": [
+        {
+          "nombre": "Crecimiento vegetativo",
+          "duracion": "[Aquí iría la duración en días]",
+          "descripcion": "Nutriente clave: Nitrógeno (N). Se aplican fórmulas ricas en N y P para desarrollo de raíces (Urea o DAP)."
+        },
+        {
+          "nombre": "Inducción y floración",
+          "duracion": "[Aquí iría la duración en días]",
+          "descripcion": "Nutrientes ideales: Fósforo (P), Boro (B) y Zinc (Zn). El nitrógeno debe reducirse a cero — un exceso provoca brotes vegetativos en lugar de flores."
+        },
+        {
+          "nombre": "Amarre y llenado del fruto",
+          "duracion": "[Aquí iría la duración en días]",
+          "descripcion": "Nutrientes clave: Potasio (K) y Calcio (Ca). Aplicaciones altas de sulfato de potasio desde que el fruto tiene el tamaño de una aceituna hasta la madurez."
+        }
+      ]
+    }
+  },
+  {
+    "id": "banano",
+    "nombre": "Banano",
+    "emoji": "🍌",
+    "descripcion": "Cultivo tropical de alta demanda hídrica. Las raíces mueren por asfixia si el suelo se satura más de 48 horas — el drenaje adecuado es el factor más crítico en suelos arcillosos.",
+    "imagen_url": null,
+    "condiciones_suelo": {
+      "humedad": "120-150 mm de lluvia mensual.",
+      "textura": "Franco, franco-arenoso o franco-arcilloso",
+      "profundidad": "Mínimo 1 metro de profundidad efectiva",
+      "ph": "5.5 - 6.5 (ligeramente ácido)"
+    },
+    "clima": {
+      "temperatura": {
+        "maxima": 30,
+        "media": 27,
+        "minima": 24,
+        "unidad": "°C",
+        "nota": "Temperatura ideal entre 24°C y 30°C"
+      },
+      "horas_luz": {
+        "valor": "6-8",
+        "nota": "Requiere entre 6 y 8 horas de luz solar directa al día."
+      },
+      "rango_humedad": {
+        "minimo": 120,
+        "maximo": 150,
+        "unidad": "mm/mes",
+        "nota": "Requiere entre 120 y 150 mm de lluvia mensual."
+      }
+    },
+    "nutricion": {
+      "requerimientos": [
+        "Nitrógeno (N) y Fósforo (P) en etapa vegetativa",
+        "Potasio (K), Calcio (Ca), Boro (B) y Zinc (Zn) en diferenciación floral",
+        "Potasio (K) y Calcio (Ca) dominan la fase de fructificación"
+      ],
+      "fertilizantes": [
+        "Urea o nitrato de amonio — fuente de Nitrógeno (N)",
+        "MAP o superfosfato triple — fuente de Fósforo (P)",
+        "Cloruro de potasio KCl — fuente de Potasio (K); usar sulfato de potasio en suelos con salinidad",
+        "Nitrato de calcio y sulfato de magnesio",
+        "Residuos del cultivo (hojas y pseudotallo) — reciclaje de potasio",
+        "Materia orgánica compostada para retención hídrica"
+      ]
+    },
+    "fenologia": {
+      "etapas": [
+        {
+          "nombre": "Vegetativa — crecimiento foliar",
+          "duracion": "[Aquí iría la duración en días]",
+          "descripcion": "Nutrientes clave: Nitrógeno (N) y Fósforo (P). El N impulsa el área foliar que alimentará el futuro racimo, el P estimula el enraizamiento inicial."
+        },
+        {
+          "nombre": "Diferenciación floral",
+          "duracion": "[Aquí iría la duración en días]",
+          "descripcion": "Nutrientes clave: Potasio (K), Calcio (Ca), Boro (B) y Zinc (Zn). El Boro y Zinc son cruciales para la correcta formación de las flores internas."
+        },
+        {
+          "nombre": "Floración a cosecha — fructificación",
+          "duracion": "[Aquí iría la duración en días]",
+          "descripcion": "El Potasio domina completamente esta fase, transportando carbohidratos desde las hojas al racimo. El Calcio previene debilidad en el cuello del racimo y mejora la vida útil en percha."
+        }
+      ]
+    }
+  },
+  {
+    "id": "aji",
+    "nombre": "Ají",
+    "emoji": "🌶️",
+    "descripcion": "[Aquí iría la descripción general del cultivo]",
+    "imagen_url": null,
+    "condiciones_suelo": {
+      "humedad": "[Aquí iría el rango de humedad del suelo requerido]",
+      "textura": "[Aquí iría la textura del suelo recomendada]"
+    },
+    "clima": {
+      "temperatura": {
+        "maxima": null,
+        "media": null,
+        "minima": null,
+        "unidad": "°C",
+        "nota": "[Aquí irían los rangos de temperatura óptimos]"
+      },
+      "horas_luz": {
+        "valor": null,
+        "nota": "[Aquí iría el requerimiento de horas luz diarias]"
+      },
+      "rango_humedad": {
+        "minimo": null,
+        "maximo": null,
+        "unidad": "%",
+        "nota": "[Aquí iría el rango de humedad relativa ambiental]"
+      }
+    },
+    "nutricion": {
+      "requerimientos": "[Aquí irían los requerimientos nutricionales principales (N, P, K, etc.)]"
+    },
+    "fenologia": {
+      "etapas": [
+        {
+          "nombre": "[Nombre de la etapa]",
+          "duracion": "[Aquí iría la duración en días]",
+          "descripcion": "[Aquí iría la descripción de la etapa fenológica]"
+        }
+      ]
+    }
+  },
+  {
+    "id": "maiz",
+    "nombre": "Maíz",
+    "emoji": "🌽",
+    "descripcion": "[Aquí iría la descripción general del cultivo]",
+    "imagen_url": null,
+    "condiciones_suelo": {
+      "humedad": "[Aquí iría el rango de humedad del suelo requerido]",
+      "textura": "[Aquí iría la textura del suelo recomendada]"
+    },
+    "clima": {
+      "temperatura": {
+        "maxima": null,
+        "media": null,
+        "minima": null,
+        "unidad": "°C",
+        "nota": "[Aquí irían los rangos de temperatura óptimos]"
+      },
+      "horas_luz": {
+        "valor": null,
+        "nota": "[Aquí iría el requerimiento de horas luz diarias]"
+      },
+      "rango_humedad": {
+        "minimo": null,
+        "maximo": null,
+        "unidad": "%",
+        "nota": "[Aquí iría el rango de humedad relativa ambiental]"
+      }
+    },
+    "nutricion": {
+      "requerimientos": "[Aquí irían los requerimientos nutricionales principales (N, P, K, etc.)]"
+    },
+    "fenologia": {
+      "etapas": [
+        {
+          "nombre": "[Nombre de la etapa]",
+          "duracion": "[Aquí iría la duración en días]",
+          "descripcion": "[Aquí iría la descripción de la etapa fenológica]"
+        }
+      ]
+    }
+  },
+  {
+    "id": "palma",
+    "nombre": "Palma de Aceite",
+    "emoji": "🌴",
+    "descripcion": "[Aquí iría la descripción general del cultivo]",
+    "imagen_url": null,
+    "condiciones_suelo": {
+      "humedad": "[Aquí iría el rango de humedad del suelo requerido]",
+      "textura": "[Aquí iría la textura del suelo recomendada]"
+    },
+    "clima": {
+      "temperatura": {
+        "maxima": null,
+        "media": null,
+        "minima": null,
+        "unidad": "°C",
+        "nota": "[Aquí irían los rangos de temperatura óptimos]"
+      },
+      "horas_luz": {
+        "valor": null,
+        "nota": "[Aquí iría el requerimiento de horas luz diarias]"
+      },
+      "rango_humedad": {
+        "minimo": null,
+        "maximo": null,
+        "unidad": "%",
+        "nota": "[Aquí iría el rango de humedad relativa ambiental]"
+      }
+    },
+    "nutricion": {
+      "requerimientos": "[Aquí irían los requerimientos nutricionales principales (N, P, K, etc.)]"
+    },
+    "fenologia": {
+      "etapas": [
+        {
+          "nombre": "[Nombre de la etapa]",
+          "duracion": "[Aquí iría la duración en días]",
+          "descripcion": "[Aquí iría la descripción de la etapa fenológica]"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sandia",
+    "nombre": "Sandía",
+    "emoji": "🍉",
+    "descripcion": "[Aquí iría la descripción general del cultivo]",
+    "imagen_url": null,
+    "condiciones_suelo": {
+      "humedad": "[Aquí iría el rango de humedad del suelo requerido]",
+      "textura": "[Aquí iría la textura del suelo recomendada]"
+    },
+    "clima": {
+      "temperatura": {
+        "maxima": null,
+        "media": null,
+        "minima": null,
+        "unidad": "°C",
+        "nota": "[Aquí irían los rangos de temperatura óptimos]"
+      },
+      "horas_luz": {
+        "valor": null,
+        "nota": "[Aquí iría el requerimiento de horas luz diarias]"
+      },
+      "rango_humedad": {
+        "minimo": null,
+        "maximo": null,
+        "unidad": "%",
+        "nota": "[Aquí iría el rango de humedad relativa ambiental]"
+      }
+    },
+    "nutricion": {
+      "requerimientos": "[Aquí irían los requerimientos nutricionales principales (N, P, K, etc.)]"
+    },
+    "fenologia": {
+      "etapas": [
+        {
+          "nombre": "[Nombre de la etapa]",
+          "duracion": "[Aquí iría la duración en días]",
+          "descripcion": "[Aquí iría la descripción de la etapa fenológica]"
+        }
+      ]
+    }
+  }
+]
