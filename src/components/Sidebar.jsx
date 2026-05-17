@@ -58,11 +58,18 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
             className="w-9 h-9 object-contain shrink-0"
           />
           {(!colapsado || hovered) && (
-            <img
-              src="/texto Agrovision.png"
-              alt="AgroVisión"
-              className="h-7 object-contain object-left"
-            />
+            <div className="flex flex-col gap-0.5">
+              <img
+                src="/texto Agrovision.png"
+                alt="AgroVisión"
+                className="h-7 object-contain object-left w-full"
+              />
+              <img
+                src="/down text.png"
+                alt="Una guía para tu cultivo"
+                className="object-contain object-left w-[80%]"
+              />
+            </div>
           )}
         </div>
 
@@ -82,7 +89,7 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
                       : 'gap-3 px-4 py-2.5 text-left',
                     esActivo
                       ? 'bg-agro-lima/15 text-agro-lima'
-                      : 'text-agro-text hover:bg-agro-accent/40',
+                      : 'text-agro-text hover:bg-agro-lima/10',
                   ].join(' ')}
                 >
                   <span className={colapsado && !hovered ? 'text-2xl' : 'text-xl shrink-0'}>
