@@ -21,7 +21,7 @@
         "media": 27,
         "minima": 20,
         "unidad": "°C",
-        "nota": "El fruto tolera hasta 16°C pero produce bien desde 20°C y 32°C"
+        "nota": "El fruto tolera hasta 16°C pero produce bien desde 20°C y 32°C. Según: DANE Colombia, InfoAgro, Herbario Virtual MGM"
       },
       "horas_luz": {
         "valor": "8-10",
@@ -90,7 +90,7 @@
         "media": 27,
         "minima": 20,
         "unidad": "°C",
-        "nota": "El rango favorable arranca desde 20°C a 30°C (por debajo de 16°C se paraliza)"
+        "nota": "El rango favorable arranca desde 20°C a 30°C (por debajo de 16°C se paraliza). Según: DANE Colombia, InfoAgro, Herbario Virtual MGM"
       },
       "horas_luz": {
         "valor": "6-8",
@@ -160,7 +160,7 @@
         "media": 24,
         "minima": 20,
         "unidad": "°C",
-        "nota": "Temperatura ideal entre 20°C y 28°C"
+        "nota": "Temperatura ideal entre 20°C y 28°C. Según: DANE Colombia, InfoAgro, Herbario Virtual MGM"
       },
       "horas_luz": {
         "valor": "6-8",
@@ -230,7 +230,7 @@
         "media": 24,
         "minima": 18,
         "unidad": "°C",
-        "nota": "Temperatura ideal entre 18°C y 30°C"
+        "nota": "Temperatura ideal entre 18°C y 30°C. Según: DANE Colombia, InfoAgro, Herbario Virtual MGM"
       },
       "horas_luz": {
         "valor": "8-10",
@@ -299,7 +299,7 @@
         "media": 27,
         "minima": 24,
         "unidad": "°C",
-        "nota": "Temperatura ideal entre 24°C y 33°C"
+        "nota": "Temperatura ideal entre 24°C y 33°C. Según: DANE Colombia, InfoAgro, Herbario Virtual MGM"
       },
       "horas_luz": {
         "valor": "Mínimo 8",
@@ -374,7 +374,7 @@
         "media": 26,
         "minima": 22,
         "unidad": "°C",
-        "nota": "Temperatura ideal entre 22°C y 30°C"
+        "nota": "Temperatura ideal entre 22°C y 30°C. Según: DANE Colombia, InfoAgro, Herbario Virtual MGM"
       },
       "horas_luz": {
         "valor": "8-10",
