@@ -2,14 +2,16 @@
   {
     "id": "mango",
     "nombre": "Mango",
+    "nombre_cientifico": "Mangifera indica",
     "emoji": "🥭",
-    "descripcion": "Mangifera indica. Cultivo tropical que requiere un período de estrés hídrico de 2 a 3 meses para inducir la floración.",
+    "descripcion": "Cultivo tropical que requiere un período de estrés hídrico de 2 a 3 meses para inducir la floración.",
     "imagen_url": null,
     "condiciones_suelo": {
       "humedad": "100-150 mm de lluvia mensual. Requiere humedad constante y moderada.",
       "textura": "Franco-arenoso o franco-arcilloso",
       "profundidad": "Mínimo 1.5 metros de profundidad efectiva",
-      "ph": "5.5 - 7.5 (ligeramente ácido a neutro)"
+      "ph": "5.5 - 7.5 (ligeramente ácido a neutro)",
+      "tip_textura": "Toma un puñado de suelo húmedo y apriétalo. Si la bola se desarma fácilmente y sientes granos al frotarla, es franco-arenoso — ideal. Si se mantiene firme y puedes moldearla levemente, tiene más arcilla: aún sirve, pero vigilá que no se encharque entre riegos."
     },
     "clima": {
       "temperatura": {
@@ -48,17 +50,17 @@
       "etapas": [
         {
           "nombre": "Crecimiento vegetativo",
-          "duracion": "[Aquí iría la duración en días]",
+          "duracion": "45-60 días por oleada de brotación; el árbol puede emitir 2-3 oleadas por año según clima y manejo",
           "descripcion": "Nutriente clave: Nitrógeno (N). Se aplican fórmulas ricas en N y P para desarrollo de raíces (Urea o DAP)."
         },
         {
           "nombre": "Inducción y floración",
-          "duracion": "[Aquí iría la duración en días]",
+          "duracion": "2-3 meses de estrés hídrico para inducir + 30-50 días desde brotación floral hasta amarre del fruto",
           "descripcion": "Nutrientes ideales: Fósforo (P), Boro (B) y Zinc (Zn). El nitrógeno debe reducirse a cero — un exceso provoca brotes vegetativos en lugar de flores."
         },
         {
           "nombre": "Amarre y llenado del fruto",
-          "duracion": "[Aquí iría la duración en días] ",
+          "duracion": "105-130 días desde amarre hasta madurez comercial (varía según variedad y altitud)",
           "descripcion": "Nutrientes clave: Potasio (K) y Calcio (Ca). Aplicaciones altas de sulfato de potasio desde que el fruto tiene el tamaño de una aceituna hasta la madurez."
         }
       ]
@@ -67,6 +69,7 @@
   {
     "id": "banano",
     "nombre": "Banano",
+    "nombre_cientifico": "Musa acuminata",
     "emoji": "🍌",
     "descripcion": "Cultivo tropical de alta demanda hídrica. Las raíces mueren por asfixia si el suelo se satura más de 48 horas — el drenaje adecuado es el factor más crítico en suelos arcillosos.",
     "imagen_url": null,
@@ -74,7 +77,8 @@
       "humedad": "120-150 mm de lluvia mensual.",
       "textura": "Franco, franco-arenoso o franco-arcilloso",
       "profundidad": "Mínimo 1 metro de profundidad efectiva",
-      "ph": "5.5 - 6.5 (ligeramente ácido)"
+      "ph": "5.5 - 6.5 (ligeramente ácido)",
+      "tip_textura": "Aprieta un puñado húmedo. Si la bola se sostiene pero se rompe con poca presión y no es pegajosa, es suelo franco — perfecto. Si se desarma sola es muy arenoso y retiene poca agua; si se moldea como plastilina tiene demasiada arcilla y puede asfixiar las raíces en menos de 48 horas."
     },
     "clima": {
       "temperatura": {
@@ -114,17 +118,17 @@
       "etapas": [
         {
           "nombre": "Vegetativa — crecimiento foliar",
-          "duracion": "[Aquí iría la duración en días]",
+          "duracion": "~180 días (6 meses desde siembra hasta diferenciación floral)",
           "descripcion": "Nutrientes clave: Nitrógeno (N) y Fósforo (P). El N impulsa el área foliar que alimentará el futuro racimo, el P estimula el enraizamiento inicial."
         },
         {
           "nombre": "Diferenciación floral",
-          "duracion": "[Aquí iría la duración en días]",
+          "duracion": "~90 días (3 meses; ocurre alrededor de la hoja 19-21 del pseudotallo)",
           "descripcion": "Nutrientes clave: Potasio (K), Calcio (Ca), Boro (B) y Zinc (Zn). El Boro y Zinc son cruciales para la correcta formación de las flores internas."
         },
         {
           "nombre": "Floración a cosecha — fructificación",
-          "duracion": "[Aquí iría la duración en días]",
+          "duracion": "81-90 días (desde emisión de la bellota hasta corte del racimo)",
           "descripcion": "El Potasio domina completamente esta fase, transportando carbohidratos desde las hojas al racimo. El Calcio previene debilidad en el cuello del racimo y mejora la vida útil en percha."
         }
       ]
@@ -133,41 +137,67 @@
   {
     "id": "aji",
     "nombre": "Ají",
+    "nombre_cientifico": "Capsicum spp.",
     "emoji": "🌶️",
-    "descripcion": "[Aquí iría la descripción general del cultivo]",
+    "descripcion": "Cultivo de alto valor que requiere humedad constante y excelente drenaje. Muy sensible a encharcamientos y a las deficiencias de calcio, que provocan pudrición apical del fruto.",
     "imagen_url": null,
     "condiciones_suelo": {
-      "humedad": "[Aquí iría el rango de humedad del suelo requerido]",
-      "textura": "[Aquí iría la textura del suelo recomendada]"
+      "humedad": "90-120 mm de lluvia mensual. Evitar encharcamientos.",
+      "textura": "Franco-arenoso o franco-arcilloso con excelente drenaje",
+      "profundidad": "Mínimo 80 cm de profundidad efectiva, idealmente 1 metro",
+      "ph": "6.0 - 7.0 (ligeramente ácido a neutro)",
+      "tip_textura": "Aprieta un puñado húmedo: la bola debe desarmarse con un toque suave y sentirse algo granulada — eso indica buen drenaje, lo cual importa muchisimo para este cultivo. Si la bola se sostiene firme o se pega a los dedos, el suelo retiene demasiada agua y el ají experimentará pudrición de raíces."
     },
     "clima": {
       "temperatura": {
-        "maxima": null,
-        "media": null,
-        "minima": null,
+        "maxima": 28,
+        "media": 24,
+        "minima": 20,
         "unidad": "°C",
-        "nota": "[Aquí irían los rangos de temperatura óptimos]"
+        "nota": "Temperatura ideal entre 20°C y 28°C"
       },
       "horas_luz": {
-        "valor": null,
-        "nota": "[Aquí iría el requerimiento de horas luz diarias]"
+        "valor": "6-8",
+        "nota": "Requiere entre 6 y 8 horas de luz solar directa al día."
       },
       "rango_humedad": {
-        "minimo": null,
-        "maximo": null,
-        "unidad": "%",
-        "nota": "[Aquí iría el rango de humedad relativa ambiental]"
+        "minimo": 90,
+        "maximo": 120,
+        "unidad": "mm/mes",
+        "nota": "Requiere entre 90 y 120 mm de lluvia mensual, evitando encharcamientos."
       }
     },
     "nutricion": {
-      "requerimientos": "[Aquí irían los requerimientos nutricionales principales (N, P, K, etc.)]"
+      "requerimientos": [
+        "Nitrógeno (N) y Fósforo (P) en etapa vegetativa para crecimiento radicular y foliar",
+        "Fósforo (P), Boro (B) y Calcio (Ca) en floración y cuajado — las deficiencias provocan caída de flores",
+        "Potasio (K) y Calcio (Ca) en llenado y maduración — K mejora tamaño y color; Ca previene pudrición apical"
+      ],
+      "fertilizantes": [
+        "Nitrato de calcio (muy recomendado), urea o nitrato de amonio — fuente de Nitrógeno (N)",
+        "MAP, DAP o superfosfato triple — fuente de Fósforo (P)",
+        "Sulfato de potasio (preferido) o nitrato de potasio (muy usado en fertirriego) — fuente de Potasio (K)",
+        "Nitrato de calcio y sulfato de magnesio — fuente de Calcio (Ca) y Magnesio (Mg)",
+        "Micronutrientes: boro, zinc, hierro y molibdeno, frecuentemente vía foliar",
+        "Compost, humus de lombriz o estiércol maduro antes del trasplante"
+      ]
     },
     "fenologia": {
       "etapas": [
         {
-          "nombre": "[Nombre de la etapa]",
-          "duracion": "[Aquí iría la duración en días]",
-          "descripcion": "[Aquí iría la descripción de la etapa fenológica]"
+          "nombre": "Vegetativa — plántula y crecimiento inicial",
+          "duracion": "Día 0 al Día 20-30 (desde trasplante)",
+          "descripcion": "Nutrientes clave: Nitrógeno (N) y Fósforo (P) para crecimiento radicular y foliar."
+        },
+        {
+          "nombre": "Floración y cuajado",
+          "duracion": "Día 20-45 (floración inicia entre los 20-45 días post-trasplante)",
+          "descripcion": "Nutrientes ideales: Fósforo (P), Boro (B) y Calcio (Ca). Las deficiencias provocan caída de flores y mala formación de frutos."
+        },
+        {
+          "nombre": "Llenado y maduración de frutos",
+          "duracion": "Día 45 al Día 80-110 (cosecha en verde ~70-90 días; en maduro ~90-110 días post-trasplante)",
+          "descripcion": "Nutrientes clave: Potasio (K) y Calcio (Ca). El potasio mejora tamaño, color y calidad del fruto; el calcio previene la pudrición apical."
         }
       ]
     }
@@ -175,41 +205,66 @@
   {
     "id": "maiz",
     "nombre": "Maíz",
+    "nombre_cientifico": "Zea mays",
     "emoji": "🌽",
-    "descripcion": "[Aquí iría la descripción general del cultivo]",
+    "descripcion": "Cultivo de alta demanda lumínica y muy sensible al déficit hídrico durante la floración y el llenado del grano. Requiere suelos profundos con buen drenaje y alta disponibilidad de nitrógeno en su etapa de mayor crecimiento.",
     "imagen_url": null,
     "condiciones_suelo": {
-      "humedad": "[Aquí iría el rango de humedad del suelo requerido]",
-      "textura": "[Aquí iría la textura del suelo recomendada]"
+      "humedad": "80-120 mm de lluvia mensual. Muy sensible al déficit hídrico en floración y llenado de grano.",
+      "textura": "Franco, franco-arenoso o franco-arcilloso con buen drenaje",
+      "profundidad": "Mínimo 1 - 1.5 metros de profundidad efectiva",
+      "ph": "5.5 - 7.0 (ligeramente ácido a neutro)",
+      "tip_textura": "Aprieta un puñado húmedo. Lo ideal es que forme una bola que aguante su forma pero se rompa limpiamente con los dedos — suelo franco con buen equilibrio. Si se desarma solo es muy arenoso y perderá agua rápido en floración; si es pegajoso y brillante al frotarlo, drena mal y puede asfixiar la raíz."
     },
     "clima": {
       "temperatura": {
-        "maxima": null,
-        "media": null,
-        "minima": null,
+        "maxima": 30,
+        "media": 24,
+        "minima": 18,
         "unidad": "°C",
-        "nota": "[Aquí irían los rangos de temperatura óptimos]"
+        "nota": "Temperatura ideal entre 18°C y 30°C"
       },
       "horas_luz": {
-        "valor": null,
-        "nota": "[Aquí iría el requerimiento de horas luz diarias]"
+        "valor": "8-10",
+        "nota": "Requiere alta luminosidad. Mínimo 8-10 horas de sol directo al día."
       },
       "rango_humedad": {
-        "minimo": null,
-        "maximo": null,
-        "unidad": "%",
-        "nota": "[Aquí iría el rango de humedad relativa ambiental]"
+        "minimo": 80,
+        "maximo": 120,
+        "unidad": "mm/mes",
+        "nota": "Requiere entre 80 y 120 mm de lluvia mensual. Crítico en floración y llenado de grano."
       }
     },
     "nutricion": {
-      "requerimientos": "[Aquí irían los requerimientos nutricionales principales (N, P, K, etc.)]"
+      "requerimientos": [
+        "Fósforo (P) y Zinc (Zn) en germinación y establecimiento para favorecer el desarrollo radicular",
+        "Nitrógeno (N) en crecimiento vegetativo rápido para desarrollo del área foliar y el tallo",
+        "Nitrógeno (N) y Potasio (K) en floración y llenado de grano — el estrés en esta etapa reduce fuertemente el rendimiento"
+      ],
+      "fertilizantes": [
+        "Urea, nitrato de amonio o sulfato de amonio (en suelos con deficiencia de azufre) — fuente de Nitrógeno (N)",
+        "DAP o MAP — fuente de Fósforo (P); recomendados como fertilización de arranque",
+        "Cloruro de potasio (KCl) o sulfato de potasio en suelos salinos — fuente de Potasio (K)",
+        "Zinc (muy importante en maíz), boro y azufre — aplicados al suelo o vía foliar según diagnóstico",
+        "Compost, gallinaza, estiércol bovino o humus de lombriz antes de la siembra"
+      ]
     },
     "fenologia": {
       "etapas": [
         {
-          "nombre": "[Nombre de la etapa]",
-          "duracion": "[Aquí iría la duración en días]",
-          "descripcion": "[Aquí iría la descripción de la etapa fenológica]"
+          "nombre": "Germinación y establecimiento",
+          "duracion": "Día 0 al Día 15 (emergencia en 7-10 días; establecimiento hasta ~2 semanas)",
+          "descripcion": "Nutrientes clave: Fósforo (P) y Zinc (Zn). Se recomienda fertilización de arranque (DAP o MAP) para favorecer el desarrollo radicular."
+        },
+        {
+          "nombre": "Crecimiento vegetativo rápido",
+          "duracion": "Día 15 al Día 55-65 (finaliza con la aparición de estigmas y espiga)",
+          "descripcion": "Nutriente clave: Nitrógeno (N), necesario para el desarrollo del área foliar y el tallo."
+        },
+        {
+          "nombre": "Floración y llenado de grano",
+          "duracion": "Día 60 al Día 100-130 (madurez fisiológica entre los 125-130 días desde emergencia)",
+          "descripcion": "Nutrientes clave: Nitrógeno (N) y Potasio (K). El estrés hídrico o nutricional en esta etapa reduce fuertemente el rendimiento."
         }
       ]
     }
@@ -217,41 +272,72 @@
   {
     "id": "palma",
     "nombre": "Palma de Aceite",
+    "nombre_cientifico": "Elaeis guineensis",
     "emoji": "🌴",
-    "descripcion": "[Aquí iría la descripción general del cultivo]",
+    "descripcion": "Cultivo perenne de producción continua durante todo el año y vida productiva de 25 a 30 años. Altamente exigente en nutrientes — especialmente Potasio, que es el elemento de mayor extracción por tonelada de racimo cosechado. No tolera sequías prolongadas ni encharcamientos.",
     "imagen_url": null,
     "condiciones_suelo": {
-      "humedad": "[Aquí iría el rango de humedad del suelo requerido]",
-      "textura": "[Aquí iría la textura del suelo recomendada]"
+      "humedad": "150-200 mm mensuales bien distribuidos. No tolera periodos de sequía prolongados ni déficits hídricos.",
+      "textura": "Franco, franco-arcilloso o franco-arenoso. Buena capacidad de retención de agua con excelente porosidad. No tolera suelos arcillosos pesados que provoquen encharcamientos.",
+      "profundidad": "Mínimo 1.0 metro de profundidad efectiva, libre de capas duras, rocas o niveles freáticos altos.",
+      "ph": "5.0 - 6.0 (moderadamente ácido a ligeramente ácido). Tolera rangos entre 4.5 y 6.5.",
+      "tip_textura": "Aprieta un puñado húmedo. La bola debe sostenerse firme sin pegarse a los dedos ni brillar — señal de textura equilibrada con buena porosidad. Si al presionarla sale agua o se aplana sin romperse, el suelo es demasiado arcilloso y retendrá agua en exceso, lo que la palma no tolera pese a su alta demanda hídrica."
     },
     "clima": {
       "temperatura": {
-        "maxima": null,
-        "media": null,
-        "minima": null,
+        "maxima": 33,
+        "media": 27,
+        "minima": 24,
         "unidad": "°C",
-        "nota": "[Aquí irían los rangos de temperatura óptimos]"
+        "nota": "Temperatura ideal entre 24°C y 33°C"
       },
       "horas_luz": {
-        "valor": null,
-        "nota": "[Aquí iría el requerimiento de horas luz diarias]"
+        "valor": "Mínimo 8",
+        "nota": "Requiere alta luminosidad. Mínimo 8 horas de luz solar directa al día."
       },
       "rango_humedad": {
-        "minimo": null,
-        "maximo": null,
-        "unidad": "%",
-        "nota": "[Aquí iría el rango de humedad relativa ambiental]"
+        "minimo": 150,
+        "maximo": 200,
+        "unidad": "mm/mes",
+        "nota": "Requiere entre 150 y 200 mm de lluvia mensual bien distribuidos."
       }
     },
     "nutricion": {
-      "requerimientos": "[Aquí irían los requerimientos nutricionales principales (N, P, K, etc.)]"
+      "requerimientos": [
+        "Fósforo (P) y Nitrógeno (N) en vivero para enraizamiento y desarrollo foliar inicial",
+        "Nitrógeno (N), Fósforo (P) y Magnesio (Mg) en establecimiento vegetativo para máxima acumulación de biomasa",
+        "Potasio (K), Nitrógeno (N) y Boro (B) en inicio de producción — el K pasa a ser el elemento más exigente",
+        "Potasio (K), Nitrógeno (N), Magnesio (Mg) y Cloro (Cl) en producción estabilizada — balancear relación K/Mg para evitar bloqueos"
+      ],
+      "fertilizantes": [
+        "Urea o nitrato de amonio — fuente de Nitrógeno (N)",
+        "Superfosfato triple o DAP — fuente de Fósforo (P); aplicado en el hoyo de siembra durante el trasplante",
+        "Cloruro de potasio (KCl) — fuente de Potasio (K) y Cloro (Cl); el elemento de mayor extracción por racimo cosechado",
+        "Sulfato de magnesio o kieserita — fuente de Magnesio (Mg); esencial para balancear altas aplicaciones de K",
+        "Bórax o ácido bórico — fuente de Boro (B); microelemento crítico para evitar malformaciones foliares y aborto de flores"
+      ]
     },
     "fenologia": {
       "etapas": [
         {
-          "nombre": "[Nombre de la etapa]",
-          "duracion": "[Aquí iría la duración en días]",
-          "descripcion": "[Aquí iría la descripción de la etapa fenológica]"
+          "nombre": "Vivero — pre-vivero y vivero",
+          "duracion": "0 a 12 meses",
+          "descripcion": "Objetivo: desarrollar un sistema radicular fuerte y área foliar sana antes del trasplante. Nutrientes clave: Fósforo (P) — el más crítico en los primeros meses; Nitrógeno (N) en dosis bajas y frecuentes para emisión de hojas; Magnesio (Mg) para formación de clorofila."
+        },
+        {
+          "nombre": "Establecimiento y desarrollo vegetativo — palma joven improductiva",
+          "duracion": "Año 1 al Año 3",
+          "descripcion": "Objetivo: lograr la máxima arquitectura de la palma para soportar la futura carga productiva. Nutrientes clave: Nitrógeno (N) — acelera la velocidad de emisión foliar; Fósforo (P) — aplicado fuertemente en el hoyo de siembra para exploración radicular profunda; Magnesio (Mg) — evita quema de hojas inferiores y asegura fotosíntesis eficiente."
+        },
+        {
+          "nombre": "Inicio de producción — palmas jóvenes en cosecha",
+          "duracion": "Año 4 al Año 7",
+          "descripcion": "Objetivo: sostener el crecimiento mientras se extraen los primeros nutrientes a través de los racimos. Nutrientes clave: Potasio (K) — pasa a ser el elemento más exigente; Nitrógeno (N) — en niveles estables para no detener el crecimiento; Boro (B) — crítico para evitar aborto de inflorescencias y malformaciones foliares."
+        },
+        {
+          "nombre": "Producción estabilizada — palma adulta",
+          "duracion": "Año 8 al Año 25-30",
+          "descripcion": "Objetivo: maximizar el rendimiento de Racimos de Fruta Fresca (RFF) y el porcentaje de extracción de aceite. Nutrientes clave: Potasio (K) — mayor extracción por tonelada de RFF cosechada; Nitrógeno (N) — mantiene tasa fotosintética y previene amarillamiento; Magnesio (Mg) — balancear relación K/Mg para evitar clorosis; Cloro (Cl) — actúa casi como macronutriente, optimiza uso del agua y la respuesta al K."
         }
       ]
     }
@@ -259,41 +345,73 @@
   {
     "id": "sandia",
     "nombre": "Sandía",
+    "nombre_cientifico": "Citrullus lanatus",
     "emoji": "🍉",
-    "descripcion": "[Aquí iría la descripción general del cultivo]",
+    "descripcion": "Cultivo de ciclo corto (90-110 días) y crecimiento sumamente rápido. Muy sensible al exceso de agua — el encharcamiento provoca asfixia radicular. Un riego excesivo o fluctuante al final del ciclo puede rajar los frutos o disminuir su contenido de azúcar (grados Brix).",
     "imagen_url": null,
     "condiciones_suelo": {
-      "humedad": "[Aquí iría el rango de humedad del suelo requerido]",
-      "textura": "[Aquí iría la textura del suelo recomendada]"
+      "humedad": "80-120 mm mensuales durante crecimiento y desarrollo del fruto. Sumamente sensible al exceso de agua.",
+      "textura": "Franco-arenoso, franco-limoso o franco. Suelos sueltos con excelente aireación y drenaje impecable. Los suelos arenosos son ideales para cosechas tempranas.",
+      "profundidad": "0.6 a 1.0 metro de profundidad efectiva. La mayor parte de raíces absorbentes se concentra en los primeros 30-40 cm.",
+      "ph": "5.5 - 7.0 (ligeramente ácido a neutro). En pH menor a 5.5 puede presentarse toxicidad por manganeso o aluminio y deficiencia de calcio.",
+      "tip_textura": "Aprieta un puñado húmedo. Si la bola se desarma fácil y sientes granos, es franco-arenoso — ideal para cosechas tempranas. Si al frotarla se siente sedosa y harinosa como talco, es franco-limosa — también funciona bien. Lo que debes evitar es cualquier suelo que se pegue o brille al frotarlo: con raíces tan sensibles al exceso de agua, la arcilla es el mayor riesgo."
     },
     "clima": {
       "temperatura": {
-        "maxima": null,
-        "media": null,
-        "minima": null,
+        "maxima": 30,
+        "media": 26,
+        "minima": 22,
         "unidad": "°C",
-        "nota": "[Aquí irían los rangos de temperatura óptimos]"
+        "nota": "Temperatura ideal entre 22°C y 30°C"
       },
       "horas_luz": {
-        "valor": null,
-        "nota": "[Aquí iría el requerimiento de horas luz diarias]"
+        "valor": "8-10",
+        "nota": "Requiere alta luminosidad. Mínimo 8-10 horas de luz solar directa al día."
       },
       "rango_humedad": {
-        "minimo": null,
-        "maximo": null,
-        "unidad": "%",
-        "nota": "[Aquí iría el rango de humedad relativa ambiental]"
+        "minimo": 80,
+        "maximo": 120,
+        "unidad": "mm/mes",
+        "nota": "Requiere entre 80 y 120 mm de lluvia mensual. Reducir al final del ciclo para evitar rajado del fruto."
       }
     },
     "nutricion": {
-      "requerimientos": "[Aquí irían los requerimientos nutricionales principales (N, P, K, etc.)]"
+      "requerimientos": [
+        "Fósforo (P) y Nitrógeno (N) en establecimiento — P para enraizamiento rápido, N en dosis bajas para primeras hojas",
+        "Nitrógeno (N) y Magnesio (Mg) en crecimiento vegetativo — impulsan guías y cobertura foliar",
+        "Boro (B), Zinc (Zn) y Fósforo (P) en floración y cuajado — reducir N drásticamente para evitar aborto de flores",
+        "Potasio (K) y Calcio (Ca) en llenado y maduración — K define dulzura y peso final; Ca previene pudrición apical (peseta)"
+      ],
+      "fertilizantes": [
+        "Urea o nitrato de amonio — fuente de Nitrógeno (N); suspender o reducir drásticamente al inicio de floración",
+        "Superfosfato triple o DAP — fuente de Fósforo (P); aplicar en el abonado de fondo",
+        "Sulfato de potasio o cloruro de potasio — fuente de Potasio (K); el elemento más exigente cuantitativamente desde cuajado hasta maduración",
+        "Nitrato de calcio — fuente de Calcio (Ca); vital para prevenir necrobiosis apical y dar firmeza a la cáscara",
+        "Sulfato de magnesio — fuente de Magnesio (Mg); mantiene tasa fotosintética en etapa de llenado",
+        "Micronutrientes vía foliar: hierro, zinc y manganeso para prevenir clorosis en crecimiento acelerado"
+      ]
     },
     "fenologia": {
       "etapas": [
         {
-          "nombre": "[Nombre de la etapa]",
-          "duracion": "[Aquí iría la duración en días]",
-          "descripcion": "[Aquí iría la descripción de la etapa fenológica]"
+          "nombre": "Establecimiento — siembra a post-trasplante",
+          "duracion": "Día 1 al Día 15-20",
+          "descripcion": "Objetivo: estimular el enraizamiento rápido y la adaptación al suelo. Nutrientes clave: Fósforo (P) — el más importante, promueve el sistema radicular; Nitrógeno (N) — en dosis bajas para primeras hojas verdaderas; Calcio (Ca) — esencial para la división celular en puntas de raíces nuevas."
+        },
+        {
+          "nombre": "Crecimiento vegetativo — desarrollo de guías",
+          "duracion": "Día 20 al Día 40-45",
+          "descripcion": "Objetivo: lograr la máxima cobertura foliar antes de la floración. Una planta con pocas hojas no tendrá energía para llenar sandías grandes. Nutrientes clave: Nitrógeno (N) — impulsa el crecimiento rápido de tallos y clorofila; Magnesio (Mg) — mantiene las hojas activas fotosintéticamente; Micronutrientes (hierro, zinc, manganeso) — previenen clorosis por el acelerado ritmo de crecimiento."
+        },
+        {
+          "nombre": "Floración y cuajado del fruto",
+          "duracion": "Día 45 al Día 60",
+          "descripcion": "Objetivo: asegurar la viabilidad del polen y evitar aborto de frutos recién formados. Nutrientes clave: Boro (B) y Zinc (Zn) — el boro es fundamental para la fertilidad del polen y el cuajado exitoso; Nitrógeno (N) — se reduce drásticamente, el exceso provoca aborto de flores; Fósforo (P) — aporta la energía química (ATP) necesaria para la floración."
+        },
+        {
+          "nombre": "Llenado y maduración del fruto",
+          "duracion": "Día 60 al Día 90-110",
+          "descripcion": "Objetivo: maximizar tamaño, grosor de corteza y concentración de azúcares (grados Brix). Nutrientes clave: Potasio (K) — transloca azúcares desde las hojas hacia la pulpa, define sabor dulce, color rojo y peso final; Calcio (Ca) — previene la pudrición apical (peseta) y da firmeza a la cáscara para evitar rajado."
         }
       ]
     }

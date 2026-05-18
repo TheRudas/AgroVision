@@ -48,15 +48,26 @@ function SeccionSuelo({ suelo }) {
 
   return (
     <SeccionCollapsible id="suelo" titulo="Suelo">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {campos.map(({ label, valor }) => (
-          <div key={label} className="bg-agro-card rounded-xl p-4">
-            <p className="text-agro-cardLabel text-xs font-cuerpo uppercase tracking-wide mb-2">{label}</p>
-            {esPendiente(valor) ? <DatosPendientes /> : (
-              <p className="text-agro-text font-cuerpo">{valor}</p>
-            )}
+      <div className="flex flex-col gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {campos.map(({ label, valor }) => (
+            <div key={label} className="bg-agro-card rounded-xl p-4">
+              <p className="text-agro-cardLabel text-xs font-cuerpo uppercase tracking-wide mb-2">{label}</p>
+              {esPendiente(valor) ? <DatosPendientes /> : (
+                <p className="text-agro-text font-cuerpo">{valor}</p>
+              )}
+            </div>
+          ))}
+        </div>
+        {suelo.tip_textura && (
+          <div className="bg-agro-card border border-agro-accent/30 rounded-xl p-4 flex gap-3">
+            <span className="text-lg shrink-0">💡</span>
+            <div>
+              <p className="text-agro-cardLabel text-xs font-cuerpo uppercase tracking-wide mb-1">¿Cómo identificar la textura en campo?</p>
+              <p className="text-agro-text font-cuerpo text-sm">{suelo.tip_textura}</p>
+            </div>
           </div>
-        ))}
+        )}
       </div>
     </SeccionCollapsible>
   )
@@ -173,7 +184,12 @@ export default function DetalleCultivo() {
       <div className="flex items-center gap-4">
         <span className="text-5xl">{cultivo.emoji}</span>
         <div>
-          <h2 className="font-titulo font-bold text-agro-text text-2xl">{cultivo.nombre}</h2>
+          <h2 className="font-titulo font-bold text-agro-text text-2xl">
+            {cultivo.nombre}
+            {cultivo.nombre_cientifico && (
+              <em className="font-cuerpo font-normal not-italic text-agro-muted text-lg"> (<i>{cultivo.nombre_cientifico}</i>)</em>
+            )}
+          </h2>
           {esPendiente(cultivo.descripcion) ? (
             <DatosPendientes />
           ) : (

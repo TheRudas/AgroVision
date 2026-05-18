@@ -36,7 +36,7 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
       <aside
         className={[
           'fixed top-0 left-0 h-full bg-agro-surface flex flex-col z-30',
-          'transition-[width] duration-200 ease-in-out overflow-hidden',
+          'transition-[width,transform] duration-200 ease-in-out overflow-hidden',
           'lg:translate-x-0 lg:static lg:z-auto',
           colapsado && !hovered ? 'w-16' : 'w-60',
           mobileOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0',
