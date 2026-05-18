@@ -70,7 +70,7 @@ const FILAS_NUMERICAS = [
 const FILAS_TEXTO = [
   { label: 'Nota pH',           get: c => c.condiciones_suelo.ph_nota ?? '—' },
   { label: 'Textura del suelo', get: c => c.condiciones_suelo.textura ?? '—' },
-  { label: 'info suelo',              get: c => c.condiciones_suelo.textura_extra ?? '—' },
+  { label: 'info suelo',        get: c => c.condiciones_suelo.textura_extra ?? '—' },
   { label: 'Profundidad',       get: c => c.condiciones_suelo.profundidad ?? '—' },
 ]
 

@@ -41,9 +41,9 @@ function SeccionCollapsible({ id, titulo, children, defaultOpen = true }) {
 function SeccionSuelo({ suelo }) {
   const campos = [
     { label: 'Humedad del suelo',  valor: suelo.humedad },
-    { label: 'Textura del suelo',  valor: suelo.textura_extra ? `${suelo.textura}. ${suelo.textura_extra}` : suelo.textura },
     { label: 'Profundidad',        valor: suelo.profundidad },
-    { label: 'pH',                 valor: suelo.ph_nota ? `${suelo.ph}. ${suelo.ph_nota}` : suelo.ph },
+    { label: 'pH',                 valor: suelo.ph },
+    { label: 'Nota de pH',         valor: suelo.ph_nota },
   ].filter(c => c.valor !== undefined)
 
   return (
@@ -59,9 +59,18 @@ function SeccionSuelo({ suelo }) {
             </div>
           ))}
         </div>
-        {suelo.tip_textura && (
+        {suelo.textura && (
           <div className="bg-agro-card border border-agro-accent/30 rounded-xl p-4 flex gap-3">
             <span className="text-lg shrink-0">💡</span>
+            <div>
+              <p className="text-agro-cardLabel text-xs font-cuerpo uppercase tracking-wide mb-1">Textura del suelo</p>
+              <p className="text-agro-text font-cuerpo text-sm">{suelo.textura_extra ? `${suelo.textura}. ${suelo.textura_extra}` : suelo.textura}</p>
+            </div>
+          </div>
+        )}
+        {suelo.tip_textura && (
+          <div className="bg-agro-card border border-agro-accent/30 rounded-xl p-4 flex gap-3">
+            <span className="text-lg shrink-0">🧪</span>
             <div>
               <p className="text-agro-cardLabel text-xs font-cuerpo uppercase tracking-wide mb-1">¿Cómo identificar la textura en campo?</p>
               <p className="text-agro-text font-cuerpo text-sm">{suelo.tip_textura}</p>
