@@ -89,7 +89,7 @@ function FilaNumerica({ label, valA, valB, unidad, displayA, displayB, indice })
         {textoA}
         {igual && <span className="ml-1 text-xs text-agro-muted font-cuerpo font-normal">(=)</span>}
       </p>
-      <div className="text-center whitespace-nowrap px-2">
+      <div className="text-center whitespace-nowrap px-2 self-center">
         <p className="text-agro-muted text-xs font-cuerpo uppercase tracking-wide">{label}</p>
       </div>
       <p className={`font-titulo font-bold text-sm text-left ${mayorB ? 'text-agro-lima' : 'text-agro-text'}`}>
@@ -103,10 +103,10 @@ function FilaNumerica({ label, valA, valB, unidad, displayA, displayB, indice })
 
 function FilaTexto({ label, valA, valB, indice }) {
   return (
-    <div className={`grid grid-cols-[1fr_auto_1fr] items-start px-4 py-3 gap-2 ${indice % 2 !== 0 ? 'bg-agro-surface/50' : ''}`}>
-      <p className="text-agro-text font-cuerpo text-xs text-right">{valA}</p>
-      <p className="text-agro-muted text-xs font-cuerpo uppercase tracking-wide text-center whitespace-nowrap px-2">{label}</p>
-      <p className="text-agro-text font-cuerpo text-xs text-left">{valB}</p>
+    <div className={`grid grid-cols-[1fr_auto_1fr] items-center px-4 py-3 gap-2 ${indice % 2 !== 0 ? 'bg-agro-surface/50' : ''}`}>
+      <p className="text-agro-text font-cuerpo text-xs text-right self-center">{valA}</p>
+      <p className="text-agro-muted text-xs font-cuerpo uppercase tracking-wide text-center whitespace-nowrap px-2 self-center">{label}</p>
+      <p className="text-agro-text font-cuerpo text-xs text-left self-center">{valB}</p>
     </div>
   )
 }
