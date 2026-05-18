@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import DetalleCultivo from './pages/DetalleCultivo'
+import Comparar from './pages/Comparar'
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -18,6 +19,7 @@ function AnimatedRoutes() {
           <Route path="/" element={<Home />} />
           <Route path="/cultivo/:id" element={<DetalleCultivo />} />
           <Route path="/cultivo/:id/:seccion" element={<DetalleCultivo />} />
+          <Route path="/comparar" element={<Comparar />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </div>

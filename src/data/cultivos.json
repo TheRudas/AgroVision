@@ -9,17 +9,19 @@
     "condiciones_suelo": {
       "humedad": "100-150 mm de lluvia mensual. Requiere humedad constante y moderada.",
       "textura": "Franco-arenoso o franco-arcilloso",
+      "textura_extra": "Evitar suelos muy arcillosos — retienen humedad en exceso y favorecen enfermedades en raíz.",
       "profundidad": "Mínimo 1.5 metros de profundidad efectiva",
       "ph": "5.5 - 7.5 (ligeramente ácido a neutro)",
+      "ph_nota": "Por debajo de 5.5 aparece toxicidad por aluminio y manganeso. Por encima de 7.5 se bloquean hierro, zinc y boro.",
       "tip_textura": "Toma un puñado de suelo húmedo y apriétalo. Si la bola se desarma fácilmente y sientes granos al frotarla, es franco-arenoso — ideal. Si se mantiene firme y puedes moldearla levemente, tiene más arcilla: aún sirve, pero vigilá que no se encharque entre riegos."
     },
     "clima": {
       "temperatura": {
-        "maxima": 30,
+        "maxima": 32,
         "media": 27,
-        "minima": 24,
+        "minima": 20,
         "unidad": "°C",
-        "nota": "Temperatura ideal entre 24°C y 30°C"
+        "nota": "El fruto tolera hasta 16°C pero produce bien desde 20°C y 32°C"
       },
       "horas_luz": {
         "valor": "8-10",
@@ -76,17 +78,19 @@
     "condiciones_suelo": {
       "humedad": "120-150 mm de lluvia mensual.",
       "textura": "Franco, franco-arenoso o franco-arcilloso",
+      "textura_extra": "El drenaje es clave: si el suelo se satura más de 48 horas, las raíces se asfixian.",
       "profundidad": "Mínimo 1 metro de profundidad efectiva",
       "ph": "5.5 - 6.5 (ligeramente ácido)",
+      "ph_nota": "Por debajo de 5.5 las raíces se intoxican con aluminio y se lavan los nutrientes. Por encima de 6.5 se bloquean hierro, zinc y manganeso.",
       "tip_textura": "Aprieta un puñado húmedo. Si la bola se sostiene pero se rompe con poca presión y no es pegajosa, es suelo franco — perfecto. Si se desarma sola es muy arenoso y retiene poca agua; si se moldea como plastilina tiene demasiada arcilla y puede asfixiar las raíces en menos de 48 horas."
     },
     "clima": {
       "temperatura": {
         "maxima": 30,
         "media": 27,
-        "minima": 24,
+        "minima": 20,
         "unidad": "°C",
-        "nota": "Temperatura ideal entre 24°C y 30°C"
+        "nota": "El rango favorable arranca desde 20°C a 30°C (por debajo de 16°C se paraliza)"
       },
       "horas_luz": {
         "valor": "6-8",
@@ -144,8 +148,10 @@
     "condiciones_suelo": {
       "humedad": "90-120 mm de lluvia mensual. Evitar encharcamientos.",
       "textura": "Franco-arenoso o franco-arcilloso con excelente drenaje",
+      "textura_extra": "Drenaje excelente es innegociable. En suelos arcillosos, añadir camas elevadas o materia orgánica mejoran la aireación.",
       "profundidad": "Mínimo 80 cm de profundidad efectiva, idealmente 1 metro",
       "ph": "6.0 - 7.0 (ligeramente ácido a neutro)",
+      "ph_nota": "Por debajo de 6.0 hay déficit de calcio y fósforo, favoreciendo la pudrición apical. Por encima de 7.0 se bloquean hierro, zinc y boro.",
       "tip_textura": "Aprieta un puñado húmedo: la bola debe desarmarse con un toque suave y sentirse algo granulada — eso indica buen drenaje, lo cual importa muchisimo para este cultivo. Si la bola se sostiene firme o se pega a los dedos, el suelo retiene demasiada agua y el ají experimentará pudrición de raíces."
     },
     "clima": {
@@ -212,8 +218,10 @@
     "condiciones_suelo": {
       "humedad": "80-120 mm de lluvia mensual. Muy sensible al déficit hídrico en floración y llenado de grano.",
       "textura": "Franco, franco-arenoso o franco-arcilloso con buen drenaje",
+      "textura_extra": "Muy arenoso: pierde fertilizante por lixiviación. Muy arcilloso: la raíz no penetra y el tallo se vuelca.",
       "profundidad": "Mínimo 1 - 1.5 metros de profundidad efectiva",
       "ph": "5.5 - 7.0 (ligeramente ácido a neutro)",
+      "ph_nota": "Por debajo de 5.5 aparece toxicidad por aluminio y manganeso. Por encima de 7.0 se bloquea el zinc, elemento crítico en este cultivo.",
       "tip_textura": "Aprieta un puñado húmedo. Lo ideal es que forme una bola que aguante su forma pero se rompa limpiamente con los dedos — suelo franco con buen equilibrio. Si se desarma solo es muy arenoso y perderá agua rápido en floración; si es pegajoso y brillante al frotarlo, drena mal y puede asfixiar la raíz."
     },
     "clima": {
@@ -278,9 +286,11 @@
     "imagen_url": null,
     "condiciones_suelo": {
       "humedad": "150-200 mm mensuales bien distribuidos. No tolera periodos de sequía prolongados ni déficits hídricos.",
-      "textura": "Franco, franco-arcilloso o franco-arenoso. Buena capacidad de retención de agua con excelente porosidad. No tolera suelos arcillosos pesados que provoquen encharcamientos.",
+      "textura": "Franco, franco-arcilloso o franco-arenoso",
+      "textura_extra": "Buena retención de agua pero con porosidad. No tolera suelos arcillosos pesados que encharcen.",
       "profundidad": "Mínimo 1.0 metro de profundidad efectiva, libre de capas duras, rocas o niveles freáticos altos.",
-      "ph": "5.0 - 6.0 (moderadamente ácido a ligeramente ácido). Tolera rangos entre 4.5 y 6.5.",
+      "ph": "5.0 - 6.0 (moderadamente ácido a ligeramente ácido)",
+      "ph_nota": "Tolera entre 4.5 y 6.5. Por encima de 6.5 se bloquean hierro, zinc y boro, críticos para la formación de racimos.",
       "tip_textura": "Aprieta un puñado húmedo. La bola debe sostenerse firme sin pegarse a los dedos ni brillar — señal de textura equilibrada con buena porosidad. Si al presionarla sale agua o se aplana sin romperse, el suelo es demasiado arcilloso y retendrá agua en exceso, lo que la palma no tolera pese a su alta demanda hídrica."
     },
     "clima": {
@@ -351,9 +361,11 @@
     "imagen_url": null,
     "condiciones_suelo": {
       "humedad": "80-120 mm mensuales durante crecimiento y desarrollo del fruto. Sumamente sensible al exceso de agua.",
-      "textura": "Franco-arenoso, franco-limoso o franco. Suelos sueltos con excelente aireación y drenaje impecable. Los suelos arenosos son ideales para cosechas tempranas.",
+      "textura": "Franco-arenoso, franco-limoso o franco",
+      "textura_extra": "Suelos sueltos y bien aireados. Los arenosos permiten cosechas más tempranas.",
       "profundidad": "0.6 a 1.0 metro de profundidad efectiva. La mayor parte de raíces absorbentes se concentra en los primeros 30-40 cm.",
-      "ph": "5.5 - 7.0 (ligeramente ácido a neutro). En pH menor a 5.5 puede presentarse toxicidad por manganeso o aluminio y deficiencia de calcio.",
+      "ph": "5.5 - 7.0 (ligeramente ácido a neutro)",
+      "ph_nota": "Por debajo de 5.5 aparece toxicidad por aluminio y déficit de calcio, favoreciendo la pudrición apical.",
       "tip_textura": "Aprieta un puñado húmedo. Si la bola se desarma fácil y sientes granos, es franco-arenoso — ideal para cosechas tempranas. Si al frotarla se siente sedosa y harinosa como talco, es franco-limosa — también funciona bien. Lo que debes evitar es cualquier suelo que se pegue o brille al frotarlo: con raíces tan sensibles al exceso de agua, la arcilla es el mayor riesgo."
     },
     "clima": {

@@ -41,9 +41,9 @@ function SeccionCollapsible({ id, titulo, children, defaultOpen = true }) {
 function SeccionSuelo({ suelo }) {
   const campos = [
     { label: 'Humedad del suelo',  valor: suelo.humedad },
-    { label: 'Textura del suelo',  valor: suelo.textura },
+    { label: 'Textura del suelo',  valor: suelo.textura_extra ? `${suelo.textura}. ${suelo.textura_extra}` : suelo.textura },
     { label: 'Profundidad',        valor: suelo.profundidad },
-    { label: 'pH',                 valor: suelo.ph },
+    { label: 'pH',                 valor: suelo.ph_nota ? `${suelo.ph}. ${suelo.ph_nota}` : suelo.ph },
   ].filter(c => c.valor !== undefined)
 
   return (

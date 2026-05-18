@@ -11,7 +11,7 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
   const partes = pathname.split('/')
   const cultivoActivo = partes[1] === 'cultivo' ? partes[2] : null
   // En móvil abierto siempre expandido; en desktop colapsa cuando hay cultivo activo
-  const colapsado = !!cultivoActivo && !mobileOpen
+  const colapsado = (!!cultivoActivo || pathname === '/comparar') && !mobileOpen
 
   function seleccionar(cultivoId) {
     if (cultivoId === cultivoActivo) {
@@ -75,6 +75,32 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
 
         {/* Lista de cultivos */}
         <nav className="flex-1 overflow-y-auto overscroll-contain py-3">
+          {/* Comparar cultivos */}
+          <button
+            onClick={() => { navigate('/comparar'); onMobileClose?.() }}
+            className={[
+              'relative w-full flex items-center transition-colors select-none',
+              colapsado && !hovered ? 'justify-center py-3 px-2' : 'gap-3 px-4 py-2.5 text-left',
+              pathname === '/comparar'
+                ? 'bg-agro-lima/15 text-agro-lima'
+                : 'text-agro-text hover:bg-agro-lima/10',
+            ].join(' ')}
+          >
+            <span className={colapsado && !hovered ? 'text-2xl' : 'text-xl shrink-0'}>⚖️</span>
+            <span className={[
+              'font-titulo font-bold text-sm truncate transition-all duration-200',
+              pathname === '/comparar' ? 'text-agro-lima' : '',
+              (!colapsado || hovered) ? 'opacity-100 max-w-full' : 'opacity-0 max-w-0',
+            ].join(' ')}>
+              Comparar cultivos
+            </span>
+            {colapsado && !hovered && pathname === '/comparar' && (
+              <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-agro-lima rounded-r-full" />
+            )}
+          </button>
+
+          <div className="border-t border-agro-accent/30 mx-4 my-2" />
+
           {cultivos.map(cultivo => {
             const esActivo = cultivoActivo === cultivo.id
 
