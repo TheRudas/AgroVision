@@ -26,7 +26,7 @@ function Layout() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
-    <div className="flex h-screen bg-agro-bg overflow-hidden">
+    <div className="flex h-dvh bg-agro-bg overflow-hidden">
       <Sidebar
         mobileOpen={sidebarOpen}
         onMobileClose={() => setSidebarOpen(false)}
