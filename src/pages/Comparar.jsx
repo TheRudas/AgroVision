@@ -46,6 +46,13 @@ function CustomSelect({ value, onChange, options, placeholder }) {
   )
 }
 
+function parsearProfundidad(str) {
+  if (!str) return null
+  const cm = str.match(/([\d.]+)\s*cm/)
+  if (cm) return parseFloat(cm[1]) / 100
+  return parsearRango(str)
+}
+
 function parsearRango(str) {
   if (!str) return null
   const ge = str.match(/>=?\s*([\d.]+)/)
@@ -64,14 +71,14 @@ const FILAS_NUMERICAS = [
   { label: 'Lluvia mínima',      get: c => c.clima.rango_humedad.minimo,      unidad: 'mm/mes', raw: null },
   { label: 'Lluvia máxima',      get: c => c.clima.rango_humedad.maximo,      unidad: 'mm/mes', raw: null },
   { label: 'Horas de luz',       get: c => parsearRango(c.clima.horas_luz.valor), unidad: 'h', raw: c => c.clima.horas_luz.valor ?? '—' },
-  { label: 'pH del suelo',       get: c => parsearRango(c.condiciones_suelo.ph),  unidad: '',  raw: c => c.condiciones_suelo.ph ?? '—' },
+  { label: 'pH del suelo',       get: c => parsearRango(c.condiciones_suelo.ph),          unidad: '',  raw: c => c.condiciones_suelo.ph ?? '—' },
+  { label: 'Profundidad',        get: c => parsearProfundidad(c.condiciones_suelo.profundidad), unidad: 'm', raw: c => c.condiciones_suelo.profundidad ?? '—' },
 ]
 
 const FILAS_TEXTO = [
   { label: 'Nota pH',           get: c => c.condiciones_suelo.ph_nota ?? '—' },
   { label: 'Textura del suelo', get: c => c.condiciones_suelo.textura ?? '—' },
   { label: 'info suelo',        get: c => c.condiciones_suelo.textura_extra ?? '—' },
-  { label: 'Profundidad',       get: c => c.condiciones_suelo.profundidad ?? '—' },
 ]
 
 function FilaNumerica({ label, valA, valB, unidad, displayA, displayB, indice }) {
