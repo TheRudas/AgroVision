@@ -173,6 +173,54 @@ function SeccionFenologia({ fenologia }) {
   )
 }
 
+const TIPO_BADGE = {
+  insecto:  { label: 'Insecto',  cls: 'bg-teal-500/15 text-teal-400' },
+  hongo:    { label: 'Hongo',    cls: 'bg-amber-500/15 text-amber-400' },
+  bacteria: { label: 'Bacteria', cls: 'bg-red-500/15 text-red-400' },
+  'acaro':  { label: 'Ácaro',   cls: 'bg-purple-500/15 text-purple-400' },
+  virus:    { label: 'Virus',    cls: 'bg-yellow-500/15 text-yellow-400' },
+  nematodo: { label: 'Nematodo', cls: 'bg-blue-500/15 text-blue-400' },
+}
+
+function SeccionPlagas({ plagas }) {
+  if (!plagas?.length) return null
+  return (
+    <SeccionCollapsible id="plagas" titulo="Plagas comunes">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {plagas.map((plaga, i) => {
+          const badge = TIPO_BADGE[plaga.tipo] ?? { label: plaga.tipo, cls: 'bg-agro-muted/15 text-agro-muted' }
+          return (
+            <div key={i} className="bg-agro-card rounded-xl p-4 flex flex-col gap-3">
+              <div className="flex items-start justify-between gap-2">
+                <div className="flex items-center gap-2">
+                  <span className="text-2xl select-none">{plaga.emoji}</span>
+                  <div>
+                    <span className="font-titulo font-bold text-agro-text text-sm leading-tight">{plaga.nombre}</span>
+                    {plaga.nombre_cientifico && (
+                      <span className="block font-cuerpo italic text-agro-muted text-xs">{plaga.nombre_cientifico}</span>
+                    )}
+                  </div>
+                </div>
+                <span className={`shrink-0 text-xs font-titulo font-bold px-2 py-0.5 rounded-full ${badge.cls}`}>
+                  {badge.label}
+                </span>
+              </div>
+              <div>
+                <p className="text-agro-cardLabel text-xs font-cuerpo uppercase tracking-wide mb-1">Cómo identificarla</p>
+                <p className="text-agro-text font-cuerpo text-sm leading-snug">{plaga.como_identificar}</p>
+              </div>
+              <div>
+                <p className="text-agro-cardLabel text-xs font-cuerpo uppercase tracking-wide mb-1">Qué hacer</p>
+                <p className="text-agro-text font-cuerpo text-sm leading-snug">{plaga.que_hacer}</p>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+    </SeccionCollapsible>
+  )
+}
+
 export default function DetalleCultivo() {
   const { id, seccion } = useParams()
   const cultivo = cultivos.find(c => c.id === id)
@@ -210,6 +258,7 @@ export default function DetalleCultivo() {
       <SeccionClima clima={cultivo.clima} />
       <SeccionNutricion nutricion={cultivo.nutricion} />
       <SeccionFenologia fenologia={cultivo.fenologia} />
+      <SeccionPlagas plagas={cultivo.plagas} />
     </div>
   )
 }

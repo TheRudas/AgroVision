@@ -11,7 +11,7 @@ export default {
           bg:        '#3d2b1f',  // fondo principal
           surface:   '#2a1d13',  // sidebar
           card:      '#4e3728',  // superficie de cards
-          accent:    '#4a7c3f',  // verde acento, bordes, badge pendientes
+          accent:    '#7a5538',  // café cálido, bordes, badge pendientes
           lima:      '#e8841a',  // acento principal: botones, highlights, activos
           limaHover: '#c07a08',  // hover del acento principal
           text:      '#fdf6ec',  // texto principal

@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import DetalleCultivo from './pages/DetalleCultivo'
 import Comparar from './pages/Comparar'
+import QueDebeSembrar from './pages/QueDebeSembrar'
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -20,6 +21,7 @@ function AnimatedRoutes() {
           <Route path="/cultivo/:id" element={<DetalleCultivo />} />
           <Route path="/cultivo/:id/:seccion" element={<DetalleCultivo />} />
           <Route path="/comparar" element={<Comparar />} />
+          <Route path="/recomendar" element={<QueDebeSembrar />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </div>
@@ -41,7 +43,7 @@ function Layout() {
       {/* Área principal */}
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         {/* Header móvil */}
-        <header className="lg:hidden flex items-center gap-3 px-4 py-3 bg-agro-surface border-b border-agro-accent shrink-0">
+        <header className="lg:hidden flex items-center gap-3 px-4 py-3 bg-agro-surface border-b border-agro-accent/30 shrink-0">
           <button
             onClick={() => setSidebarOpen(true)}
             className="text-agro-muted hover:text-agro-limaHover p-1"

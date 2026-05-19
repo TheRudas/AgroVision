@@ -66,7 +66,41 @@
           "descripcion": "Nutrientes clave: Potasio (K) y Calcio (Ca). Aplicaciones altas de sulfato de potasio desde que el fruto tiene el tamaño de una aceituna hasta la madurez."
         }
       ]
-    }
+    },
+    "plagas": [
+      {
+        "nombre": "Antracnosis",
+        "nombre_cientifico": "Colletotrichum gloeosporioides",
+        "tipo": "hongo",
+        "emoji": "🍄",
+        "como_identificar": "Manchas negras o café oscuro en hojas, flores y frutos. Los frutos maduros se pudren con manchas hundidas de color negro.",
+        "que_hacer": "Aplicar fungicidas con cobre (oxicloruro de cobre) o mancozeb. Podar ramas enfermas y recoger frutos caídos. Evitar el riego por aspersión sobre el follaje."
+      },
+      {
+        "nombre": "Mosca de la fruta",
+        "nombre_cientifico": "Ceratitis capitata / Anastrepha obliqua",
+        "tipo": "insecto",
+        "emoji": "🐛",
+        "como_identificar": "Frutos con pequeños huecos o picaduras en la cáscara. Al abrir el mango se ven larvas blancas pequeñas dentro de la pulpa.",
+        "que_hacer": "Colocar trampas con atrayente de melaza o proteína hidrolizada. Recoger y enterrar frutos caídos. Aplicar spinosad o malatión en casos severos."
+      },
+      {
+        "nombre": "Trips del mango",
+        "nombre_cientifico": "Frankliniella occidentalis",
+        "tipo": "insecto",
+        "emoji": "🐛",
+        "como_identificar": "Flores y hojas tiernas con raspado plateado o color plateado-grisáceo. Las flores se caen antes de cuajar. Se ven insectos muy pequeños color café oscuro.",
+        "que_hacer": "Aplicar spinosad o imidacloprid en la época de floración. Hacer aspersiones en horas frescas del día. Eliminar malezas alrededor del árbol."
+      },
+      {
+        "nombre": "Oídio",
+        "nombre_cientifico": "Oidium mangiferae",
+        "tipo": "hongo",
+        "emoji": "🍄",
+        "como_identificar": "Polvo blanco harinoso sobre hojas jóvenes y flores. Los brotes nuevos se deforman y no crecen bien.",
+        "que_hacer": "Aplicar azufre mojable o biofungicidas a base de Bacillus subtilis. Podar los brotes afectados. Mejorar la ventilación del árbol con podas de formación."
+      }
+    ]
   },
   {
     "id": "banano",
@@ -136,7 +170,41 @@
           "descripcion": "El Potasio domina completamente esta fase, transportando carbohidratos desde las hojas al racimo. El Calcio previene debilidad en el cuello del racimo y mejora la vida útil en percha."
         }
       ]
-    }
+    },
+    "plagas": [
+      {
+        "nombre": "Sigatoka negra",
+        "nombre_cientifico": "Mycosphaerella fijiensis",
+        "tipo": "hongo",
+        "emoji": "🍄",
+        "como_identificar": "Rayas amarillas que se vuelven manchas negras alargadas en las hojas. Las hojas se secan desde abajo hacia arriba. La planta parece quemada.",
+        "que_hacer": "Eliminar y enterrar hojas enfermas (deshoje fitosanitario). Aplicar fungicidas sistémicos como propiconazol o trifloxistrobin. Evitar exceso de humedad en el cultivo."
+      },
+      {
+        "nombre": "Picudo negro del banano",
+        "nombre_cientifico": "Cosmopolites sordidus",
+        "tipo": "insecto",
+        "emoji": "🐛",
+        "como_identificar": "Plantas que se doblan o caen sin razón aparente. Al cortar el seudotallo se ven túneles y larvas blancas dentro del tejido.",
+        "que_hacer": "Usar trampas con pseudotallo picado impregnado de insecticida. Aplicar clorpirifos en el suelo cerca de la base. Desinfectar los colinos antes de sembrar sumergiéndolos en agua caliente (52°C por 20 min)."
+      },
+      {
+        "nombre": "Moko del banano",
+        "nombre_cientifico": "Ralstonia solanacearum",
+        "tipo": "bacteria",
+        "emoji": "🦠",
+        "como_identificar": "Las hojas del centro amarillean y se secan. Al cortar el pseudotallo se ve el interior café o negro con mal olor. El racimo no desarrolla bien.",
+        "que_hacer": "No tiene cura: arrancar y quemar las plantas enfermas. Desinfectar herramientas con hipoclorito al 10% entre planta y planta. Evitar el paso de personas o animales por zonas infectadas."
+      },
+      {
+        "nombre": "Nematodo barrenador",
+        "nombre_cientifico": "Radopholus similis",
+        "tipo": "nematodo",
+        "emoji": "🪱",
+        "como_identificar": "Plantas que se caen o vuelcan fácilmente. Raíces con manchas café-rojizas al partirlas. Plantas con poco vigor y racimos pequeños.",
+        "que_hacer": "Rotar cultivos. Aplicar nematicidas como cadusafos al suelo. Usar plantas madre sanas y desinfectadas. Incorporar materia orgánica para favorecer hongos antagonistas."
+      }
+    ]
   },
   {
     "id": "aji",
@@ -206,7 +274,41 @@
           "descripcion": "Nutrientes clave: Potasio (K) y Calcio (Ca). El potasio mejora tamaño, color y calidad del fruto; el calcio previene la pudrición apical."
         }
       ]
-    }
+    },
+    "plagas": [
+      {
+        "nombre": "Phytophthora / Marchitez",
+        "nombre_cientifico": "Phytophthora capsici",
+        "tipo": "hongo",
+        "emoji": "🍄",
+        "como_identificar": "Plantas que se marchitan de repente como si les faltara agua, aunque el suelo esté húmedo. El tallo cerca al suelo se pone café y se pudre.",
+        "que_hacer": "Mejorar el drenaje del suelo. Aplicar metalaxil o fosetil aluminio en drench al suelo. No regar en exceso. Desinfectar el suelo con cal antes de sembrar."
+      },
+      {
+        "nombre": "Trips",
+        "nombre_cientifico": "Thrips palmi",
+        "tipo": "insecto",
+        "emoji": "🐛",
+        "como_identificar": "Hojas con plateado o color bronce en la parte superior. Flores y frutos pequeños con cicatrices plateadas o deformes. Al sacudir la flor caen insectitos muy pequeños.",
+        "que_hacer": "Aplicar spinosad o abamectina. Instalar trampas azules pegajosas. Eliminar malezas que sirven de refugio. Hacer aspersiones en horas frescas."
+      },
+      {
+        "nombre": "Virus del mosaico del pepino (CMV)",
+        "nombre_cientifico": "Cucumber Mosaic Virus",
+        "tipo": "virus",
+        "emoji": "☀",
+        "como_identificar": "Hojas con manchas amarillo-verdosas en mosaico, arrugadas o con ampollas. Plantas achaparradas. Frutos deformados con manchas de colores.",
+        "que_hacer": "No tiene cura. Arrancar y quemar plantas enfermas. Controlar los áfidos que transmiten el virus con imidacloprid. Usar semilla certificada y libre de virus."
+      },
+      {
+        "nombre": "Ácaro blanco",
+        "nombre_cientifico": "Polyphagotarsonemus latus",
+        "tipo": "acaro",
+        "emoji": "🕷️",
+        "como_identificar": "Hojas tiernas enrolladas hacia abajo o deformadas con color cobrizo. Brotes que no se desarrollan bien. Muy difícil verlos a simple vista.",
+        "que_hacer": "Aplicar azufre mojable o abamectina. Evitar el estrés hídrico de la planta. Hacer aspersiones por el envés de las hojas. Eliminar brotes muy afectados."
+      }
+    ]
   },
   {
     "id": "maiz",
@@ -275,7 +377,41 @@
           "descripcion": "Nutrientes clave: Nitrógeno (N) y Potasio (K). El estrés hídrico o nutricional en esta etapa reduce fuertemente el rendimiento."
         }
       ]
-    }
+    },
+    "plagas": [
+      {
+        "nombre": "Gusano cogollero",
+        "nombre_cientifico": "Spodoptera frugiperda",
+        "tipo": "insecto",
+        "emoji": "🐛",
+        "como_identificar": "Hojas con huecos irregulares y bordes en serrucho. En el cogollo (centro de la planta) se ve excremento arenoso café y una oruga verde o café con rayas.",
+        "que_hacer": "Aplicar Bacillus thuringiensis (BT) o spinosad en el cogollo. En casos graves usar clorpirifos o emamectina. Hacer aplicaciones temprano en la mañana. Monitorear semanalmente."
+      },
+      {
+        "nombre": "Roya del maíz",
+        "nombre_cientifico": "Puccinia sorghi",
+        "tipo": "hongo",
+        "emoji": "🍄",
+        "como_identificar": "Polvillo anaranjado o café en las hojas, especialmente por el envés. Al frotar la hoja la mano queda manchada de naranja. Las hojas se secan prematuramente.",
+        "que_hacer": "Aplicar mancozeb o trifloxistrobin preventivamente. Usar variedades resistentes. Evitar exceso de nitrógeno. Hacer rotación de cultivos con leguminosas."
+      },
+      {
+        "nombre": "Pudrición del tallo (Fusarium)",
+        "nombre_cientifico": "Fusarium moniliforme",
+        "tipo": "hongo",
+        "emoji": "🍄",
+        "como_identificar": "Plantas que se doblan o caen cerca a la cosecha. El tallo interno está podrido y de color rosado o café. Las mazorcas se quedan pequeñas con granos podridos.",
+        "que_hacer": "Tratar la semilla con fungicidas (thiram o carboxin) antes de sembrar. Evitar el encharcamiento. Hacer rotación de cultivos. Cosechar a tiempo sin dejar el maíz pasado."
+      },
+      {
+        "nombre": "Áfido del maíz (pulgón)",
+        "nombre_cientifico": "Rhopalosiphum maidis",
+        "tipo": "insecto",
+        "emoji": "🐛",
+        "como_identificar": "Colonias de insectos pequeños verdosos o grises agrupados en hojas, tallos y espiga. Las plantas tienen melaza pegajosa y fumagina negra encima.",
+        "que_hacer": "Aplicar imidacloprid o jabón potásico. Fomentar insectos benéficos como mariquitas. En ataques leves, lavar con agua a presión. Eliminar plantas muy infestadas."
+      }
+    ]
   },
   {
     "id": "palma",
@@ -350,7 +486,41 @@
           "descripcion": "Objetivo: maximizar el rendimiento de Racimos de Fruta Fresca (RFF) y el porcentaje de extracción de aceite. Nutrientes clave: Potasio (K) — mayor extracción por tonelada de RFF cosechada; Nitrógeno (N) — mantiene tasa fotosintética y previene amarillamiento; Magnesio (Mg) — balancear relación K/Mg para evitar clorosis; Cloro (Cl) — actúa casi como macronutriente, optimiza uso del agua y la respuesta al K."
         }
       ]
-    }
+    },
+    "plagas": [
+      {
+        "nombre": "Pudrición del cogollo (PC)",
+        "nombre_cientifico": "Phytophthora palmivora",
+        "tipo": "hongo",
+        "emoji": "🍄",
+        "como_identificar": "Las hojas del centro de la palma se ponen amarillas, luego café y se pudren con mal olor. La pudrición avanza hacia adentro y puede matar la palma.",
+        "que_hacer": "Cirugía del cogollo: extraer todo el tejido podrido con herramienta desinfectada. Aplicar fungicidas con metalaxil en la cavidad. Cubrir con arena. Desinfectar herramientas entre palma y palma."
+      },
+      {
+        "nombre": "Picudo rojo (Rhynchophorus)",
+        "nombre_cientifico": "Rhynchophorus palmarum",
+        "tipo": "insecto",
+        "emoji": "🐛",
+        "como_identificar": "Hojas centrales que no abren o se doblan. Al explorar la base de la corona se encuentran larvas blancas y gordas (hasta 5 cm). La palma emite olor a fermentado.",
+        "que_hacer": "Instalar trampas con feromonas específicas. Aplicar imidacloprid en drench. Eliminar palmas muy afectadas y enterrarlas. Desinfectar heridas de poda."
+      },
+      {
+        "nombre": "Marchitez sorpresiva",
+        "nombre_cientifico": "Phytomonas staheli",
+        "tipo": "nematodo",
+        "emoji": "🪱",
+        "como_identificar": "Palmas que se marchitan muy rápido en pocos días: hojas que cuelgan, frutos que se pudren en el racimo y palma que muere repentinamente.",
+        "que_hacer": "No tiene cura efectiva. Eliminar y quemar palmas afectadas de inmediato. Controlar el insecto vector (Lincus) con insecticidas. Evitar heridas en las raíces y mantener buen drenaje."
+      },
+      {
+        "nombre": "Hormiga arriera (defoliadora)",
+        "nombre_cientifico": "Atta cephalotes",
+        "tipo": "insecto",
+        "emoji": "🐛",
+        "como_identificar": "Hojas cortadas en semicírculos perfectos. Se ven hileras de hormigas cargando trozos de hoja hacia el suelo. En ataques fuertes la palma queda casi sin follaje.",
+        "que_hacer": "Localizar el hormiguero y aplicar cebo tóxico con sulfluramida o hidrametilnona. No usar insecticidas líquidos directamente sobre el nido. Monitorear perimetralmente el lote."
+      }
+    ]
   },
   {
     "id": "sandia",
@@ -426,6 +596,40 @@
           "descripcion": "Objetivo: maximizar tamaño, grosor de corteza y concentración de azúcares (grados Brix). Nutrientes clave: Potasio (K) — transloca azúcares desde las hojas hacia la pulpa, define sabor dulce, color rojo y peso final; Calcio (Ca) — previene la pudrición apical (peseta) y da firmeza a la cáscara para evitar rajado."
         }
       ]
-    }
+    },
+    "plagas": [
+      {
+        "nombre": "Mildiú velloso",
+        "nombre_cientifico": "Pseudoperonospora cubensis",
+        "tipo": "hongo",
+        "emoji": "🍄",
+        "como_identificar": "Manchas amarillas en la parte superior de la hoja y un pelillo grisáceo o morado por el envés. Las hojas se secan rápidamente y la planta pierde vigor.",
+        "que_hacer": "Aplicar mancozeb, clorotalonil o cobre preventivamente. Evitar mojar el follaje al regar. Mejorar la circulación del aire entre plantas. Eliminar hojas muy enfermas."
+      },
+      {
+        "nombre": "Mosca blanca",
+        "nombre_cientifico": "Bemisia tabaci",
+        "tipo": "insecto",
+        "emoji": "🐛",
+        "como_identificar": "Insectos blancos muy pequeños que vuelan al mover la planta. Hojas con melaza pegajosa y fumagina negra. Plantas débiles con hojas amarillas y arrugadas.",
+        "que_hacer": "Instalar trampas amarillas pegajosas. Aplicar imidacloprid o jabón potásico. Colocar mallas antiáfidos en semilleros. Eliminar malezas hospederas alrededor del cultivo."
+      },
+      {
+        "nombre": "Virus de la mancha anular (PRSV-W)",
+        "nombre_cientifico": "Papaya Ringspot Virus",
+        "tipo": "virus",
+        "emoji": "☀",
+        "como_identificar": "Hojas con mosaico verde-amarillo, arrugadas o en forma de hilo. Frutos con manchas y deformes. Plantas achaparradas que no producen bien.",
+        "que_hacer": "No tiene cura. Eliminar plantas enfermas de inmediato. Controlar mosca blanca y pulgones que lo transmiten. Usar semilla certificada. Colocar barreras de maíz alrededor del cultivo."
+      },
+      {
+        "nombre": "Gusano del fruto (Diaphania)",
+        "nombre_cientifico": "Diaphania nitidalis",
+        "tipo": "insecto",
+        "emoji": "🐛",
+        "como_identificar": "Flores y frutos tiernos con huecos o raspados. Orugas verde-transparente dentro de los frutos pequeños. Las flores se caen antes de cuajar.",
+        "que_hacer": "Aplicar Bacillus thuringiensis (BT) o spinosad en las flores. Hacer aplicaciones al atardecer cuando la oruga es activa. Eliminar frutos pequeños muy afectados. Monitorear diariamente en floración."
+      }
+    ]
   }
 ]

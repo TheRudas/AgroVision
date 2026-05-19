@@ -11,7 +11,7 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
   const partes = pathname.split('/')
   const cultivoActivo = partes[1] === 'cultivo' ? partes[2] : null
   // En móvil abierto siempre expandido; en desktop colapsa cuando hay cultivo activo
-  const colapsado = (!!cultivoActivo || pathname === '/comparar') && !mobileOpen
+  const colapsado = (!!cultivoActivo || pathname === '/comparar' || pathname === '/recomendar') && !mobileOpen
 
   function seleccionar(cultivoId) {
     if (cultivoId === cultivoActivo) {
@@ -77,7 +77,7 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
         <nav className="flex-1 overflow-y-auto overscroll-contain py-3">
           {/* Comparar cultivos */}
           <button
-            onClick={() => { navigate('/comparar'); onMobileClose?.() }}
+            onClick={() => { navigate(pathname === '/comparar' ? '/' : '/comparar'); onMobileClose?.() }}
             className={[
               'relative w-full flex items-center transition-colors select-none',
               colapsado && !hovered ? 'justify-center py-3 px-2' : 'gap-3 px-4 py-2.5 text-left',

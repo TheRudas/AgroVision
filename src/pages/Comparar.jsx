@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useSearchParams, useNavigate } from 'react-router-dom'
 import cultivos from '../data/cultivos.json'
 
 function CustomSelect({ value, onChange, options, placeholder }) {
@@ -119,8 +120,11 @@ function FilaTexto({ label, valA, valB, indice }) {
 }
 
 export default function Comparar() {
-  const [idA, setIdA] = useState('')
-  const [idB, setIdB] = useState('')
+  const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
+  const ids = cultivos.map(c => c.id)
+  const [idA, setIdA] = useState(() => { const v = searchParams.get('a'); return ids.includes(v) ? v : '' })
+  const [idB, setIdB] = useState(() => { const v = searchParams.get('b'); return ids.includes(v) ? v : '' })
 
   const cultivoA = cultivos.find(c => c.id === idA)
   const cultivoB = cultivos.find(c => c.id === idB)
@@ -153,7 +157,7 @@ export default function Comparar() {
       )}
 
       {/* Tabla comparativa */}
-      {listos && <div className="bg-agro-card rounded-xl overflow-hidden">
+      {listos && <div className="bg-agro-card rounded-xl overflow-hidden" id="tabla-comparar">
         {/* Encabezado */}
         <div className="grid grid-cols-[1fr_auto_1fr] items-center bg-agro-surface px-4 py-3 gap-2">
           <p className="font-titulo font-bold text-agro-lima text-sm text-right">{cultivoA.emoji} {cultivoA.nombre}</p>
@@ -189,6 +193,15 @@ export default function Comparar() {
           />
         ))}
       </div>}
+
+      <div className="flex justify-center">
+        <button
+          onClick={() => navigate('/')}
+          className="bg-agro-lima hover:bg-agro-limaHover text-agro-surface font-titulo font-bold px-10 py-2.5 rounded-full text-sm transition-colors"
+        >
+          Volver al Inicio
+        </button>
+      </div>
     </div>
   )
 }

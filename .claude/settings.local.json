@@ -5,7 +5,11 @@
       "PowerShell(New-Item *)",
       "PowerShell(cd \"C:\\\\Users\\\\USUARIO\\\\Documents\\\\Mis GitProyectos\\\\AgroVision\"; Start-Process powershell -ArgumentList '-NoExit', '-Command', 'npm run dev' -WorkingDirectory \"C:\\\\Users\\\\USUARIO\\\\Documents\\\\Mis GitProyectos\\\\AgroVision\"; Write-Output \"Servidor iniciado\")",
       "PowerShell(Start-Sleep -Seconds 4; Start-Process \"http://localhost:5173\"; Write-Output \"Abriendo navegador\")",
-      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\USUARIO\\\\Documents\\\\Mis GitProyectos\\\\AgroVision\\\\src\" -Recurse | Where-Object { $_.PSIsContainer } | Select-Object -ExpandProperty FullName | Sort-Object)"
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\USUARIO\\\\Documents\\\\Mis GitProyectos\\\\AgroVision\\\\src\" -Recurse | Where-Object { $_.PSIsContainer } | Select-Object -ExpandProperty FullName | Sort-Object)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\USUARIO\\\\Documents\\\\Mis GitProyectos\\\\AgroVision\" -Recurse -ErrorAction SilentlyContinue)",
+      "Bash(Select-Object FullName)",
+      "WebSearch",
+      "Bash(npx vite *)"
     ]
   }
 }
