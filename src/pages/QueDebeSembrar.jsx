@@ -148,16 +148,16 @@ function TarjetaResultado({ item, posicion, respuestas, primerLugar }) {
   const explicaciones = getExplicaciones(item.id, respuestas)
 
   const colorBarra =
-    item.porcentaje >= 70 ? 'bg-agro-accent' :
-    item.porcentaje >= 50 ? 'bg-agro-lima' : 'bg-agro-muted/50'
+    posicion === 0 ? 'bg-green-500' :
+    posicion === 1 ? 'bg-amber-400' : 'bg-amber-700'
 
   return (
     <div
       className={[
         'rounded-xl border p-5 transition-all',
         primerLugar
-          ? 'bg-agro-card border-agro-lima/50 shadow-lg shadow-agro-lima/10'
-          : 'bg-agro-card/60 border-agro-accent/30',
+          ? 'bg-agro-card border-agro-lima/80 shadow-lg shadow-agro-lima/10'
+          : 'bg-agro-card/60 border-agro-accent/60',
       ].join(' ')}
     >
       {/* Encabezado */}
@@ -215,7 +215,7 @@ function TarjetaResultado({ item, posicion, respuestas, primerLugar }) {
           'w-full py-2.5 rounded-lg font-titulo font-bold text-sm transition-colors',
           primerLugar
             ? 'bg-agro-lima hover:bg-agro-limaHover text-agro-surface'
-            : 'bg-transparent border border-agro-accent/40 hover:border-agro-lima/50 text-agro-text hover:text-agro-lima',
+            : 'bg-transparent border border-agro-accent/70 hover:border-agro-lima/70 text-agro-text hover:text-agro-lima',
         ].join(' ')}
       >
         Ver guía completa →
