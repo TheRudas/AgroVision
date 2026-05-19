@@ -29,7 +29,7 @@ export default function Home() {
           </div>
         </div>
         <button
-          className="shrink-0 self-start sm:self-center bg-agro-lima hover:bg-agro-limaHover text-agro-surface font-titulo font-bold text-sm px-5 py-2.5 rounded-full transition-colors whitespace-nowrap"
+          className="w-full sm:w-auto sm:shrink-0 bg-agro-lima hover:bg-agro-limaHover text-agro-surface font-titulo font-bold text-sm px-5 py-2.5 rounded-full transition-colors whitespace-nowrap"
           onClick={e => { e.stopPropagation(); navigate('/recomendar') }}
         >
           Comenzar →
