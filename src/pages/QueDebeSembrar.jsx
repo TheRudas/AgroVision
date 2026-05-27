@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import cultivos from '../data/cultivos.json'
 import { preguntas, puntajes, maxPuntaje, razones } from '../data/recomendador.js'
 
@@ -152,7 +152,7 @@ function PantallaPregunta({ pregunta, pasoActual, total, onResponder, onAnterior
 
 // ── Tarjeta de resultado individual ───────────────────────────────────────────
 
-function TarjetaResultado({ item, posicion, respuestas, primerLugar }) {
+function TarjetaResultado({ item, posicion, respuestas, primerLugar, recomendados }) {
   const navigate = useNavigate()
   const cultivo = cultivos.find(c => c.id === item.id)
   if (!cultivo) return null
@@ -223,7 +223,9 @@ function TarjetaResultado({ item, posicion, respuestas, primerLugar }) {
 
       {/* CTA */}
       <button
-        onClick={() => navigate(`/cultivo/${item.id}`)}
+        onClick={() => navigate(`/cultivo/${item.id}`, {
+          state: { fromEncuesta: true, recomendados, posicion, respuestas },
+        })}
         className={[
           'w-full py-2.5 rounded-lg font-titulo font-bold text-sm transition-colors',
           primerLugar
@@ -239,49 +241,101 @@ function TarjetaResultado({ item, posicion, respuestas, primerLugar }) {
 
 // ── Pantalla de resultados ─────────────────────────────────────────────────────
 
+function mensajeResultados(top3) {
+  const diff12 = top3[0].porcentaje - top3[1].porcentaje
+  const diff23 = top3[1].porcentaje - top3[2].porcentaje
+  const c1 = cultivos.find(c => c.id === top3[0].id)
+  const c2 = cultivos.find(c => c.id === top3[1].id)
+
+  if (diff12 <= 8) {
+    return {
+      icono: '⚔️',
+      titulo: '¡Resultados muy reñidos!',
+      texto: `${c1?.nombre} y ${c2?.nombre} quedaron casi empatados. La diferencia está en los detalles — compáralos antes de decidirte.`,
+      textoComparar: `Compara ${c1?.nombre} vs ${c2?.nombre}`,
+      colorBorde: 'border-amber-400/50 hover:border-amber-400/80',
+      colorFondo: 'bg-amber-400/5 hover:bg-amber-400/10',
+      colorTitulo: 'text-amber-300',
+    }
+  }
+  if (diff12 >= 25) {
+    return {
+      icono: '🏆',
+      titulo: `${c1?.nombre} es tu cultivo ideal`,
+      texto: `Se distancia claramente del resto. Si aún tienes curiosidad, puedes compararlo con las otras opciones.`,
+      textoComparar: `¿Seguro? Compara con ${c2?.nombre}`,
+      colorBorde: 'border-agro-lima/50 hover:border-agro-lima/80',
+      colorFondo: 'bg-agro-lima/5 hover:bg-agro-lima/10',
+      colorTitulo: 'text-agro-lima',
+    }
+  }
+  if (diff12 <= 15 && diff23 <= 8) {
+    return {
+      icono: '📊',
+      titulo: 'Los tres compiten de cerca',
+      texto: 'No hay un ganador aplastante. Tu zona y tus objetivos serán el factor decisivo — vale la pena comparar.',
+      textoComparar: `Compara ${c1?.nombre} vs ${c2?.nombre}`,
+      colorBorde: 'border-agro-accent/60 hover:border-agro-lima/50',
+      colorFondo: 'bg-agro-card/60 hover:bg-agro-lima/5',
+      colorTitulo: 'text-agro-text',
+    }
+  }
+  return {
+    icono: '✅',
+    titulo: `${c1?.nombre} lidera la recomendación`,
+    texto: `Encaja bien con tus respuestas. ${c2?.nombre} también es una opción válida si buscas una alternativa.`,
+    textoComparar: `Compara ${c1?.nombre} vs ${c2?.nombre}`,
+    colorBorde: 'border-agro-lima/40 hover:border-agro-lima/70',
+    colorFondo: 'bg-agro-lima/5 hover:bg-agro-lima/10',
+    colorTitulo: 'text-agro-lima',
+  }
+}
+
 function PantallaResultados({ respuestas, onReiniciar }) {
   const navigate = useNavigate()
   const top3 = calcularResultados(respuestas)
+  const recomendados = top3.map(r => r.id)
+  const msg = mensajeResultados(top3)
 
   return (
     <div className="animate-fadein px-6 py-8 max-w-2xl mx-auto w-full">
-      <div className="text-center mb-8">
+      <div className="text-center mb-6">
         <div className="text-5xl mb-3 select-none">🌾</div>
         <h2 className="font-titulo font-bold text-2xl text-agro-text mb-2">
           Tu recomendación
         </h2>
         <p className="text-agro-muted text-sm">
-          Basado en tus respuestas, estos son los cultivos más adecuados para ti
+          Aquí te mostramos los cultivos más recomendados según tus respuestas
         </p>
       </div>
 
-      {/* Banner comparador */}
+      {/* Tarjeta unificada: contexto + comparar */}
       <div
-        onClick={() => navigate(`/comparar?a=${top3[0]?.id ?? ''}&b=${top3[1]?.id ?? ''}`)}
-        className="mb-6 rounded-2xl bg-agro-card border border-agro-lima/30 p-5 flex flex-col sm:flex-row sm:items-center gap-4 cursor-pointer hover:border-agro-lima/70 hover:bg-agro-lima/5 transition-all group"
+        onClick={() => navigate(`/comparar?a=${top3[0]?.id ?? ''}&b=${top3[1]?.id ?? ''}`, { state: { respuestas } })}
+        className={`mb-6 rounded-2xl border p-5 cursor-pointer transition-all group ${msg.colorBorde} ${msg.colorFondo}`}
       >
-        <div className="flex items-center gap-4 flex-1 min-w-0">
-          <span className="text-4xl shrink-0 select-none">⚖️</span>
-          <div className="min-w-0">
-            <div className="font-titulo font-bold text-agro-text text-base group-hover:text-agro-lima transition-colors">
-              ¿Sigues teniendo dudas?
-            </div>
-            <div className="text-agro-muted text-sm leading-snug">
-              Aclaralas sin compromiso! Consulta y compara los cultivos que mas se adaptan a tus respuestas!
-            </div>
+        <div className="flex items-start gap-3 mb-4">
+          <span className="text-2xl shrink-0 select-none mt-0.5">{msg.icono}</span>
+          <div>
+            <p className={`font-titulo font-bold text-base ${msg.colorTitulo}`}>{msg.titulo}</p>
+            <p className="text-agro-muted text-sm mt-1 leading-snug">{msg.texto}</p>
           </div>
         </div>
-        <button
-          className="w-full sm:w-auto sm:shrink-0 bg-agro-lima hover:bg-agro-limaHover text-agro-surface font-titulo font-bold text-sm px-5 py-2.5 rounded-full transition-colors whitespace-nowrap"
-          onClick={e => {
-            e.stopPropagation()
-            const a = top3[0]?.id ?? ''
-            const b = top3[1]?.id ?? ''
-            navigate(`/comparar?a=${a}&b=${b}`)
-          }}
-        >
-          Comparar →
-        </button>
+        <div className="border-t border-agro-accent/30 pt-4 flex items-center justify-between gap-3">
+          <div className="flex items-center gap-2 text-agro-muted text-sm">
+            <span className="text-lg select-none">⚖️</span>
+            <span>{msg.textoComparar}</span>
+          </div>
+          <button
+            className="shrink-0 bg-agro-lima hover:bg-agro-limaHover text-agro-surface font-titulo font-bold text-sm px-5 py-2 rounded-full transition-colors whitespace-nowrap"
+            onClick={e => {
+              e.stopPropagation()
+              navigate(`/comparar?a=${top3[0]?.id ?? ''}&b=${top3[1]?.id ?? ''}`, { state: { respuestas } })
+            }}
+          >
+            Comparar →
+          </button>
+        </div>
       </div>
 
       <div className="space-y-4">
@@ -292,6 +346,7 @@ function PantallaResultados({ respuestas, onReiniciar }) {
             posicion={index}
             respuestas={respuestas}
             primerLugar={index === 0}
+            recomendados={recomendados}
           />
         ))}
       </div>
@@ -311,8 +366,11 @@ function PantallaResultados({ respuestas, onReiniciar }) {
 // ── Componente principal ───────────────────────────────────────────────────────
 
 export default function QueDebeSembrar() {
-  const [paso, setPaso] = useState(0)
-  const [respuestas, setRespuestas] = useState({})
+  const location = useLocation()
+  const respuestasRestauradas = location.state?.respuestas ?? null
+
+  const [paso, setPaso] = useState(() => respuestasRestauradas ? preguntas.length + 1 : 0)
+  const [respuestas, setRespuestas] = useState(() => respuestasRestauradas ?? {})
 
   function responder(opcionId) {
     const pregunta = preguntas[paso - 1]

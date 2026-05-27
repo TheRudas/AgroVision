@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useSearchParams, useNavigate } from 'react-router-dom'
+import { useSearchParams, useNavigate, useLocation } from 'react-router-dom'
 import cultivos from '../data/cultivos.json'
 
 function CustomSelect({ value, onChange, options, placeholder }) {
@@ -121,6 +121,8 @@ function FilaTexto({ label, valA, valB, indice }) {
 
 export default function Comparar() {
   const navigate = useNavigate()
+  const location = useLocation()
+  const respuestasEncuesta = location.state?.respuestas ?? null
   const [searchParams] = useSearchParams()
   const ids = cultivos.map(c => c.id)
   const [idA, setIdA] = useState(() => { const v = searchParams.get('a'); return ids.includes(v) ? v : '' })
@@ -135,6 +137,17 @@ export default function Comparar() {
 
   return (
     <div className="p-4 sm:p-6 lg:p-8 flex flex-col gap-6 w-full">
+      {respuestasEncuesta && (
+        <button
+          onClick={() => navigate('/recomendar', { state: { respuestas: respuestasEncuesta } })}
+          className="self-start flex items-center gap-1.5 text-agro-muted hover:text-agro-lima transition-colors group"
+        >
+          <svg className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span className="font-titulo font-bold text-sm">Volver a resultados</span>
+        </button>
+      )}
       <h2 className="font-titulo font-bold text-agro-text text-2xl">Comparar cultivos</h2>
 
       {/* Selectores */}

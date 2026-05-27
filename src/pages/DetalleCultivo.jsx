@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import cultivos from '../data/cultivos.json'
 import DatosPendientes from '../components/DatosPendientes'
 import TemperaturaCard from '../components/TemperaturaCard'
@@ -304,9 +304,126 @@ function SeccionPlagas({ plagas }) {
   )
 }
 
+function NavCultivos({ id, navigate }) {
+  const pos = cultivos.findIndex(c => c.id === id)
+  const anterior = pos > 0 ? cultivos[pos - 1] : null
+  const siguiente = pos < cultivos.length - 1 ? cultivos[pos + 1] : null
+
+  const btnBase = 'flex items-center gap-2 font-titulo font-bold text-sm px-4 py-2 rounded-full transition-colors'
+  const btnGris = `${btnBase} bg-agro-card border border-agro-accent/60 hover:border-agro-lima/60 text-agro-text hover:text-agro-lima group`
+  const btnVerde = `${btnBase} bg-agro-lima hover:bg-agro-limaHover text-agro-surface group`
+
+  return (
+    <div className="flex items-center justify-between gap-3 mb-5 w-full">
+      {anterior ? (
+        <button onClick={() => navigate(`/cultivo/${anterior.id}`)} className={btnGris}>
+          <svg className="w-4 h-4 transition-transform group-hover:-translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span className="truncate max-w-[110px]">{anterior.nombre}</span>
+        </button>
+      ) : (
+        <button onClick={() => navigate('/')} className={btnGris}>
+          <svg className="w-4 h-4 transition-transform group-hover:-translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          Ver todos
+        </button>
+      )}
+
+      {siguiente ? (
+        <button onClick={() => navigate(`/cultivo/${siguiente.id}`)} className={btnVerde}>
+          <span className="truncate max-w-[110px]">{siguiente.nombre}</span>
+          <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      ) : (
+        <button onClick={() => navigate('/')} className={btnVerde}>
+          Ver todos
+          <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      )}
+    </div>
+  )
+}
+
+function NavEncuesta({ encuesta, navigate }) {
+  const { recomendados, posicion, respuestas } = encuesta
+  const pos = posicion ?? 0
+
+  const anterior = pos > 0 ? cultivos.find(c => c.id === recomendados[pos - 1]) : null
+  const siguiente = pos < recomendados.length - 1 ? cultivos.find(c => c.id === recomendados[pos + 1]) : null
+  const esUltimo = pos === recomendados.length - 1
+
+  function irAnterior() {
+    if (anterior) {
+      navigate(`/cultivo/${anterior.id}`, {
+        state: { fromEncuesta: true, recomendados, posicion: pos - 1, respuestas },
+      })
+    }
+  }
+
+  function irSiguiente() {
+    if (esUltimo) {
+      navigate('/')
+    } else if (siguiente) {
+      navigate(`/cultivo/${siguiente.id}`, {
+        state: { fromEncuesta: true, recomendados, posicion: pos + 1, respuestas },
+      })
+    }
+  }
+
+  function irResultados() {
+    navigate('/recomendar', { state: { respuestas } })
+  }
+
+  const btnBase = 'flex items-center gap-2 font-titulo font-bold text-sm px-5 py-2.5 rounded-full transition-colors'
+
+  return (
+    <div className="flex items-center justify-between gap-3 mb-5 w-full">
+      {pos === 0 ? (
+        <button onClick={irResultados} className={`${btnBase} bg-agro-card border border-agro-accent/60 hover:border-agro-lima/60 text-agro-text hover:text-agro-lima group`}>
+          <svg className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          Volver a resultados
+        </button>
+      ) : (
+        <button onClick={irAnterior} className={`${btnBase} bg-agro-card border border-agro-accent/60 hover:border-agro-lima/60 text-agro-text hover:text-agro-lima group`}>
+          <svg className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          {anterior?.nombre ?? 'Anterior'}
+        </button>
+      )}
+
+      {esUltimo ? (
+        <button onClick={irSiguiente} className={`${btnBase} bg-agro-lima hover:bg-agro-limaHover text-agro-surface group`}>
+          Ver todos los cultivos
+          <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      ) : (
+        <button onClick={irSiguiente} className={`${btnBase} bg-agro-lima hover:bg-agro-limaHover text-agro-surface group`}>
+          {siguiente?.nombre ?? 'Siguiente'}
+          <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      )}
+    </div>
+  )
+}
+
 export default function DetalleCultivo() {
   const { id, seccion } = useParams()
   const navigate = useNavigate()
+  const location = useLocation()
+  const encuesta = location.state?.fromEncuesta ? location.state : null
   const cultivo = cultivos.find(c => c.id === id)
 
   if (!cultivo) {
@@ -321,15 +438,10 @@ export default function DetalleCultivo() {
 
   return (
     <div className="p-4 sm:p-6 lg:p-8 flex flex-col w-full">
-      <button
-        onClick={() => navigate('/')}
-        className="self-start flex items-center gap-1.5 text-agro-muted hover:text-agro-lima transition-colors mb-5 group"
-      >
-        <svg className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-        </svg>
-        <span className="font-titulo font-bold text-sm">Volver a cultivos</span>
-      </button>
+      {encuesta
+        ? <NavEncuesta encuesta={encuesta} navigate={navigate} />
+        : <NavCultivos id={id} navigate={navigate} />
+      }
 
       <div className="flex items-center gap-4">
         <span className="text-5xl">{cultivo.emoji}</span>
@@ -357,7 +469,7 @@ export default function DetalleCultivo() {
       <SeccionPoscosecha poscosecha={cultivo.poscosecha} />
 
       <button
-        onClick={() => navigate('/')}
+        onClick={() => encuesta ? navigate('/') : window.history.state?.idx > 0 ? navigate(-1) : navigate('/')}
         className="self-center flex items-center gap-2 bg-agro-lima hover:bg-agro-limaHover text-agro-surface font-titulo font-bold text-sm px-6 py-2.5 rounded-full transition-colors mt-8 group"
       >
         <svg className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
