@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import cultivos from '../data/cultivos.json'
 import DatosPendientes from '../components/DatosPendientes'
 import TemperaturaCard from '../components/TemperaturaCard'
@@ -142,6 +142,49 @@ function ListaNutricion({ items }) {
   )
 }
 
+function comoBullets(texto) {
+  if (!texto) return []
+  return texto.split('. ').map(s => s.trim()).filter(Boolean).map(s => s.endsWith('.') ? s : s + '.')
+}
+
+function SeccionRiego({ riego }) {
+  const items = [
+    { icono: '💧', label: 'Frecuencia', valor: riego.frecuencia },
+    { icono: '🪣', label: 'Cantidad por riego', valor: riego.cantidad },
+    { icono: '⚠️', label: 'Nota importante', valor: riego.nota },
+  ].filter(item => !esPendiente(item.valor))
+
+  return (
+    <SeccionCollapsible id="riego" titulo="Riego">
+      <div className="bg-agro-card rounded-xl p-5">
+        <ol className="flex flex-col gap-0">
+          {items.map((item, i) => (
+            <li key={i} className="flex gap-4">
+              <div className="flex flex-col items-center">
+                <div className="w-3 h-3 rounded-full bg-agro-lima mt-1 shrink-0" />
+                {i < items.length - 1 && (
+                  <div className="w-0.5 bg-agro-lima flex-1 my-1" />
+                )}
+              </div>
+              <div className="pb-5">
+                <p className="font-titulo font-bold text-agro-text text-sm">{item.icono} {item.label}</p>
+                <ul className="flex flex-col gap-1.5 mt-1.5">
+                  {comoBullets(item.valor).map((punto, j) => (
+                    <li key={j} className="flex items-start gap-2 text-agro-text font-cuerpo text-sm leading-snug">
+                      <span className="mt-1.5 w-1 h-1 rounded-full bg-agro-lima/70 shrink-0" />
+                      {punto}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </SeccionCollapsible>
+  )
+}
+
 function SeccionNutricion({ nutricion }) {
   const tieneFertilizantes = Array.isArray(nutricion.fertilizantes) && nutricion.fertilizantes.length > 0
 
@@ -165,9 +208,42 @@ function SeccionNutricion({ nutricion }) {
 
 function SeccionFenologia({ fenologia }) {
   return (
-    <SeccionCollapsible id="fenologia" titulo="Fenología">
+    <SeccionCollapsible id="fenologia" titulo="Fenología y etapas">
       <div className="bg-agro-card rounded-xl p-5">
         <FenologiaTimeline etapas={fenologia.etapas} />
+      </div>
+    </SeccionCollapsible>
+  )
+}
+
+function SeccionPoscosecha({ poscosecha }) {
+  if (!poscosecha) return null
+  return (
+    <SeccionCollapsible id="poscosecha" titulo="Poscosecha">
+      <div className="flex flex-col gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="bg-agro-card rounded-xl p-4">
+            <p className="text-agro-cardLabel text-xs font-cuerpo uppercase tracking-wide mb-2">🌡️ Temperatura de almacenamiento</p>
+            <p className="text-agro-text font-cuerpo text-sm leading-snug">{poscosecha.temperatura_almacenamiento}</p>
+          </div>
+          <div className="bg-agro-card rounded-xl p-4">
+            <p className="text-agro-cardLabel text-xs font-cuerpo uppercase tracking-wide mb-2">📅 Vida útil</p>
+            <p className="text-agro-text font-cuerpo text-sm leading-snug">{poscosecha.vida_util}</p>
+          </div>
+        </div>
+        {Array.isArray(poscosecha.recomendaciones) && poscosecha.recomendaciones.length > 0 && (
+          <div className="bg-agro-card rounded-xl p-4">
+            <p className="text-agro-cardLabel text-xs font-cuerpo uppercase tracking-wide mb-3">Recomendaciones</p>
+            <ul className="flex flex-col gap-2">
+              {poscosecha.recomendaciones.map((rec, i) => (
+                <li key={i} className="flex items-start gap-2 text-agro-text font-cuerpo text-sm">
+                  <span className="mt-1 w-1.5 h-1.5 rounded-full bg-agro-lima shrink-0" />
+                  {rec}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </SeccionCollapsible>
   )
@@ -210,8 +286,15 @@ function SeccionPlagas({ plagas }) {
                 <p className="text-agro-text font-cuerpo text-sm leading-snug">{plaga.como_identificar}</p>
               </div>
               <div>
-                <p className="text-agro-cardLabel text-xs font-cuerpo uppercase tracking-wide mb-1">Qué hacer</p>
-                <p className="text-agro-text font-cuerpo text-sm leading-snug">{plaga.que_hacer}</p>
+                <p className="text-agro-cardLabel text-xs font-cuerpo uppercase tracking-wide mb-2">🛡️ Manejo y prevención</p>
+                <ul className="flex flex-col gap-1.5">
+                  {comoBullets(plaga.prevencion || plaga.que_hacer).map((punto, j) => (
+                    <li key={j} className="flex items-start gap-2 text-agro-text font-cuerpo text-sm leading-snug">
+                      <span className="mt-1.5 w-1 h-1 rounded-full bg-agro-lima/70 shrink-0" />
+                      {punto}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           )
@@ -223,6 +306,7 @@ function SeccionPlagas({ plagas }) {
 
 export default function DetalleCultivo() {
   const { id, seccion } = useParams()
+  const navigate = useNavigate()
   const cultivo = cultivos.find(c => c.id === id)
 
   if (!cultivo) {
@@ -237,6 +321,16 @@ export default function DetalleCultivo() {
 
   return (
     <div className="p-4 sm:p-6 lg:p-8 flex flex-col w-full">
+      <button
+        onClick={() => navigate('/')}
+        className="self-start flex items-center gap-1.5 text-agro-muted hover:text-agro-lima transition-colors mb-5 group"
+      >
+        <svg className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+        <span className="font-titulo font-bold text-sm">Volver a cultivos</span>
+      </button>
+
       <div className="flex items-center gap-4">
         <span className="text-5xl">{cultivo.emoji}</span>
         <div>
@@ -256,9 +350,21 @@ export default function DetalleCultivo() {
 
       <SeccionSuelo suelo={cultivo.condiciones_suelo} />
       <SeccionClima clima={cultivo.clima} />
+      {cultivo.riego && <SeccionRiego riego={cultivo.riego} />}
       <SeccionNutricion nutricion={cultivo.nutricion} />
       <SeccionFenologia fenologia={cultivo.fenologia} />
       <SeccionPlagas plagas={cultivo.plagas} />
+      <SeccionPoscosecha poscosecha={cultivo.poscosecha} />
+
+      <button
+        onClick={() => navigate('/')}
+        className="self-center flex items-center gap-2 bg-agro-lima hover:bg-agro-limaHover text-agro-surface font-titulo font-bold text-sm px-6 py-2.5 rounded-full transition-colors mt-8 group"
+      >
+        <svg className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+        Volver a cultivos
+      </button>
     </div>
   )
 }

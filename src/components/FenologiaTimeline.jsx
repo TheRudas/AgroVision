@@ -25,6 +25,19 @@ export default function FenologiaTimeline({ etapas }) {
             <p className="text-agro-text text-sm font-cuerpo mt-1">
               {esPendiente(etapa.descripcion) ? <DatosPendientes /> : etapa.descripcion}
             </p>
+            {Array.isArray(etapa.cuidados_clave) && etapa.cuidados_clave.length > 0 && (
+              <div className="mt-2">
+                <p className="text-agro-cardLabel text-xs font-cuerpo uppercase tracking-wide mb-1.5">Cuidados clave</p>
+                <ul className="flex flex-col gap-1.5">
+                  {etapa.cuidados_clave.map((cuidado, j) => (
+                    <li key={j} className="flex items-start gap-2 text-agro-text font-cuerpo text-xs">
+                      <span className="mt-1 w-1.5 h-1.5 rounded-full bg-agro-lima shrink-0" />
+                      {cuidado}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </li>
       ))}

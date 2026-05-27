@@ -49,23 +49,36 @@ function getExplicaciones(cultivoId, respuestas) {
 // ── Pantalla intro ─────────────────────────────────────────────────────────────
 
 function PantallaIntro({ onStart }) {
+  const navigate = useNavigate()
   return (
-    <div className="animate-fadein flex flex-col items-center justify-center flex-1 px-6 py-12 text-center">
-      <div className="text-7xl mb-6 select-none">🌾</div>
-      <h1 className="font-titulo font-bold text-3xl text-agro-text mb-3">
-        ¿Qué debo sembrar?
-      </h1>
-      <p className="text-agro-muted text-base max-w-md leading-relaxed mb-8">
-        No todos los cultivos sirven para todos los terrenos. Responde
-        6 preguntas simples y te decimos cuál encaja mejor con tu zona,
-        tu suelo y tus objetivos.
-      </p>
+    <div className="animate-fadein flex flex-col flex-1 px-6 py-8">
       <button
-        onClick={onStart}
-        className="bg-agro-lima hover:bg-agro-limaHover text-agro-surface font-titulo font-bold px-8 py-3 rounded-xl text-base transition-colors"
+        onClick={() => navigate('/')}
+        className="self-start flex items-center gap-2 bg-agro-lima hover:bg-agro-limaHover text-agro-surface font-titulo font-bold text-sm px-5 py-2.5 rounded-full transition-colors mb-8 group"
       >
-        Comenzar →
+        <svg className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+        Volver a cultivos
       </button>
+
+      <div className="flex flex-col items-center justify-center flex-1 text-center">
+        <div className="text-7xl mb-6 select-none">🌾</div>
+        <h1 className="font-titulo font-bold text-3xl text-agro-text mb-3">
+          ¿Qué debo sembrar?
+        </h1>
+        <p className="text-agro-muted text-base max-w-md leading-relaxed mb-8">
+          No todos los cultivos sirven para todos los terrenos. Responde
+          6 preguntas simples y te decimos cuál encaja mejor con tu zona,
+          tu suelo y tus objetivos.
+        </p>
+        <button
+          onClick={onStart}
+          className="bg-agro-lima hover:bg-agro-limaHover text-agro-surface font-titulo font-bold px-8 py-3 rounded-xl text-base transition-colors"
+        >
+          Comenzar →
+        </button>
+      </div>
     </div>
   )
 }

@@ -34,6 +34,11 @@
         "nota": "Requiere entre 100 y 150 mm de lluvia mensual."
       }
     },
+    "riego": {
+      "frecuencia": "Árboles jóvenes (0–3 años): 2 a 3 veces por semana en época seca. Árboles adultos productivos: 1 a 2 veces por semana. Suspender el riego 6–8 semanas antes de la inducción floral para generar estrés hídrico controlado.",
+      "cantidad": "Árboles jóvenes: 20–40 litros por planta por riego. Árboles adultos (≥8 años): 60–120 litros por planta por semana. Con riego por goteo se recomienda lámina de 4–6 mm/día en plena producción.",
+      "nota": "El mango requiere un período de estrés hídrico de 6 a 8 semanas sin riego para inducir la diferenciación floral. En zonas con riego suplementario debe suprimirse intencionalmente antes de la floración."
+    },
     "nutricion": {
       "requerimientos": [
         "Nitrógeno (N) y Fósforo (P) en etapa vegetativa",
@@ -53,18 +58,43 @@
         {
           "nombre": "Crecimiento vegetativo",
           "duracion": "45-60 días por oleada de brotación; el árbol puede emitir 2-3 oleadas por año según clima y manejo",
-          "descripcion": "Nutriente clave: Nitrógeno (N). Se aplican fórmulas ricas en N y P para desarrollo de raíces (Urea o DAP)."
+          "descripcion": "Nutriente clave: Nitrógeno (N). Se aplican fórmulas ricas en N y P para desarrollo de raíces (Urea o DAP).",
+          "cuidados_clave": [
+            "Fertilización nitrogenada al inicio de cada flujo vegetativo para estimular brotación vigorosa y uniforme; aplicar en drench o fertirriego con urea o nitrato de amonio.",
+            "Podas de formación en árboles jóvenes y podas sanitarias post-cosecha para eliminar ramas secas, cruzadas o enfermas, mejorando la arquitectura del árbol y la aireación del dosel.",
+            "Control preventivo de hongos foliares (antracnosis, oídio) con fungicidas cúpricos o azufre mojable al inicio de cada flujo de crecimiento, especialmente con humedad relativa superior al 80%."
+          ]
         },
         {
           "nombre": "Inducción y floración",
           "duracion": "2-3 meses de estrés hídrico para inducir + 30-50 días desde brotación floral hasta amarre del fruto",
-          "descripcion": "Nutrientes ideales: Fósforo (P), Boro (B) y Zinc (Zn). El nitrógeno debe reducirse a cero — un exceso provoca brotes vegetativos en lugar de flores."
+          "descripcion": "Nutrientes ideales: Fósforo (P), Boro (B) y Zinc (Zn). El nitrógeno debe reducirse a cero — un exceso provoca brotes vegetativos en lugar de flores.",
+          "cuidados_clave": [
+            "Suspender el riego 6–8 semanas antes de la floración esperada para inducir estrés hídrico; en variedades tardías apoyar con aplicaciones foliares de nitrato de potasio al 3–4%.",
+            "Proteger las inflorescencias de antracnosis y oídio con fungicidas preventivos (mancozeb, azoxistrobina) cada 8–12 días durante la emisión y apertura de flores.",
+            "Favorecer la polinización evitando insecticidas durante horas de mayor actividad de polinizadores (6–10 am); monitorear trips en inflorescencias, el umbral de acción es 10 individuos por panícula."
+          ]
         },
         {
           "nombre": "Amarre y llenado del fruto",
           "duracion": "105-130 días desde amarre hasta madurez comercial (varía según variedad y altitud)",
-          "descripcion": "Nutrientes clave: Potasio (K) y Calcio (Ca). Aplicaciones altas de sulfato de potasio desde que el fruto tiene el tamaño de una aceituna hasta la madurez."
+          "descripcion": "Nutrientes clave: Potasio (K) y Calcio (Ca). Aplicaciones altas de sulfato de potasio desde que el fruto tiene el tamaño de una aceituna hasta la madurez.",
+          "cuidados_clave": [
+            "Reanudar el riego regular tras el amarre de frutos (cuaje >2 cm de diámetro), manteniendo humedad uniforme para evitar caída prematura y agrietamiento del fruto.",
+            "Fertilización con Potasio (K) y Calcio (Ca) durante el llenado del fruto; el potasio es el elemento de mayor respuesta en mango (relación K:N de 2:1 en esta etapa).",
+            "Controlar mosca de la fruta (Anastrepha spp.) mediante trampas McPhail con proteína hidrolizada y cosechar oportunamente para reducir la carga de inóculo."
+          ]
         }
+      ]
+    },
+    "poscosecha": {
+      "temperatura_almacenamiento": "13°C con humedad relativa del 90–95%. No almacenar por debajo de 10–12°C para evitar daño por frío. Temperatura de tránsito recomendada: 13°C.",
+      "vida_util": "2 a 3 semanas a 13°C en atmósfera normal. 3 a 6 semanas a 13°C en atmósfera controlada (3–5% O₂ y 5–10% CO₂), dependiendo del cultivar.",
+      "recomendaciones": [
+        "Realizar tratamiento hidrotérmico (agua caliente a 46–48°C por 60–90 minutos) para control de antracnosis latente y mosca de la fruta antes del almacenamiento o exportación, según protocolo ICA.",
+        "Aplicar recubrimientos con cera (emulsión de cera carnauba) para reducir pérdidas de peso por transpiración y prolongar la vida útil hasta en un 50%.",
+        "Cosechar el fruto en estado de madurez fisiológica (índice de refracción ≥7° Brix o cambio de color interno a amarillo-naranja) para garantizar maduración uniforme en destino.",
+        "Manejar el fruto con cuidado evitando golpes y rozaduras; usar canastillas plásticas acolchadas y empaques individuales para reducir daño mecánico que favorece hongos poscosecha."
       ]
     },
     "plagas": [
@@ -74,7 +104,8 @@
         "tipo": "hongo",
         "emoji": "🍄",
         "como_identificar": "Manchas negras o café oscuro en hojas, flores y frutos. Los frutos maduros se pudren con manchas hundidas de color negro.",
-        "que_hacer": "Aplicar fungicidas con cobre (oxicloruro de cobre) o mancozeb. Podar ramas enfermas y recoger frutos caídos. Evitar el riego por aspersión sobre el follaje."
+        "que_hacer": "Aplicar fungicidas con cobre (oxicloruro de cobre) o mancozeb. Podar ramas enfermas y recoger frutos caídos. Evitar el riego por aspersión sobre el follaje.",
+        "prevencion": "Realizar podas sanitarias para mejorar la aireación del dosel. Aplicar fungicidas preventivos a base de cobre (3 g/L) o mancozeb (2 g/L) al inicio de la floración y repetir cada 8–12 días durante lluvias. Evitar heridas en frutos durante el manejo y la cosecha. En poscosecha, aplicar tratamiento hidrotérmico (46–48°C, 60 min) para eliminar infecciones latentes."
       },
       {
         "nombre": "Mosca de la fruta",
@@ -82,7 +113,8 @@
         "tipo": "insecto",
         "emoji": "🐛",
         "como_identificar": "Frutos con pequeños huecos o picaduras en la cáscara. Al abrir el mango se ven larvas blancas pequeñas dentro de la pulpa.",
-        "que_hacer": "Colocar trampas con atrayente de melaza o proteína hidrolizada. Recoger y enterrar frutos caídos. Aplicar spinosad o malatión en casos severos."
+        "que_hacer": "Colocar trampas con atrayente de melaza o proteína hidrolizada. Recoger y enterrar frutos caídos. Aplicar spinosad o malatión en casos severos.",
+        "prevencion": "Instalar trampas McPhail con proteína hidrolizada (mínimo 1 trampa/ha) para monitoreo permanente. Recoger y destruir frutos caídos o con síntomas de daño. Aplicar cebo tóxico en parche cuando capturas superen el umbral de acción. Coordinar con el ICA el Plan Nacional de Manejo de Moscas de la Fruta."
       },
       {
         "nombre": "Trips del mango",
@@ -90,7 +122,8 @@
         "tipo": "insecto",
         "emoji": "🐛",
         "como_identificar": "Flores y hojas tiernas con raspado plateado o color plateado-grisáceo. Las flores se caen antes de cuajar. Se ven insectos muy pequeños color café oscuro.",
-        "que_hacer": "Aplicar spinosad o imidacloprid en la época de floración. Hacer aspersiones en horas frescas del día. Eliminar malezas alrededor del árbol."
+        "que_hacer": "Aplicar spinosad o imidacloprid en la época de floración. Hacer aspersiones en horas frescas del día. Eliminar malezas alrededor del árbol.",
+        "prevencion": "Monitorear inflorescencias a partir de la emisión floral; aplicar control cuando se detecten ≥10 trips por panícula. Usar depredadores naturales como Orius spp. Mantener coberturas vegetales en el piso del huerto. Aplicar insecticidas de bajo impacto (spinosad, aceite mineral) en horas de menor actividad polinizadora (después de las 10 am)."
       },
       {
         "nombre": "Oídio",
@@ -98,7 +131,8 @@
         "tipo": "hongo",
         "emoji": "🍄",
         "como_identificar": "Polvo blanco harinoso sobre hojas jóvenes y flores. Los brotes nuevos se deforman y no crecen bien.",
-        "que_hacer": "Aplicar azufre mojable o biofungicidas a base de Bacillus subtilis. Podar los brotes afectados. Mejorar la ventilación del árbol con podas de formación."
+        "que_hacer": "Aplicar azufre mojable o biofungicidas a base de Bacillus subtilis. Podar los brotes afectados. Mejorar la ventilación del árbol con podas de formación.",
+        "prevencion": "Aplicar azufre mojable (2–3 g/L) o biofungicidas con Bacillus subtilis al inicio de la emisión de panículas y repetir cada 10–14 días durante la floración. Favorecer la circulación de aire en el dosel mediante podas. Evitar exceso de nitrógeno que promueve tejidos blandos susceptibles."
       }
     ]
   },
@@ -137,6 +171,11 @@
         "nota": "Requiere entre 120 y 150 mm de lluvia mensual."
       }
     },
+    "riego": {
+      "frecuencia": "Riego cada 8 a 10 días en época seca. En época lluviosa se ajusta según precipitación, pudiendo suspenderse si la lluvia aporta más de 30 mm/semana. Con sistemas de aspersión o goteo se riega 2 a 3 veces por semana.",
+      "cantidad": "Requerimiento hídrico de 150 a 200 mm/mes (1.800 a 2.400 mm/año). En la región de Urabá se requieren entre 50 y 60 mm/semana. Con densidad de 1.600 plantas/ha, equivale a 30–38 litros por planta por riego en sistema por aspersión.",
+      "nota": "El banano es muy sensible al déficit hídrico: por cada 100 mm de déficit el rendimiento puede caer entre 1,42 y 2,13 t/ha. Evitar encharcamiento pues favorece enfermedades radiculares."
+    },
     "nutricion": {
       "requerimientos": [
         "Nitrógeno (N) y Fósforo (P) en etapa vegetativa",
@@ -157,18 +196,43 @@
         {
           "nombre": "Vegetativa — crecimiento foliar",
           "duracion": "~180 días (6 meses desde siembra hasta diferenciación floral)",
-          "descripcion": "Nutrientes clave: Nitrógeno (N) y Fósforo (P). El N impulsa el área foliar que alimentará el futuro racimo, el P estimula el enraizamiento inicial."
+          "descripcion": "Nutrientes clave: Nitrógeno (N) y Fósforo (P). El N impulsa el área foliar que alimentará el futuro racimo, el P estimula el enraizamiento inicial.",
+          "cuidados_clave": [
+            "Realizar deshije mensual dejando un hijo espada seleccionado por planta (unidad madre-hijo-nieto) para garantizar continuidad productiva y densidad óptima de 1.600 plantas/ha.",
+            "Aplicar fertilización fraccionada con énfasis en Nitrógeno y Potasio según análisis de suelo y foliar; ciclos mensuales de fertilización para pleno desarrollo del pseudotallo y raíces.",
+            "Controlar malezas intensivamente durante los primeros 4 meses, garantizando zona libre de competencia de al menos 1 m alrededor de cada planta."
+          ]
         },
         {
           "nombre": "Diferenciación floral",
           "duracion": "~90 días (3 meses; ocurre alrededor de la hoja 19-21 del pseudotallo)",
-          "descripcion": "Nutrientes clave: Potasio (K), Calcio (Ca), Boro (B) y Zinc (Zn). El Boro y Zinc son cruciales para la correcta formación de las flores internas."
+          "descripcion": "Nutrientes clave: Potasio (K), Calcio (Ca), Boro (B) y Zinc (Zn). El Boro y Zinc son cruciales para la correcta formación de las flores internas.",
+          "cuidados_clave": [
+            "Realizar deschante (eliminación de vainas foliares secas del pseudotallo) para reducir refugios de plagas como el picudo negro y mejorar circulación de aire.",
+            "Intensificar monitoreo y aplicaciones preventivas contra Sigatoka negra, asegurando al menos 8 hojas funcionales al momento de la diferenciación floral.",
+            "Ajustar la fertilización con mayor aporte de Potasio y Calcio; evitar déficit hídrico en esta etapa, pues afecta irreversiblemente el número de manos y el peso del racimo."
+          ]
         },
         {
           "nombre": "Floración a cosecha — fructificación",
           "duracion": "81-90 días (desde emisión de la bellota hasta corte del racimo)",
-          "descripcion": "El Potasio domina completamente esta fase, transportando carbohidratos desde las hojas al racimo. El Calcio previene debilidad en el cuello del racimo y mejora la vida útil en percha."
+          "descripcion": "El Potasio domina completamente esta fase, transportando carbohidratos desde las hojas al racimo. El Calcio previene debilidad en el cuello del racimo y mejora la vida útil en percha.",
+          "cuidados_clave": [
+            "Colocar funda de polipropileno perforada (enfunde) sobre el racimo tan pronto el ápice de la bellota apunte al suelo, para proteger la fruta de daños por insectos y mejorar calibre.",
+            "Realizar apuntalamiento con vara bifurcada (horqueta) para evitar volcamiento de la planta por el peso del racimo; efectuar desflore entre 3 y 7 días después del enfunde.",
+            "Cosechar a los 81–90 días después de la floración (12–14 semanas) cuando el fruto alcanza el calibre de exportación (≥39/32 pulgadas); realizar desmane y selección en campo."
+          ]
         }
+      ]
+    },
+    "poscosecha": {
+      "temperatura_almacenamiento": "13–14°C para almacenamiento y transporte en verde. Temperaturas inferiores a 13°C causan daño por frío: decoloración de cáscara e incapacidad de madurar. Para maduración controlada: 15–20°C.",
+      "vida_util": "2 a 4 semanas en atmósfera normal a 13–14°C. Se extiende a 4–6 semanas bajo atmósfera controlada (CO₂ <1% y O₂ entre 2–5% a 14°C).",
+      "recomendaciones": [
+        "Cosechar en horas frescas del día y trasladar la fruta rápidamente a la empacadora para reducir el calor de campo; evitar golpes y rozaduras durante el corte y desmane.",
+        "Lavar los gajos con agua limpia clorada (100–150 ppm de cloro libre) para remover el látex y reducir carga microbiana; aplicar fungicida poscosecha (thiabendazol o imazalil) en el agua de lavado.",
+        "Mantener la cadena de frío continua desde el pre-enfriado (13–14°C) hasta el destino; aplicar 100–150 ppm de etileno por 24–48 horas a 15–20°C con HR 90–95% para inducir maduración uniforme.",
+        "Empacar en cajas de cartón con polietileno interior y absorbente de etileno (permanganato de potasio) para retardar la maduración durante el transporte de exportación."
       ]
     },
     "plagas": [
@@ -178,7 +242,8 @@
         "tipo": "hongo",
         "emoji": "🍄",
         "como_identificar": "Rayas amarillas que se vuelven manchas negras alargadas en las hojas. Las hojas se secan desde abajo hacia arriba. La planta parece quemada.",
-        "que_hacer": "Eliminar y enterrar hojas enfermas (deshoje fitosanitario). Aplicar fungicidas sistémicos como propiconazol o trifloxistrobin. Evitar exceso de humedad en el cultivo."
+        "que_hacer": "Eliminar y enterrar hojas enfermas (deshoje fitosanitario). Aplicar fungicidas sistémicos como propiconazol o trifloxistrobin. Evitar exceso de humedad en el cultivo.",
+        "prevencion": "Implementar monitoreo semanal estimando el porcentaje de área foliar afectada en cada hoja para determinar el estado de la enfermedad y activar aplicaciones oportunas. Realizar deshoje fitosanitario eliminando hojas con síntomas avanzados. Aplicar fungicidas sistémicos (triazoles, estrobirulinas) en rotación para evitar resistencia; complementar con protectantes (mancozeb, clorotalonil) en época seca. Mantener al menos 8–10 hojas funcionales por planta."
       },
       {
         "nombre": "Picudo negro del banano",
@@ -186,7 +251,8 @@
         "tipo": "insecto",
         "emoji": "🐛",
         "como_identificar": "Plantas que se doblan o caen sin razón aparente. Al cortar el seudotallo se ven túneles y larvas blancas dentro del tejido.",
-        "que_hacer": "Usar trampas con pseudotallo picado impregnado de insecticida. Aplicar clorpirifos en el suelo cerca de la base. Desinfectar los colinos antes de sembrar sumergiéndolos en agua caliente (52°C por 20 min)."
+        "que_hacer": "Usar trampas con pseudotallo picado impregnado de insecticida. Aplicar clorpirifos en el suelo cerca de la base. Desinfectar los colinos antes de sembrar sumergiéndolos en agua caliente (52°C por 20 min).",
+        "prevencion": "Usar exclusivamente material de siembra certificado libre de larvas; desinfectar cormos con solución de clorpirifos o con Beauveria bassiana antes de la siembra. Instalar trampas tipo sándwich con feromona agregante Cosmolure® (25–30 trampas/ha) para monitoreo permanente. Realizar deschante periódico eliminando vainas y residuos del pseudotallo que sirven de refugio y sitio de postura."
       },
       {
         "nombre": "Moko del banano",
@@ -194,7 +260,8 @@
         "tipo": "bacteria",
         "emoji": "🦠",
         "como_identificar": "Las hojas del centro amarillean y se secan. Al cortar el pseudotallo se ve el interior café o negro con mal olor. El racimo no desarrolla bien.",
-        "que_hacer": "No tiene cura: arrancar y quemar las plantas enfermas. Desinfectar herramientas con hipoclorito al 10% entre planta y planta. Evitar el paso de personas o animales por zonas infectadas."
+        "que_hacer": "No tiene cura: arrancar y quemar las plantas enfermas. Desinfectar herramientas con hipoclorito al 10% entre planta y planta. Evitar el paso de personas o animales por zonas infectadas.",
+        "prevencion": "Utilizar únicamente vitroplantas o colinos de origen certificado libre de Ralstonia solanacearum. Desinfectar todas las herramientas de corte con hipoclorito de sodio al 3% entre planta y planta; instalar pediluvios con desinfectante en los accesos a la finca. Ante cualquier planta con síntomas aplicar el protocolo ICA: erradicación inmediata, encalado del sitio y cuarentena del área afectada."
       },
       {
         "nombre": "Nematodo barrenador",
@@ -202,7 +269,8 @@
         "tipo": "nematodo",
         "emoji": "🪱",
         "como_identificar": "Plantas que se caen o vuelcan fácilmente. Raíces con manchas café-rojizas al partirlas. Plantas con poco vigor y racimos pequeños.",
-        "que_hacer": "Rotar cultivos. Aplicar nematicidas como cadusafos al suelo. Usar plantas madre sanas y desinfectadas. Incorporar materia orgánica para favorecer hongos antagonistas."
+        "que_hacer": "Rotar cultivos. Aplicar nematicidas como cadusafos al suelo. Usar plantas madre sanas y desinfectadas. Incorporar materia orgánica para favorecer hongos antagonistas.",
+        "prevencion": "Establecer el cultivo únicamente con vitroplantas certificadas libres de Radopholus similis o con cormos termotratados (agua caliente a 52–55°C por 20 minutos). Realizar rotación de cultivos con especies no hospedantes (Brassica, Mucuna, piña) por al menos un ciclo antes de nuevas plantaciones. Mantener buen drenaje del suelo; complementar con nematicidas biológicos (Paecilomyces lilacinus, Trichoderma spp.) según análisis nematológico del suelo."
       }
     ]
   },
@@ -241,6 +309,11 @@
         "nota": "Requiere entre 90 y 120 mm de lluvia mensual, evitando encharcamientos."
       }
     },
+    "riego": {
+      "frecuencia": "Cada 2–3 días en etapa vegetativa; cada 1–2 días en floración y llenado de frutos en época seca. En suelos arenosos regar cada 5–7 días; en suelos arcillosos cada 8–10 días. Usar riego por goteo preferiblemente.",
+      "cantidad": "3–5 litros por planta por día en época seca bajo riego por goteo. Investigaciones en el Valle del Sinú (Córdoba) determinaron una dosis óptima de 5,32 L/planta/día para máxima producción comercial. Lámina total del ciclo: 400–600 mm.",
+      "nota": "El ají es muy sensible tanto al déficit como al exceso hídrico. Nunca permitir encharcamiento — las raíces se asfixian en menos de 24 horas. Verificar humedad a 20 cm de profundidad antes de regar: si el suelo aún está húmedo, no regar."
+    },
     "nutricion": {
       "requerimientos": [
         "Nitrógeno (N) y Fósforo (P) en etapa vegetativa para crecimiento radicular y foliar",
@@ -261,18 +334,43 @@
         {
           "nombre": "Vegetativa — plántula y crecimiento inicial",
           "duracion": "Día 0 al Día 20-30 (desde trasplante)",
-          "descripcion": "Nutrientes clave: Nitrógeno (N) y Fósforo (P) para crecimiento radicular y foliar."
+          "descripcion": "Nutrientes clave: Nitrógeno (N) y Fósforo (P) para crecimiento radicular y foliar.",
+          "cuidados_clave": [
+            "Trasplantar plántulas de 20–30 días con 10–12 cm de altura; hacerlo en horas frescas (tarde o mañana temprano) para reducir el estrés hídrico y térmico.",
+            "Mantener humedad constante pero sin encharcar — riegos frecuentes y ligeros los primeros 10 días post-trasplante para favorecer el prendimiento radicular.",
+            "Aplicar fertilización de arranque con Nitrógeno (N) y Fósforo (P); desyerbar manualmente para eliminar competencia sin dañar raíces superficiales."
+          ]
         },
         {
           "nombre": "Floración y cuajado",
           "duracion": "Día 20-45 (floración inicia entre los 20-45 días post-trasplante)",
-          "descripcion": "Nutrientes ideales: Fósforo (P), Boro (B) y Calcio (Ca). Las deficiencias provocan caída de flores y mala formación de frutos."
+          "descripcion": "Nutrientes ideales: Fósforo (P), Boro (B) y Calcio (Ca). Las deficiencias provocan caída de flores y mala formación de frutos.",
+          "cuidados_clave": [
+            "Evitar el estrés hídrico y el riego excesivo — ambos reducen la viabilidad del polen y provocan caída de flores; mantener humedad uniforme.",
+            "Aplicar Boro (B) y Calcio (Ca) vía foliar para mejorar el cuajado; reducir el Nitrógeno para no estimular exceso de follaje en perjuicio de las flores.",
+            "Monitorear y controlar trips y áfidos activamente — son los vectores que más daño causan en esta etapa al transmitir virus y raspar flores y frutos."
+          ]
         },
         {
           "nombre": "Llenado y maduración de frutos",
           "duracion": "Día 45 al Día 80-110 (cosecha en verde ~70-90 días; en maduro ~90-110 días post-trasplante)",
-          "descripcion": "Nutrientes clave: Potasio (K) y Calcio (Ca). El potasio mejora tamaño, color y calidad del fruto; el calcio previene la pudrición apical."
+          "descripcion": "Nutrientes clave: Potasio (K) y Calcio (Ca). El potasio mejora tamaño, color y calidad del fruto; el calcio previene la pudrición apical.",
+          "cuidados_clave": [
+            "Aumentar las aplicaciones de Potasio (K) para mejorar tamaño, color y calidad del fruto; mantener aplicaciones de Calcio (Ca) para prevenir la pudrición apical.",
+            "Sostener riegos regulares sin fluctuaciones bruscas — los cambios abruptos de humedad provocan rajado o deformación de frutos.",
+            "Cosechar en el índice de madurez correcto según destino: fruto verde-brillante (mercado fresco) o completamente rojo (procesamiento); usar tijeras desinfectadas para no dañar la planta."
+          ]
         }
+      ]
+    },
+    "poscosecha": {
+      "temperatura_almacenamiento": "7,5–10°C con humedad relativa de 90–95%. No bajar de 7°C para evitar daño por frío. Para ají picante maduro (rojo) hasta 5°C es tolerable por períodos cortos.",
+      "vida_util": "2 a 3 semanas bajo refrigeración a 7,5–10°C y 90–95% HR. Sin refrigeración, la vida útil se reduce a 5–7 días en condiciones tropicales (25–30°C).",
+      "recomendaciones": [
+        "Pre-enfriar los frutos lo antes posible después de la cosecha (máximo 2–3 horas); reducir la temperatura por debajo de 12°C en menos de una hora y media usando aire forzado húmedo.",
+        "Cosechar en las horas más frescas del día (temprano en la mañana), evitando golpes y cortes; los frutos dañados liberan etileno que acelera la maduración del lote completo.",
+        "Almacenar en cajas plásticas ventiladas o canastillas limpias y desinfectadas; nunca en bolsas cerradas que acumulen condensación y favorecen hongos como Botrytis.",
+        "Mantener el fruto alejado de productos climatéricos (tomate, mango, banano) que emiten etileno y aceleran la maduración y el deterioro del ají."
       ]
     },
     "plagas": [
@@ -282,7 +380,8 @@
         "tipo": "hongo",
         "emoji": "🍄",
         "como_identificar": "Plantas que se marchitan de repente como si les faltara agua, aunque el suelo esté húmedo. El tallo cerca al suelo se pone café y se pudre.",
-        "que_hacer": "Mejorar el drenaje del suelo. Aplicar metalaxil o fosetil aluminio en drench al suelo. No regar en exceso. Desinfectar el suelo con cal antes de sembrar."
+        "que_hacer": "Mejorar el drenaje del suelo. Aplicar metalaxil o fosetil aluminio en drench al suelo. No regar en exceso. Desinfectar el suelo con cal antes de sembrar.",
+        "prevencion": "Seleccionar lotes con excelente drenaje natural; construir camas elevadas en suelos planos o arcillosos. Rotar el cultivo con gramíneas (maíz, sorgo) al menos un ciclo antes de volver a sembrar solanáceas. Desinfectar el suelo con cal dolomítica (1–2 t/ha) antes de sembrar. Evitar el riego excesivo y no regar en horas nocturnas. Aplicar fosetil-aluminio o metalaxil de forma preventiva en drench al inicio del ciclo y después de lluvias intensas."
       },
       {
         "nombre": "Trips",
@@ -290,7 +389,8 @@
         "tipo": "insecto",
         "emoji": "🐛",
         "como_identificar": "Hojas con plateado o color bronce en la parte superior. Flores y frutos pequeños con cicatrices plateadas o deformes. Al sacudir la flor caen insectitos muy pequeños.",
-        "que_hacer": "Aplicar spinosad o abamectina. Instalar trampas azules pegajosas. Eliminar malezas que sirven de refugio. Hacer aspersiones en horas frescas."
+        "que_hacer": "Aplicar spinosad o abamectina. Instalar trampas azules pegajosas. Eliminar malezas que sirven de refugio. Hacer aspersiones en horas frescas.",
+        "prevencion": "Instalar trampas pegajosas azules (20–30 trampas/ha) desde el trasplante para monitoreo temprano y captura de adultos. Eliminar malezas dentro y en los bordes del lote, que sirven de reservorio. Mantener plantas vigorosas con nutrición balanceada — las plantas estresadas son más susceptibles. Usar coberturas (mulch) para dificultar la pupación en el suelo."
       },
       {
         "nombre": "Virus del mosaico del pepino (CMV)",
@@ -298,7 +398,8 @@
         "tipo": "virus",
         "emoji": "☀",
         "como_identificar": "Hojas con manchas amarillo-verdosas en mosaico, arrugadas o con ampollas. Plantas achaparradas. Frutos deformados con manchas de colores.",
-        "que_hacer": "No tiene cura. Arrancar y quemar plantas enfermas. Controlar los áfidos que transmiten el virus con imidacloprid. Usar semilla certificada y libre de virus."
+        "que_hacer": "No tiene cura. Arrancar y quemar plantas enfermas. Controlar los áfidos que transmiten el virus con imidacloprid. Usar semilla certificada y libre de virus.",
+        "prevencion": "Usar semilla certificada y libre de virus; verificar el estado sanitario de las plántulas antes del trasplante. Controlar los áfidos vectores con trampas pegajosas amarillas y aplicaciones de aceites minerales o jabón potásico. Eliminar y quemar de inmediato cualquier planta con síntomas de mosaico. Desinfectar herramientas con hipoclorito al 10% para evitar transmisión mecánica."
       },
       {
         "nombre": "Ácaro blanco",
@@ -306,7 +407,8 @@
         "tipo": "acaro",
         "emoji": "🕷️",
         "como_identificar": "Hojas tiernas enrolladas hacia abajo o deformadas con color cobrizo. Brotes que no se desarrollan bien. Muy difícil verlos a simple vista.",
-        "que_hacer": "Aplicar azufre mojable o abamectina. Evitar el estrés hídrico de la planta. Hacer aspersiones por el envés de las hojas. Eliminar brotes muy afectados."
+        "que_hacer": "Aplicar azufre mojable o abamectina. Evitar el estrés hídrico de la planta. Hacer aspersiones por el envés de las hojas. Eliminar brotes muy afectados.",
+        "prevencion": "Monitorear semanalmente los brotes tiernos y el envés de hojas jóvenes con lupa (10x) — el ácaro blanco es casi invisible a simple vista. Evitar el estrés hídrico y la fertilización nitrogenada excesiva, que producen tejido tierno muy atractivo para el ácaro. Instalar barreras físicas (sarán) en los bordes del lote. Liberar ácaros depredadores como Amblyseius californicus como control biológico preventivo."
       }
     ]
   },
@@ -345,6 +447,11 @@
         "nota": "Requiere entre 80 y 120 mm de lluvia mensual. Crítico en floración y llenado de grano."
       }
     },
+    "riego": {
+      "frecuencia": "Germinación: riegos ligeros cada 3–5 días. Crecimiento vegetativo: cada 8–12 días según clima. Floración y llenado: cada 7–10 días sin interrupciones en el periodo crítico (15 días antes a 30 días después de floración).",
+      "cantidad": "Germinación y establecimiento: 25–30 mm por riego. Crecimiento vegetativo: 40–60 mm por riego. Floración y llenado de grano: 60–80 mm por riego (hasta 10–12 mm/día en pico). Requerimiento total del ciclo: 500–800 mm.",
+      "nota": "La floración es la etapa más crítica: el déficit hídrico entre VT y R3 puede reducir el rendimiento hasta un 60%. En el trópico colombiano, aprovechar las lluvias del primer y segundo semestre; el riego suplementario es esencial en periodos secos."
+    },
     "nutricion": {
       "requerimientos": [
         "Fósforo (P) y Zinc (Zn) en germinación y establecimiento para favorecer el desarrollo radicular",
@@ -364,18 +471,43 @@
         {
           "nombre": "Germinación y establecimiento",
           "duracion": "Día 0 al Día 15 (emergencia en 7-10 días; establecimiento hasta ~2 semanas)",
-          "descripcion": "Nutrientes clave: Fósforo (P) y Zinc (Zn). Se recomienda fertilización de arranque (DAP o MAP) para favorecer el desarrollo radicular."
+          "descripcion": "Nutrientes clave: Fósforo (P) y Zinc (Zn). Se recomienda fertilización de arranque (DAP o MAP) para favorecer el desarrollo radicular.",
+          "cuidados_clave": [
+            "Usar semilla certificada o de alta calidad con tratamiento fungicida-insecticida (Thiram, Metalaxil) para proteger contra patógenos del suelo como Fusarium y Pythium.",
+            "Sembrar a 3–5 cm de profundidad en suelo con temperatura mínima de 18°C y buena humedad; densidad de 55.000–75.000 plantas/ha para híbridos comerciales en el trópico.",
+            "Mantener el lote libre de malezas desde la emergencia hasta V6, pues la competencia temprana puede reducir el rendimiento hasta un 40%."
+          ]
         },
         {
           "nombre": "Crecimiento vegetativo rápido",
           "duracion": "Día 15 al Día 55-65 (finaliza con la aparición de estigmas y espiga)",
-          "descripcion": "Nutriente clave: Nitrógeno (N), necesario para el desarrollo del área foliar y el tallo."
+          "descripcion": "Nutriente clave: Nitrógeno (N), necesario para el desarrollo del área foliar y el tallo.",
+          "cuidados_clave": [
+            "Realizar fertilización fraccionada: aplicar nitrógeno en dos momentos (V3–V4 y V6–V8) según análisis de suelo; el maíz en trópico requiere 150–200 kg N/ha, 60–80 kg P₂O₅/ha y 80–100 kg K₂O/ha por ciclo.",
+            "Efectuar aporque entre V5 y V8 para dar soporte mecánico al tallo, mejorar drenaje y favorecer el desarrollo radicular; también elimina malezas residuales entre surcos.",
+            "Monitorear semanalmente el cogollo para detectar larvas de gusano cogollero (Spodoptera frugiperda) en estadios tempranos; umbral de acción: 20% de plantas con daño fresco en cogollo."
+          ]
         },
         {
           "nombre": "Floración y llenado de grano",
           "duracion": "Día 60 al Día 100-130 (madurez fisiológica entre los 125-130 días desde emergencia)",
-          "descripcion": "Nutrientes clave: Nitrógeno (N) y Potasio (K). El estrés hídrico o nutricional en esta etapa reduce fuertemente el rendimiento."
+          "descripcion": "Nutrientes clave: Nitrógeno (N) y Potasio (K). El estrés hídrico o nutricional en esta etapa reduce fuertemente el rendimiento.",
+          "cuidados_clave": [
+            "Garantizar disponibilidad hídrica continua durante la antesis y polinización: el estrés hídrico en este periodo puede causar pérdidas del 6–13% por día de déficit; evitar cualquier interrupción del riego por 14 días alrededor de la floración.",
+            "Monitorear la sanidad foliar para detectar roya común (Puccinia sorghi) y pudrición del tallo (Fusarium); aplicar fungicidas triazoles o estrobilurinas preventivamente si las condiciones de humedad y temperatura favorecen la infección.",
+            "Evaluar el llenado de grano realizando la prueba de la línea de leche en mazorca (R3–R5); cosechar cuando el grano alcance 25–30% de humedad para cosecha mecánica o 18–22% para cosecha manual."
+          ]
         }
+      ]
+    },
+    "poscosecha": {
+      "temperatura_almacenamiento": "Temperatura ideal entre 10–15°C para almacenamiento prolongado. En condiciones tropicales colombianas sin refrigeración, mantener el grano en el lugar más fresco y seco disponible, preferiblemente por debajo de 27°C con buena ventilación.",
+      "vida_util": "Con humedad del grano ≤13% y temperatura controlada (10–15°C): hasta 12 meses conservando calidad comercial. En condiciones tropicales (25–30°C) con humedad ≤13%: 6–8 meses. Con humedad >14%: riesgo de deterioro en menos de 3 meses.",
+      "recomendaciones": [
+        "Secar el grano inmediatamente después de la cosecha hasta alcanzar un contenido de humedad del 12–13% antes del almacenamiento; usar secadora mecánica o secado solar en tendales limpios, revolviendo periódicamente.",
+        "Limpiar y desinfectar silos, bodegas o costales antes del almacenamiento; eliminar residuos de cosechas anteriores que pueden albergar insectos y hongos como Aspergillus y Fusarium productores de aflatoxinas.",
+        "Aplicar control preventivo de insectos de almacén (Sitophilus zeamais, Tribolium spp.) mediante fosfuro de aluminio (fumigación) o insecticidas de contacto registrados por el ICA; inspeccionar el grano cada 15–30 días.",
+        "Registrar y monitorear la temperatura y humedad del grano almacenado al menos cada dos semanas; si se detecta calentamiento localizado (bolsas calientes), airear o re-secar el grano de inmediato."
       ]
     },
     "plagas": [
@@ -385,7 +517,8 @@
         "tipo": "insecto",
         "emoji": "🐛",
         "como_identificar": "Hojas con huecos irregulares y bordes en serrucho. En el cogollo (centro de la planta) se ve excremento arenoso café y una oruga verde o café con rayas.",
-        "que_hacer": "Aplicar Bacillus thuringiensis (BT) o spinosad en el cogollo. En casos graves usar clorpirifos o emamectina. Hacer aplicaciones temprano en la mañana. Monitorear semanalmente."
+        "que_hacer": "Aplicar Bacillus thuringiensis (BT) o spinosad en el cogollo. En casos graves usar clorpirifos o emamectina. Hacer aplicaciones temprano en la mañana. Monitorear semanalmente.",
+        "prevencion": "Usar semillas tratadas con insecticidas sistémicos (clorpirifos, imidacloprid). Realizar siembras en épocas óptimas para evitar picos poblacionales. Conservar enemigos naturales (Telenomus remus, Chelonus insularis). Aplicar Bacillus thuringiensis (Bt) en larvas L1–L2 antes de que penetren al cogollo. Usar feromonas de monitoreo para anticipar la presencia de adultos. Rotar cultivos con leguminosas para romper el ciclo de la plaga."
       },
       {
         "nombre": "Roya del maíz",
@@ -393,7 +526,8 @@
         "tipo": "hongo",
         "emoji": "🍄",
         "como_identificar": "Polvillo anaranjado o café en las hojas, especialmente por el envés. Al frotar la hoja la mano queda manchada de naranja. Las hojas se secan prematuramente.",
-        "que_hacer": "Aplicar mancozeb o trifloxistrobin preventivamente. Usar variedades resistentes. Evitar exceso de nitrógeno. Hacer rotación de cultivos con leguminosas."
+        "que_hacer": "Aplicar mancozeb o trifloxistrobin preventivamente. Usar variedades resistentes. Evitar exceso de nitrógeno. Hacer rotación de cultivos con leguminosas.",
+        "prevencion": "Seleccionar híbridos o variedades con resistencia genética a Puccinia sorghi, priorizando materiales evaluados por AGROSAVIA o CIMMYT para el trópico colombiano. Monitorear el cultivo a partir de V8 y aplicar fungicidas preventivos (azoxistrobina, pyraclostrobin) si la incidencia supera el 5% de área foliar afectada. Evitar densidades de siembra muy altas que favorezcan el microclima húmedo."
       },
       {
         "nombre": "Pudrición del tallo (Fusarium)",
@@ -401,7 +535,8 @@
         "tipo": "hongo",
         "emoji": "🍄",
         "como_identificar": "Plantas que se doblan o caen cerca a la cosecha. El tallo interno está podrido y de color rosado o café. Las mazorcas se quedan pequeñas con granos podridos.",
-        "que_hacer": "Tratar la semilla con fungicidas (thiram o carboxin) antes de sembrar. Evitar el encharcamiento. Hacer rotación de cultivos. Cosechar a tiempo sin dejar el maíz pasado."
+        "que_hacer": "Tratar la semilla con fungicidas (thiram o carboxin) antes de sembrar. Evitar el encharcamiento. Hacer rotación de cultivos. Cosechar a tiempo sin dejar el maíz pasado.",
+        "prevencion": "Usar semilla certificada con tratamiento fungicida (Thiram + Carboxin o Metalaxil). Garantizar buen drenaje del suelo y evitar encharcamientos. Realizar rotación de cultivos con no gramíneas (soya, yuca) cada 1–2 ciclos para reducir el inóculo en el suelo. Incorporar los residuos de cosecha profundamente o eliminarlos del lote. Cosechar oportunamente para evitar que el tallo maduro debilitado sufra volcamiento."
       },
       {
         "nombre": "Áfido del maíz (pulgón)",
@@ -409,7 +544,8 @@
         "tipo": "insecto",
         "emoji": "🐛",
         "como_identificar": "Colonias de insectos pequeños verdosos o grises agrupados en hojas, tallos y espiga. Las plantas tienen melaza pegajosa y fumagina negra encima.",
-        "que_hacer": "Aplicar imidacloprid o jabón potásico. Fomentar insectos benéficos como mariquitas. En ataques leves, lavar con agua a presión. Eliminar plantas muy infestadas."
+        "que_hacer": "Aplicar imidacloprid o jabón potásico. Fomentar insectos benéficos como mariquitas. En ataques leves, lavar con agua a presión. Eliminar plantas muy infestadas.",
+        "prevencion": "Conservar y favorecer la presencia de enemigos naturales (Coccinellidae, Chrysopidae, avispas parasitoides) evitando aplicaciones innecesarias de insecticidas de amplio espectro. Monitorear la espiga y el cogollo desde la aparición de la panoja. Aplicar insecticidas sistémicos (imidacloprid, tiametoxam) como tratamiento de semilla para protección temprana. Evitar exceso de fertilización nitrogenada que favorece el tejido suculento preferido por los áfidos."
       }
     ]
   },
@@ -448,6 +584,11 @@
         "nota": "Requiere entre 150 y 200 mm de lluvia mensual bien distribuidos."
       }
     },
+    "riego": {
+      "frecuencia": "Cada 7 a 10 días en época seca (déficit hídrico). En zonas con sequía de 4 a 6 meses al año (Zona Norte: Magdalena, Cesar, Bolívar; Llanos Orientales: Meta, Casanare) se requiere riego suplementario sistemático.",
+      "cantidad": "Entre 45 y 63 mm por semana según la zona. La palma adulta consume entre 135 mm/mes (Zona Tumaco) y 189 mm/mes (Zona Norte). Una palma adulta en la Zona Norte requiere entre 350 y 400 litros por día en déficit hídrico. Lámina neta recomendada: 60–90 mm por aplicación bajo aspersión o microaspersión.",
+      "nota": "La palma necesita mínimo 1.800 mm de lluvia anuales bien distribuidos. El déficit hídrico acumulado mayor a 250 mm reduce el rendimiento en racimos 12 a 18 meses después. El nivel freático debe mantenerse por debajo de 60 cm."
+    },
     "nutricion": {
       "requerimientos": [
         "Fósforo (P) y Nitrógeno (N) en vivero para enraizamiento y desarrollo foliar inicial",
@@ -468,23 +609,53 @@
         {
           "nombre": "Vivero — pre-vivero y vivero",
           "duracion": "0 a 12 meses",
-          "descripcion": "Objetivo: desarrollar un sistema radicular fuerte y área foliar sana antes del trasplante. Nutrientes clave: Fósforo (P) — el más crítico en los primeros meses; Nitrógeno (N) en dosis bajas y frecuentes para emisión de hojas; Magnesio (Mg) para formación de clorofila."
+          "descripcion": "Objetivo: desarrollar un sistema radicular fuerte y área foliar sana antes del trasplante. Nutrientes clave: Fósforo (P) — el más crítico en los primeros meses; Nitrógeno (N) en dosis bajas y frecuentes para emisión de hojas; Magnesio (Mg) para formación de clorofila.",
+          "cuidados_clave": [
+            "Preparar el sustrato con suelo del primer horizonte (30–40 cm) al menos 4 meses antes; corregir pH a 5.0–5.5 con cal dolomítica y añadir materia orgánica (compost o gallinaza) al 10–15% del volumen de la bolsa.",
+            "Mantener riego dos veces al día en pre-vivero (bolsa pequeña, 0–3 meses) y una vez al día en vivero (bolsa grande, 3–12 meses); garantizar drenaje libre en las bolsas.",
+            "Aplicar fertilización fraccionada cada 15 días con fórmulas ricas en Fósforo (P) y Nitrógeno (N) en pequeñas dosis; eliminar plántulas con anormalidades foliares, deformaciones o síntomas de enfermedades antes del trasplante."
+          ]
         },
         {
           "nombre": "Establecimiento y desarrollo vegetativo — palma joven improductiva",
           "duracion": "Año 1 al Año 3",
-          "descripcion": "Objetivo: lograr la máxima arquitectura de la palma para soportar la futura carga productiva. Nutrientes clave: Nitrógeno (N) — acelera la velocidad de emisión foliar; Fósforo (P) — aplicado fuertemente en el hoyo de siembra para exploración radicular profunda; Magnesio (Mg) — evita quema de hojas inferiores y asegura fotosíntesis eficiente."
+          "descripcion": "Objetivo: lograr la máxima arquitectura de la palma para soportar la futura carga productiva. Nutrientes clave: Nitrógeno (N) — acelera la velocidad de emisión foliar; Fósforo (P) — aplicado fuertemente en el hoyo de siembra para exploración radicular profunda; Magnesio (Mg) — evita quema de hojas inferiores y asegura fotosíntesis eficiente.",
+          "cuidados_clave": [
+            "Realizar el trasplante al inicio de la época de lluvias con densidad de 143 a 160 palmas/ha en triángulo equilátero; aplicar superfosfato triple o DAP directamente en el hoyo de siembra (200–300 g/palma).",
+            "Establecer cobertura vegetal con leguminosas (Mucuna, Pueraria, Arachis) entre calles para reducir erosión, conservar humedad y aportar nitrógeno biológico; controlar malezas en el plato de forma manual o con herbicidas de contacto.",
+            "Fertilizar con fórmulas N-P-Mg en los años 1–3 según análisis de suelo foliar; realizar podas de hojas secas o enfermas anualmente para mantener entre 28 y 40 hojas funcionales."
+          ]
         },
         {
           "nombre": "Inicio de producción — palmas jóvenes en cosecha",
           "duracion": "Año 4 al Año 7",
-          "descripcion": "Objetivo: sostener el crecimiento mientras se extraen los primeros nutrientes a través de los racimos. Nutrientes clave: Potasio (K) — pasa a ser el elemento más exigente; Nitrógeno (N) — en niveles estables para no detener el crecimiento; Boro (B) — crítico para evitar aborto de inflorescencias y malformaciones foliares."
+          "descripcion": "Objetivo: sostener el crecimiento mientras se extraen los primeros nutrientes a través de los racimos. Nutrientes clave: Potasio (K) — pasa a ser el elemento más exigente; Nitrógeno (N) — en niveles estables para no detener el crecimiento; Boro (B) — crítico para evitar aborto de inflorescencias y malformaciones foliares.",
+          "cuidados_clave": [
+            "Implementar polinización asistida con polen fresco o conservado en frío (–18°C) aplicado sobre inflorescencias femeninas receptivas, especialmente en híbridos OxG; programar aplicaciones cada 3 días durante la antesis.",
+            "Ajustar el plan de fertilización con énfasis en Potasio (K) y Boro (B); basar las dosis en análisis foliar anual tomado en la hoja 17.",
+            "Iniciar cosecha cuando los racimos presenten 3 a 5 frutos sueltos por kilogramo de racimo; cosechar con frecuencia de 10 a 14 días y transportar los RFF a la planta extractora en menos de 24 horas."
+          ]
         },
         {
           "nombre": "Producción estabilizada — palma adulta",
           "duracion": "Año 8 al Año 25-30",
-          "descripcion": "Objetivo: maximizar el rendimiento de Racimos de Fruta Fresca (RFF) y el porcentaje de extracción de aceite. Nutrientes clave: Potasio (K) — mayor extracción por tonelada de RFF cosechada; Nitrógeno (N) — mantiene tasa fotosintética y previene amarillamiento; Magnesio (Mg) — balancear relación K/Mg para evitar clorosis; Cloro (Cl) — actúa casi como macronutriente, optimiza uso del agua y la respuesta al K."
+          "descripcion": "Objetivo: maximizar el rendimiento de Racimos de Fruta Fresca (RFF) y el porcentaje de extracción de aceite. Nutrientes clave: Potasio (K) — mayor extracción por tonelada de RFF cosechada; Nitrógeno (N) — mantiene tasa fotosintética y previene amarillamiento; Magnesio (Mg) — balancear relación K/Mg para evitar clorosis; Cloro (Cl) — actúa casi como macronutriente, optimiza uso del agua y la respuesta al K.",
+          "cuidados_clave": [
+            "Mantener cosecha cada 10 a 15 días con criterio de 3–5 frutos sueltos/kg de racimo; realizar poda anual dejando mínimo 30–35 hojas funcionales; evitar cortar más de 2 hojas por debajo del último racimo cosechado.",
+            "Ejecutar fertilización basada en análisis foliar y de suelo anual: dosis típicas son 2–3 kg de KCl, 1–1,5 kg de Urea y 0,5–1 kg de Kieserita por palma por año, fraccionadas en dos aplicaciones (inicio y final de lluvias).",
+            "Implementar programa de Manejo Integrado de Plagas (MIP) con monitoreo mensual de PC, Rhynchophorus, marchitez sorpresiva y defoliadores; mantener red de trampas con feromonas para picudo a razón de 1 trampa por hectárea."
+          ]
         }
+      ]
+    },
+    "poscosecha": {
+      "temperatura_almacenamiento": "Los racimos de fruta fresca (RFF) no se almacenan en frío: deben procesarse a temperatura ambiente en la planta extractora lo antes posible. El calor acelerado (>35°C en patio) aumenta la hidrólisis enzimática y eleva los Ácidos Grasos Libres (AGL).",
+      "vida_util": "Máximo 24 horas desde la cosecha hasta el ingreso a la planta extractora para mantener AGL por debajo de 3.5%. Después de 48 horas sin procesar, la acidez libre puede superar el 5%, causando pérdida de calidad. En zonas con temperaturas superiores a 32°C, el tiempo máximo recomendado es de 18 horas.",
+      "recomendaciones": [
+        "Cosechar únicamente racimos con 3 a 5 frutos sueltos por kilogramo de racimo (criterio de madurez óptima); evitar cosechar racimos verdes (menos de 1 fruto suelto/kg) por bajo contenido de aceite.",
+        "Recoger todos los frutos sueltos caídos al suelo junto con el racimo, ya que representan entre el 3 y el 8% del aceite del racimo; transportarlos en costales separados hacia la planta extractora.",
+        "Evitar golpes, caídas desde altura o aplastamiento de los racimos durante la cosecha y la descarga; los daños mecánicos aceleran la actividad de la lipasa endógena que eleva la acidez libre irreversiblemente.",
+        "Organizar la logística de transporte para que el tiempo total desde corte hasta esterilización no supere las 24 horas; registrar hora de corte por lote para trazabilidad de calidad y control de acidez libre."
       ]
     },
     "plagas": [
@@ -494,7 +665,8 @@
         "tipo": "hongo",
         "emoji": "🍄",
         "como_identificar": "Las hojas del centro de la palma se ponen amarillas, luego café y se pudren con mal olor. La pudrición avanza hacia adentro y puede matar la palma.",
-        "que_hacer": "Cirugía del cogollo: extraer todo el tejido podrido con herramienta desinfectada. Aplicar fungicidas con metalaxil en la cavidad. Cubrir con arena. Desinfectar herramientas entre palma y palma."
+        "que_hacer": "Cirugía del cogollo: extraer todo el tejido podrido con herramienta desinfectada. Aplicar fungicidas con metalaxil en la cavidad. Cubrir con arena. Desinfectar herramientas entre palma y palma.",
+        "prevencion": "Mantener un sistema de drenaje eficiente que evite encharcamientos prolongados, pues la humedad excesiva y la temperatura entre 27–30°C favorecen el desarrollo de Phytophthora palmivora. Realizar monitoreo visual semanal del cogollo para detectar lesiones iniciales antes de que avancen. Desinfectar todas las herramientas de cosecha y poda entre palma y palma con hipoclorito al 10%. Georreferenciar focos y reportar al ICA según Resolución 092771 de 2021 (plaga de control oficial obligatorio)."
       },
       {
         "nombre": "Picudo rojo (Rhynchophorus)",
@@ -502,7 +674,8 @@
         "tipo": "insecto",
         "emoji": "🐛",
         "como_identificar": "Hojas centrales que no abren o se doblan. Al explorar la base de la corona se encuentran larvas blancas y gordas (hasta 5 cm). La palma emite olor a fermentado.",
-        "que_hacer": "Instalar trampas con feromonas específicas. Aplicar imidacloprid en drench. Eliminar palmas muy afectadas y enterrarlas. Desinfectar heridas de poda."
+        "que_hacer": "Instalar trampas con feromonas específicas. Aplicar imidacloprid en drench. Eliminar palmas muy afectadas y enterrarlas. Desinfectar heridas de poda.",
+        "prevencion": "Instalar red de trampas con feromona de agregación Rhynchophorol + cebo vegetal (trozos de caña o cogollo de palma) a razón de 1 trampa por hectárea; revisar y renovar cebo y feromona cada 30 días. Desinfectar de inmediato todas las heridas de poda, cosecha y cirugía con pasta cicatrizante o insecticida sistémico. Evitar abandonar material vegetal en descomposición (racimos, hojas, tocones) dentro del lote, pues constituyen sitios de reproducción."
       },
       {
         "nombre": "Marchitez sorpresiva",
@@ -510,7 +683,8 @@
         "tipo": "nematodo",
         "emoji": "🪱",
         "como_identificar": "Palmas que se marchitan muy rápido en pocos días: hojas que cuelgan, frutos que se pudren en el racimo y palma que muere repentinamente.",
-        "que_hacer": "No tiene cura efectiva. Eliminar y quemar palmas afectadas de inmediato. Controlar el insecto vector (Lincus) con insecticidas. Evitar heridas en las raíces y mantener buen drenaje."
+        "que_hacer": "No tiene cura efectiva. Eliminar y quemar palmas afectadas de inmediato. Controlar el insecto vector (Lincus) con insecticidas. Evitar heridas en las raíces y mantener buen drenaje.",
+        "prevencion": "Controlar malezas gramíneas (especialmente pasto guinea) dentro y en los bordes del cultivo, pues las ninfas del insecto vector Lincus lethifer se desarrollan sobre estas plantas. Aplicar insecticidas sistémicos en el control del vector en zonas con historial de la enfermedad. Realizar monitoreo epidemiológico mensual para detectar palmas con hojas colgantes o frutos podridos; reportar inmediatamente al ICA (enfermedad de control oficial). En las zonas Oriental y Norte de Colombia el monitoreo debe ser semanal."
       },
       {
         "nombre": "Hormiga arriera (defoliadora)",
@@ -518,7 +692,8 @@
         "tipo": "insecto",
         "emoji": "🐛",
         "como_identificar": "Hojas cortadas en semicírculos perfectos. Se ven hileras de hormigas cargando trozos de hoja hacia el suelo. En ataques fuertes la palma queda casi sin follaje.",
-        "que_hacer": "Localizar el hormiguero y aplicar cebo tóxico con sulfluramida o hidrametilnona. No usar insecticidas líquidos directamente sobre el nido. Monitorear perimetralmente el lote."
+        "que_hacer": "Localizar el hormiguero y aplicar cebo tóxico con sulfluramida o hidrametilnona. No usar insecticidas líquidos directamente sobre el nido. Monitorear perimetralmente el lote.",
+        "prevencion": "Realizar monitoreo perimetral del lote al menos cada 15 días buscando senderos de hormigas y hojas cortadas en semicírculo; los ataques nocturnos son los más frecuentes, por lo que se recomienda inspección temprana en la mañana. Aplicar cebo tóxico granulado con sulfluramida o hidrametilnona alrededor de las entradas del hormiguero sin disturbar el montículo. Mantener limpios los bordes del lote y las calles de servicio, ya que los matorrales facilitan la instalación de nuevas colonias."
       }
     ]
   },
@@ -557,6 +732,11 @@
         "nota": "Requiere entre 80 y 120 mm de lluvia mensual. Reducir al final del ciclo para evitar rajado del fruto."
       }
     },
+    "riego": {
+      "frecuencia": "Establecimiento (días 1–20): cada 2–3 días con riegos cortos. Crecimiento vegetativo (días 20–45): cada 3–5 días. Floración y cuajado (días 45–60): diario o cada 2 días — etapa crítica, el déficit provoca aborto de frutos. Llenado y maduración (días 60–100): cada 4–6 días, reducir progresivamente en las últimas 2 semanas antes de cosecha.",
+      "cantidad": "Aproximadamente 3–6 litros por planta por riego en goteo. Necesidad hídrica total del ciclo: 500–700 mm. Demanda máxima en floración y llenado de fruto: 4–8 mm/día según temperatura y viento.",
+      "nota": "Reducir el riego 10–14 días antes de la cosecha para concentrar azúcares (aumentar grados Brix) y evitar el rajado del fruto. El encharcamiento en cualquier etapa causa asfixia radicular y muerte de plantas."
+    },
     "nutricion": {
       "requerimientos": [
         "Fósforo (P) y Nitrógeno (N) en establecimiento — P para enraizamiento rápido, N en dosis bajas para primeras hojas",
@@ -578,23 +758,53 @@
         {
           "nombre": "Establecimiento — siembra a post-trasplante",
           "duracion": "Día 1 al Día 15-20",
-          "descripcion": "Objetivo: estimular el enraizamiento rápido y la adaptación al suelo. Nutrientes clave: Fósforo (P) — el más importante, promueve el sistema radicular; Nitrógeno (N) — en dosis bajas para primeras hojas verdaderas; Calcio (Ca) — esencial para la división celular en puntas de raíces nuevas."
+          "descripcion": "Objetivo: estimular el enraizamiento rápido y la adaptación al suelo. Nutrientes clave: Fósforo (P) — el más importante, promueve el sistema radicular; Nitrógeno (N) — en dosis bajas para primeras hojas verdaderas; Calcio (Ca) — esencial para la división celular en puntas de raíces nuevas.",
+          "cuidados_clave": [
+            "Aplicar riego de establecimiento inmediatamente tras el trasplante o siembra directa para garantizar contacto suelo-raíz; mantener humedad constante sin encharcar los primeros 5–7 días.",
+            "Proteger las plántulas del sol directo intenso las primeras 48–72 horas post-trasplante para reducir estrés hídrico y térmico; monitorear síntomas de marchitamiento.",
+            "Aplicar abono de fondo rico en fósforo (superfosfato triple o DAP) antes de la siembra y verificar pH del suelo (5.5–7.0); corregir con cal dolomita si es necesario."
+          ]
         },
         {
           "nombre": "Crecimiento vegetativo — desarrollo de guías",
           "duracion": "Día 20 al Día 40-45",
-          "descripcion": "Objetivo: lograr la máxima cobertura foliar antes de la floración. Una planta con pocas hojas no tendrá energía para llenar sandías grandes. Nutrientes clave: Nitrógeno (N) — impulsa el crecimiento rápido de tallos y clorofila; Magnesio (Mg) — mantiene las hojas activas fotosintéticamente; Micronutrientes (hierro, zinc, manganeso) — previenen clorosis por el acelerado ritmo de crecimiento."
+          "descripcion": "Objetivo: lograr la máxima cobertura foliar antes de la floración. Una planta con pocas hojas no tendrá energía para llenar sandías grandes. Nutrientes clave: Nitrógeno (N) — impulsa el crecimiento rápido de tallos y clorofila; Magnesio (Mg) — mantiene las hojas activas fotosintéticamente; Micronutrientes (hierro, zinc, manganeso) — previenen clorosis por el acelerado ritmo de crecimiento.",
+          "cuidados_clave": [
+            "Guiar y orientar las ramas rastreras para evitar que se enreden entre sí; en cultivos con alta densidad, dirigir las guías en una sola dirección para facilitar labores y mejorar ventilación.",
+            "Controlar malezas de forma manual o con mulch plástico plateado en las primeras 3 semanas; las malezas compiten agresivamente por agua y nutrientes y hospedan plagas como mosca blanca.",
+            "Realizar aplicaciones preventivas de fungicidas (cobre o mancozeb) y monitorear semanalmente la presencia de mildiú velloso y mosca blanca, especialmente en épocas de alta humedad."
+          ]
         },
         {
           "nombre": "Floración y cuajado del fruto",
           "duracion": "Día 45 al Día 60",
-          "descripcion": "Objetivo: asegurar la viabilidad del polen y evitar aborto de frutos recién formados. Nutrientes clave: Boro (B) y Zinc (Zn) — el boro es fundamental para la fertilidad del polen y el cuajado exitoso; Nitrógeno (N) — se reduce drásticamente, el exceso provoca aborto de flores; Fósforo (P) — aporta la energía química (ATP) necesaria para la floración."
+          "descripcion": "Objetivo: asegurar la viabilidad del polen y evitar aborto de frutos recién formados. Nutrientes clave: Boro (B) y Zinc (Zn) — el boro es fundamental para la fertilidad del polen y el cuajado exitoso; Nitrógeno (N) — se reduce drásticamente, el exceso provoca aborto de flores; Fósforo (P) — aporta la energía química (ATP) necesaria para la floración.",
+          "cuidados_clave": [
+            "Garantizar la presencia de polinizadores (abejas); evitar aplicar insecticidas de amplio espectro durante las horas de mayor actividad de abejas (6:00–10:00 a.m.).",
+            "Suspender o reducir drásticamente la fertilización nitrogenada durante la floración; el exceso de nitrógeno provoca aborto de flores y exceso de follaje a expensas del cuajado.",
+            "Eliminar frutos deformes o muy pequeños en plantas con más de 3 frutos cuajados para concentrar los nutrientes en 1–2 frutos de mayor tamaño y calidad comercial."
+          ]
         },
         {
           "nombre": "Llenado y maduración del fruto",
           "duracion": "Día 60 al Día 90-110",
-          "descripcion": "Objetivo: maximizar tamaño, grosor de corteza y concentración de azúcares (grados Brix). Nutrientes clave: Potasio (K) — transloca azúcares desde las hojas hacia la pulpa, define sabor dulce, color rojo y peso final; Calcio (Ca) — previene la pudrición apical (peseta) y da firmeza a la cáscara para evitar rajado."
+          "descripcion": "Objetivo: maximizar tamaño, grosor de corteza y concentración de azúcares (grados Brix). Nutrientes clave: Potasio (K) — transloca azúcares desde las hojas hacia la pulpa, define sabor dulce, color rojo y peso final; Calcio (Ca) — previene la pudrición apical (peseta) y da firmeza a la cáscara para evitar rajado.",
+          "cuidados_clave": [
+            "Incrementar la fertilización potásica (sulfato de potasio) y cálcica (nitrato de calcio) para maximizar el peso final, la concentración de azúcares (°Brix) y prevenir la pudrición apical.",
+            "Colocar un soporte o almohadilla (paja, teja plástica) debajo de cada fruto para evitar quemaduras por contacto directo con el suelo caliente y reducir pudriciones basales.",
+            "Monitorear los índices de madurez: zarcillo más cercano al fruto seco, mancha amarilla en la base del fruto, sonido sordo al golpear suavemente; cosechar a los 30–35 días post-cuajado."
+          ]
         }
+      ]
+    },
+    "poscosecha": {
+      "temperatura_almacenamiento": "13–15°C con humedad relativa de 85–90%. Por debajo de 10°C se presentan daños por frío: descomposición interna y pérdida de textura y sabor. En condiciones tropicales sin refrigeración, conservar en lugar fresco y ventilado a la sombra.",
+      "vida_util": "2–3 semanas bajo refrigeración adecuada (13–15°C). A temperatura ambiente tropical (25–30°C) la vida útil se reduce a 7–10 días. Una vez cortado el fruto, consumir en menos de 3–5 días bajo refrigeración.",
+      "recomendaciones": [
+        "Cosechar con 5–8 cm de pedúnculo (tallo) para reducir la entrada de patógenos y alargar la vida poscosecha; usar tijeras o machete desinfectado para evitar transmisión de enfermedades entre plantas.",
+        "Evitar golpes y apilamiento excesivo durante el transporte; la cáscara de la sandía es susceptible a magulladuras que aceleran la descomposición interna aunque no sean visibles externamente.",
+        "No almacenar sandías junto a frutas climatéricas como banano, mango o aguacate que emiten etileno, ya que altas concentraciones pueden ablandar la pulpa prematuramente.",
+        "Lavar y secar los frutos antes del despacho para la comercialización local; evitar humedades superficiales durante el transporte, ya que favorecen el desarrollo de hongos como Alternaria y Colletotrichum en la cáscara."
       ]
     },
     "plagas": [
@@ -604,7 +814,8 @@
         "tipo": "hongo",
         "emoji": "🍄",
         "como_identificar": "Manchas amarillas en la parte superior de la hoja y un pelillo grisáceo o morado por el envés. Las hojas se secan rápidamente y la planta pierde vigor.",
-        "que_hacer": "Aplicar mancozeb, clorotalonil o cobre preventivamente. Evitar mojar el follaje al regar. Mejorar la circulación del aire entre plantas. Eliminar hojas muy enfermas."
+        "que_hacer": "Aplicar mancozeb, clorotalonil o cobre preventivamente. Evitar mojar el follaje al regar. Mejorar la circulación del aire entre plantas. Eliminar hojas muy enfermas.",
+        "prevencion": "Establecer distancias de siembra adecuadas (2.0–2.5 m entre plantas) para favorecer la circulación del aire y reducir la humedad foliar. Evitar el riego por aspersión o regar solo en horas de la mañana para que el follaje seque antes del anochecer. Realizar aplicaciones preventivas de fungicidas de contacto (mancozeb, clorotalonil, hidróxido de cobre) desde el inicio del crecimiento vegetativo, especialmente en períodos nublados o de alta humedad relativa (>80%). Eliminar residuos del cultivo anterior antes de la nueva siembra."
       },
       {
         "nombre": "Mosca blanca",
@@ -612,7 +823,8 @@
         "tipo": "insecto",
         "emoji": "🐛",
         "como_identificar": "Insectos blancos muy pequeños que vuelan al mover la planta. Hojas con melaza pegajosa y fumagina negra. Plantas débiles con hojas amarillas y arrugadas.",
-        "que_hacer": "Instalar trampas amarillas pegajosas. Aplicar imidacloprid o jabón potásico. Colocar mallas antiáfidos en semilleros. Eliminar malezas hospederas alrededor del cultivo."
+        "que_hacer": "Instalar trampas amarillas pegajosas. Aplicar imidacloprid o jabón potásico. Colocar mallas antiáfidos en semilleros. Eliminar malezas hospederas alrededor del cultivo.",
+        "prevencion": "Instalar trampas amarillas pegajosas (1 trampa por cada 200 m²) desde el trasplante. Usar mulch plástico plateado o aluminio en el suelo, pues la reflexión de la luz repele a los adultos. Colocar mallas antiáfidos en semilleros para producir plántulas libres del insecto. Liberar enemigos naturales como Encarsia formosa o aplicar hongos entomopatógenos (Beauveria bassiana) en los primeros focos de infestación."
       },
       {
         "nombre": "Virus de la mancha anular (PRSV-W)",
@@ -620,7 +832,8 @@
         "tipo": "virus",
         "emoji": "☀",
         "como_identificar": "Hojas con mosaico verde-amarillo, arrugadas o en forma de hilo. Frutos con manchas y deformes. Plantas achaparradas que no producen bien.",
-        "que_hacer": "No tiene cura. Eliminar plantas enfermas de inmediato. Controlar mosca blanca y pulgones que lo transmiten. Usar semilla certificada. Colocar barreras de maíz alrededor del cultivo."
+        "que_hacer": "No tiene cura. Eliminar plantas enfermas de inmediato. Controlar mosca blanca y pulgones que lo transmiten. Usar semilla certificada. Colocar barreras de maíz alrededor del cultivo.",
+        "prevencion": "Usar exclusivamente semilla certificada libre de virus proveniente de casas semilleras reconocidas. Establecer barreras vivas perimetrales con maíz o sorgo (3–4 hileras) para interceptar los pulgones vectores del virus antes de que lleguen al cultivo. Aplicar aceite mineral al 1–2% en aspersión foliar para interferir con la transmisión no persistente del virus por áfidos. Eliminar de inmediato cualquier planta con síntomas de mosaico, introduciéndola en bolsas plásticas antes de sacarla del lote."
       },
       {
         "nombre": "Gusano del fruto (Diaphania)",
@@ -628,7 +841,8 @@
         "tipo": "insecto",
         "emoji": "🐛",
         "como_identificar": "Flores y frutos tiernos con huecos o raspados. Orugas verde-transparente dentro de los frutos pequeños. Las flores se caen antes de cuajar.",
-        "que_hacer": "Aplicar Bacillus thuringiensis (BT) o spinosad en las flores. Hacer aplicaciones al atardecer cuando la oruga es activa. Eliminar frutos pequeños muy afectados. Monitorear diariamente en floración."
+        "que_hacer": "Aplicar Bacillus thuringiensis (BT) o spinosad en las flores. Hacer aplicaciones al atardecer cuando la oruga es activa. Eliminar frutos pequeños muy afectados. Monitorear diariamente en floración.",
+        "prevencion": "Monitorear diariamente durante la floración revisando flores y frutos tiernos en busca de orugas o daños tipo raspado. Aplicar Bacillus thuringiensis var. kurstaki (BT) de forma preventiva desde la aparición de flores, realizando las aplicaciones al atardecer cuando las larvas recién eclosionadas se exponen. Eliminar y destruir los frutos tiernos dañados para romper el ciclo del insecto. Usar calabaza o zapallo como cultivo trampa en el perímetro para atraer y concentrar la plaga lejos de la sandía."
       }
     ]
   }

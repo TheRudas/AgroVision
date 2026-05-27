@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -32,6 +32,7 @@ function AnimatedRoutes() {
 
 function Layout() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const navigate = useNavigate()
 
   return (
     <div className="flex h-dvh bg-agro-bg overflow-hidden">
@@ -53,8 +54,14 @@ function Layout() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-          <img src="/logo Agrovision.png" alt="AgroVisión" className="w-7 h-7 object-contain shrink-0" />
-          <img src="/texto Agrovision.png" alt="AgroVisión" className="h-7 object-contain object-left" />
+          <button
+            onClick={() => navigate('/')}
+            className="flex items-center gap-2 cursor-pointer"
+            aria-label="Ir al inicio"
+          >
+            <img src="/logo Agrovision.png" alt="AgroVisión" className="w-7 h-7 object-contain shrink-0" />
+            <img src="/texto Agrovision.png" alt="AgroVisión" className="h-7 object-contain object-left" />
+          </button>
         </header>
 
         <AnimatedRoutes />

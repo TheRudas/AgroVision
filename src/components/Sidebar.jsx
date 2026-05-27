@@ -1,25 +1,20 @@
 import { useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import cultivos from '../data/cultivos.json'
 
 export default function Sidebar({ mobileOpen, onMobileClose }) {
   const navigate = useNavigate()
   const { pathname } = useLocation()
   const [hovered, setHovered] = useState(false)
 
-  // Determinar cultivo activo desde la URL: /cultivo/:id
   const partes = pathname.split('/')
   const cultivoActivo = partes[1] === 'cultivo' ? partes[2] : null
-  // En móvil abierto siempre expandido; en desktop colapsa cuando hay cultivo activo
   const colapsado = (!!cultivoActivo || pathname === '/comparar' || pathname === '/recomendar') && !mobileOpen
+  const expandido = !colapsado || hovered
 
-  function seleccionar(cultivoId) {
-    if (cultivoId === cultivoActivo) {
-      // Clic en el activo → deseleccionar, volver al home, expandir sidebar
-      navigate('/')
-    } else {
-      navigate(`/cultivo/${cultivoId}`)
-    }
+  const enCultivos = pathname === '/' || !!cultivoActivo
+
+  function irACultivos() {
+    navigate('/')
     onMobileClose?.()
   }
 
@@ -48,7 +43,7 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
         <div
           className={[
             'border-b border-agro-accent shrink-0 flex items-center cursor-pointer',
-            colapsado && !hovered ? 'justify-center py-4 px-2' : 'px-4 py-4 gap-3',
+            expandido ? 'px-4 py-4 gap-3' : 'justify-center py-4 px-2',
           ].join(' ')}
           onClick={() => { navigate('/'); onMobileClose?.() }}
         >
@@ -57,7 +52,7 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
             alt="AgroVisión logo"
             className="w-9 h-9 object-contain shrink-0"
           />
-          {(!colapsado || hovered) && (
+          {expandido && (
             <div className="flex flex-col gap-0.5">
               <img
                 src="/texto Agrovision.png"
@@ -73,73 +68,64 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
           )}
         </div>
 
-        {/* Lista de cultivos */}
+        {/* Nav */}
         <nav className="flex-1 overflow-y-auto overscroll-contain py-3">
-          {/* Comparar cultivos */}
+
+          {/* Cultivos */}
           <button
-            onClick={() => { navigate(pathname === '/comparar' ? '/' : '/comparar'); onMobileClose?.() }}
+            onClick={irACultivos}
             className={[
               'relative w-full flex items-center transition-colors select-none',
-              colapsado && !hovered ? 'justify-center py-3 px-2' : 'gap-3 px-4 py-2.5 text-left',
-              pathname === '/comparar'
+              expandido ? 'gap-3 px-4 py-2.5 text-left' : 'justify-center py-3 px-2',
+              enCultivos
                 ? 'bg-agro-lima/15 text-agro-lima'
                 : 'text-agro-text hover:bg-agro-lima/10',
             ].join(' ')}
           >
-            <span className={colapsado && !hovered ? 'text-2xl' : 'text-xl shrink-0'}>⚖️</span>
-            <span className={[
-              'font-titulo font-bold text-sm truncate transition-all duration-200',
-              pathname === '/comparar' ? 'text-agro-lima' : '',
-              (!colapsado || hovered) ? 'opacity-100 max-w-full' : 'opacity-0 max-w-0',
-            ].join(' ')}>
-              Comparar cultivos
-            </span>
-            {colapsado && !hovered && pathname === '/comparar' && (
+            <span className={expandido ? 'text-xl shrink-0' : 'text-2xl'}>🌿</span>
+            {expandido && (
+              <>
+                <span className={[
+                  'font-titulo font-bold text-sm flex-1',
+                  enCultivos ? 'text-agro-lima' : '',
+                ].join(' ')}>
+                  Cultivos
+                </span>
+                <span className="text-agro-muted text-base font-bold pr-1">›</span>
+              </>
+            )}
+            {!expandido && enCultivos && (
               <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-agro-lima rounded-r-full" />
             )}
           </button>
 
           <div className="border-t border-agro-accent/30 mx-4 my-2" />
 
-          {cultivos.map(cultivo => {
-            const esActivo = cultivoActivo === cultivo.id
+          {/* Comparar cultivos */}
+          <button
+            onClick={() => { navigate(pathname === '/comparar' ? '/' : '/comparar'); onMobileClose?.() }}
+            className={[
+              'relative w-full flex items-center transition-colors select-none',
+              expandido ? 'gap-3 px-4 py-2.5 text-left' : 'justify-center py-3 px-2',
+              pathname === '/comparar'
+                ? 'bg-agro-lima/15 text-agro-lima'
+                : 'text-agro-text hover:bg-agro-lima/10',
+            ].join(' ')}
+          >
+            <span className={expandido ? 'text-xl shrink-0' : 'text-2xl'}>⚖️</span>
+            {expandido && (
+              <span className={[
+                'font-titulo font-bold text-sm truncate',
+                pathname === '/comparar' ? 'text-agro-lima' : '',
+              ].join(' ')}>
+                Comparar cultivos
+              </span>
+            )}
+            {!expandido && pathname === '/comparar' && (
+              <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-agro-lima rounded-r-full" />
+            )}
+          </button>
 
-            return (
-              <div key={cultivo.id}>
-                <button
-                  onClick={() => seleccionar(cultivo.id)}
-                  className={[
-                    'relative w-full flex items-center transition-colors select-none',
-                    colapsado && !hovered
-                      ? 'justify-center py-3 px-2'
-                      : 'gap-3 px-4 py-2.5 text-left',
-                    esActivo
-                      ? 'bg-agro-lima/15 text-agro-lima'
-                      : 'text-agro-text hover:bg-agro-lima/10',
-                  ].join(' ')}
-                >
-                  <span className={colapsado && !hovered ? 'text-2xl' : 'text-xl shrink-0'}>
-                    {cultivo.emoji}
-                  </span>
-
-                  <span
-                    className={[
-                      'font-titulo font-bold text-sm truncate transition-all duration-200',
-                      esActivo ? 'text-agro-lima' : '',
-                      (!colapsado || hovered) ? 'opacity-100 max-w-full' : 'opacity-0 max-w-0',
-                    ].join(' ')}
-                  >
-                    {cultivo.nombre}
-                  </span>
-
-                  {/* Indicador activo en modo colapsado */}
-                  {colapsado && !hovered && esActivo && (
-                    <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-agro-lima rounded-r-full" />
-                  )}
-                </button>
-              </div>
-            )
-          })}
         </nav>
       </aside>
     </>

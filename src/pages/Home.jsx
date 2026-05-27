@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 import cultivos from '../data/cultivos.json'
-import CultivoCard from '../components/CultivoCard'
 
 export default function Home() {
   const navigate = useNavigate()
@@ -36,9 +35,30 @@ export default function Home() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {/* Lista de cultivos */}
+      <div className="flex flex-col gap-3">
         {cultivos.map(c => (
-          <CultivoCard key={c.id} cultivo={c} />
+          <div
+            key={c.id}
+            onClick={() => navigate(`/cultivo/${c.id}`)}
+            className="flex items-center gap-4 bg-agro-card border border-agro-accent/20 rounded-2xl px-4 py-3 cursor-pointer hover:border-agro-lima/40 hover:bg-agro-card/80 transition-all group"
+          >
+            <span className="text-3xl shrink-0 select-none">{c.emoji}</span>
+            <div className="flex-1 min-w-0">
+              <div className="font-titulo font-bold text-agro-text text-base leading-tight group-hover:text-agro-lima transition-colors">
+                {c.nombre}
+              </div>
+              <div className="text-agro-muted text-xs italic leading-tight mt-0.5">
+                {c.nombre_cientifico}
+              </div>
+            </div>
+            <button
+              onClick={e => { e.stopPropagation(); navigate(`/cultivo/${c.id}`) }}
+              className="shrink-0 bg-agro-lima/20 hover:bg-agro-lima text-agro-lima hover:text-agro-surface font-titulo font-bold text-sm px-4 py-2 rounded-full transition-colors whitespace-nowrap"
+            >
+              Ver →
+            </button>
+          </div>
         ))}
       </div>
     </div>
