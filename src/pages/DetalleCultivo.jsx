@@ -469,7 +469,7 @@ export default function DetalleCultivo() {
       <SeccionPoscosecha poscosecha={cultivo.poscosecha} />
 
       <button
-        onClick={() => encuesta ? navigate('/') : window.history.state?.idx > 0 ? navigate(-1) : navigate('/')}
+        onClick={() => navigate('/')}
         className="self-center flex items-center gap-2 bg-agro-lima hover:bg-agro-limaHover text-agro-surface font-titulo font-bold text-sm px-6 py-2.5 rounded-full transition-colors mt-8 group"
       >
         <svg className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
